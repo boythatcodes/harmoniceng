@@ -1,214 +1,8 @@
-<!doctype html>
-<html lang="en-US">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+@extends('layouts.main_page')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Harmonic Engineering: The Ultimate WordPress Theme for Business Consulting and Finance Services">
-    <link rel="profile" href="https://gmpg.org/xfn/11" />
-    <link rel="alternate" type="application/rss+xml" title="Wealth Up RSS Feed" href="feed/index.html" />
-    <link rel="alternate" type="application/atom+xml" title="Wealth Up Atom Feed" href="feed/atom/index.html" />
-    <link rel="pingback" href="xmlrpc.php" />
-    <title>Wealth Up &#8211; Business Consulting and Finance Services WordPress Theme</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <style type="text/css">
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 100;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat-JDF30TGI.ttf) format('truetype');
-        }
+@section('content')
 
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 200;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat8JDV30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 300;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat_XDV30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat-JDV30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 500;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat-7DV30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 600;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat9XCl30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 700;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat9uCl30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 800;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat8JCl30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: italic;
-            font-weight: 900;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat8gCl30TGI.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 100;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAop1RSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 200;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAIpxRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 300;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwA_JxRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 500;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAkJxRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 600;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAfJtRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZtRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 800;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAIptRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAC5tRSW3z.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 100;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAop1hTg.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 300;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwA_JxhTg.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhTg.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 500;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAkJxhTg.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZthTg.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'DM Sans';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAC5thTg.ttf) format('truetype');
-        }
-    </style>
-    <link rel="stylesheet" id="siteground-optimizer-combined-css-f88ed418aeaad3ed120dd080817673c5"
+<link rel="stylesheet" id="siteground-optimizer-combined-css-f88ed418aeaad3ed120dd080817673c5"
         href="wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-f88ed418aeaad3ed120dd080817673c5.css"
         media="all" />
     <link rel="preload"
@@ -221,808 +15,9 @@
         href="comments/feed/index.html" />
     <link rel='stylesheet' id='Harmonic Engineering-heading-font-css' href='../../../use.typekit.net/ewt3tpu8a54.css?ver=1.0.0'
         media='all' />
-    <style id='Harmonic Engineering-inline-css'>
-        :root {
-            --cms-accent-regular-rgb: 1, 160, 76;
-            --cms-accent-darken-rgb: 1, 112, 54;
-            --cms-primary-regular-rgb: 27, 26, 26;
-            --cms-primary-darken-rgb: 34, 34, 34;
-            --cms-primary-lighten-rgb: 40, 40, 40;
-            --cms-secondary-regular-rgb: 243, 132, 60;
-            --cms-secondary-darken-rgb: 243, 120, 6;
-            --cms-secondary-lighten-rgb: 246, 251, 249;
-            --cms-heading-regular-rgb: 34, 34, 34;
-            --cms-heading-lighten-rgb: 40, 40, 40;
-            --cms-accent-regular: #0d7caa;
-            --cms-accent-darken: #156199;
-            --cms-primary-regular: #1B1A1A;
-            --cms-primary-darken: #222222;
-            --cms-primary-lighten: #282828;
-            --cms-secondary-regular: #e71926;
-            --cms-secondary-darken: #d23c3e;
-            --cms-secondary-lighten: #F6FBF9;
-            --cms-heading-regular: #222222;
-            --cms-heading-lighten: #282828;
-            --cms-body-bg: #fff;
-            --cms-body-family: 'DM Sans', sans-serif;
-            --cms-body-size: 17px;
-            --cms-body-weight: 400;
-            --cms-body-style: normal;
-            --cms-body-color: #9B9B9B;
-            --cms-body-line-height: 1.5882352941176;
-            --cms-heading-family: 'Paralucent', sans-serif;
-            --cms-heading-weight: 600;
-            --cms-heading-style: normal;
-            --cms-heading-line-height: 1.125;
-            --cms-meta-color: #222222;
-            --cms-link-regular-color: #1B1A1A;
-            --cms-link-hover-color: #0d7caa;
-            --cms-link-active-color: #0d7caa;
-            --cms-header-height: 80px;
-            --cms-logo-width: 197px;
-            --cms-logo-height: 49px;
-            --cms-logo-width-mobile: 49px;
-            --cms-logo-height-mobile: 49px;
-            --cms-menu-regular: #1B1A1A;
-            --cms-menu-hover: #0d7caa;
-            --cms-menu-active: #0d7caa;
-            --cms-menu-regular-rgb: 27, 26, 26;
-            --cms-menu-hover-rgb: 1, 160, 76;
-            --cms-menu-active-rgb: 1, 160, 76;
-            --cms-menu-transparent-regular: #222222;
-            --cms-menu-transparent-hover: #0d7caa;
-            --cms-menu-transparent-active: #0d7caa;
-            --cms-menu-transparent-regular-rgb: 34, 34, 34;
-            --cms-menu-transparent-hover-rgb: 1, 160, 76;
-            --cms-menu-transparent-active-rgb: 1, 160, 76;
-            --cms-ptitle-color: #fff;
-            --cms-ptitle-bg-color: #1b1a1a;
-            --cms-ptitle-bg-image: url(wp-content/uploads/ptitle-blog.webp);
-            --cms-ptitle-bg-overlay: rgba(var(--cms-primary-rgb), 0.25);
-            --cms-grey: #F9F9F9;
-            --cms-border: #EAEAEA;
-            --cms-border-05: rgba(234, 234, 234, 0.5);
-            --cms-green: #DBF844;
-            --cms-red: #ff0000;
-            --cms-popup-max-width: 620px;
-        }
-    </style>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <script src="wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
-    <link rel="https://api.w.org/" href="wp-json/index.html" />
-    <link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/10.json" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-    <meta name="generator" content="WordPress 6.6.1" />
-    <link rel="canonical" href="index.html" />
-    <link rel='shortlink' href='index.html' />
-    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-        href="wp-json/oembed/1.0/embed0b57.json?url=https%3A%2F%2Fdemo.cmssuperheroes.com%2Fthemeforest%2Fwealthup%2F" />
-    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-        href="wp-json/oembed/1.0/embed8a55?url=https%3A%2F%2Fdemo.cmssuperheroes.com%2Fthemeforest%2Fwealthup%2F&amp;format=xml" />
-    <div id="wp-theme-Harmonic Engineering" style="display:none;"></div>
-    <link rel="alternate" hreflang="en-US" href="index.html" />
-    <link rel="alternate" hreflang="ar" href="ar/index.html" />
-    <link rel="alternate" hreflang="en" href="index.html" />
-    <meta name="generator"
-        content="Elementor 3.23.4; features: e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading, e_lazyload; settings: css_print_method-external, google_font-enabled, font_display-swap">
-    <style>
-        .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
-        .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
-            background-image: none !important;
-        }
 
-        @media screen and (max-height: 1024px) {
 
-            .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
-            .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
-                background-image: none !important;
-            }
-        }
-
-        @media screen and (max-height: 640px) {
-
-            .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
-            .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
-                background-image: none !important;
-            }
-        }
-    </style>
-    <style id='wp-fonts-local'>
-        @font-face {
-            font-family: Inter;
-            font-style: normal;
-            font-weight: 300 900;
-            font-display: fallback;
-            src: url('wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt%2cwght.woff2') format('woff2');
-            font-stretch: normal;
-        }
-
-        @font-face {
-            font-family: Cardo;
-            font-style: normal;
-            font-weight: 400;
-            font-display: fallback;
-            src: url('wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
-        }
-    </style>
-    <link rel="icon" href="wp-content/uploads/cropped-logo-mobile-32x32.png" sizes="32x32" />
-    <link rel="icon" href="wp-content/uploads/cropped-logo-mobile-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="wp-content/uploads/cropped-logo-mobile-180x180.png" />
-    <meta name="msapplication-TileImage"
-        content="/wp-content/uploads/cropped-logo-mobile-270x270.png" />
-    <style id="wp-custom-css">
-        @media (max-width: 880px) {
-
-            .site-header-button,
-            .site-side-navs {
-                display: none;
-            }
-        }
-
-        .scroll-top {
-            rotate: -45deg;
-        }
-    </style>
-</head>
-
-<body
-    class="home page-template-default page page-id-10 cms-theme-cursor theme-wealthup translatepress-en_US cms-header-layout-1 cms-heading-font-default elementor-default elementor-kit-32 elementor-page elementor-page-10">
-    <header id="cms-header-wrap" class="site-header">
-        <div id="cms-header"
-            class="cms-header header-layout-1 sticky-on sticky-srollup transparent-off bg-primary header-shadow">
-            <div id="cms-header-top" class="cms-header-top header-top-default">
-                <div data-elementor-type="wp-post" data-elementor-id="154" class="elementor elementor-154">
-                    <div class="elementor-element elementor-element-fba1d44 e-con-boxed-wide bg-primary text-white elementor-hidden-mobile_extra elementor-hidden-mobile e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
-                        data-id="fba1d44" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;boxed-wide&quot;}">
-                        <div class="elementor-element elementor-element-b1c689d e-con-full p-tb-10 e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                            data-id="b1c689d" data-element_type="container"
-                            data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                            <div class="elementor-element elementor-element-5e2d8da text-13 elementor-widget elementor-widget-cms_navigation_menu"
-                                data-id="5e2d8da" data-element_type="widget"
-                                data-widget_type="cms_navigation_menu.default">
-                                <div class="elementor-widget-container">
-                                    <div class="cms-emenu cms-emenu-4">
-                                        <ul id="menu-header-top"
-                                            class="cms-menu cms-menu-horz justify-content-mobile-center">
-                                            <li id="menu-item-156"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156">
-                                                <a href="pricing/index.html"
-                                                    class="cms-menu-link text-white text-hover-white"><span
-                                                        class="menu-title title flex-basic d-flex">Pricing</span></a>
-                                            </li>
-                                            <li id="menu-item-157"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157">
-                                                <a href="careers/index.html"
-                                                    class="cms-menu-link text-white text-hover-white"><span
-                                                        class="menu-title title flex-basic d-flex">Careers</span></a>
-                                            </li>
-                                            <li id="menu-item-158"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158">
-                                                <a href="faqs/index.html"
-                                                    class="cms-menu-link text-white text-hover-white"><span
-                                                        class="menu-title title flex-basic d-flex">FAQs</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-2bc83ac e-con-full p-tb-10 e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                            data-id="2bc83ac" data-element_type="container"
-                            data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                            <div class="elementor-element elementor-element-dd9e318 elementor-widget__width-initial text-13 elementor-widget elementor-widget-cms_cta"
-                                data-id="dd9e318" data-element_type="widget" data-widget_type="cms_cta.default">
-                                <div class="elementor-widget-container">
-                                    <div class="cms-cta cms-cta-4 text-center"> <span
-                                            class="cms-desc text-grey empty-none">Impartial Consulting Services to
-                                            Empower Your Growth!</span> <a
-                                            class="cms-link ml-5 text-accent text-hover-grey cms-hover-move-icon-up font-700"
-                                            href="pricing/index.html"> Get Started <span
-                                                class="text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span> </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-257e077 e-con-full p-tb-10 e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                            data-id="257e077" data-element_type="container"
-                            data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                            <div class="elementor-element elementor-element-45d7a31 text-13 elementor-widget elementor-widget-cms_social_icons"
-                                data-id="45d7a31" data-element_type="widget"
-                                data-widget_type="cms_social_icons.default">
-                                <div class="elementor-widget-container">
-                                    <div
-                                        class="cms-social-icons cms-social-icons-1 d-flex align-items-center gap-20 justify-content-end justify-content-mobile-center">
-                                        <a class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-8379a35 text-accent text-hover-white"
-                                            href="https://facebook.com/" target="_blank" aria-label="Facebook"> <span
-                                                class="cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M32 16c0-8.838-7.163-16-16-16s-16 7.162-16 16 7.162 16 16 16c0.094 0 0.188 0 0.281-0.006v-12.45h-3.438v-4.006h3.438v-2.95c0-3.419 2.087-5.281 5.137-5.281 1.462 0 2.719 0.106 3.081 0.156v3.575h-2.1c-1.656 0-1.981 0.787-1.981 1.944v2.55h3.969l-0.519 4.006h-3.45v11.844c6.688-1.919 11.581-8.075 11.581-15.381z">
-                                                    </path>
-                                                </svg> </span> <span
-                                                class="cms-title text-grey cms-hidden-laptop cms-hidden-tablet_extra cms-hidden-tablet cms-hidden-mobile_extra cms-hidden-mobile">Facebook</span>
-                                        </a> <a
-                                            class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-d6ca4c2 text-accent text-hover-white"
-                                            href="https://twitter.com/" target="_blank" aria-label="Twitter"> <span
-                                                class="cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM23.305 12.475c0.007 0.157 0.011 0.316 0.011 0.475 0 4.853-3.694 10.449-10.449 10.449v0c-2.074 0-4.004-0.608-5.629-1.65 0.287 0.034 0.58 0.051 0.876 0.051 1.721 0 3.304-0.587 4.561-1.572-1.608-0.030-2.963-1.092-3.431-2.551 0.224 0.043 0.454 0.066 0.69 0.066 0.335 0 0.66-0.045 0.969-0.129-1.68-0.336-2.946-1.822-2.946-3.6 0-0.017 0-0.031 0-0.047 0.495 0.275 1.061 0.441 1.663 0.459-0.986-0.658-1.634-1.783-1.634-3.057 0-0.673 0.182-1.303 0.497-1.846 1.811 2.222 4.518 3.684 7.57 3.837-0.063-0.269-0.095-0.549-0.095-0.837 0-2.027 1.645-3.672 3.673-3.672 1.056 0 2.011 0.447 2.681 1.16 0.837-0.165 1.622-0.471 2.332-0.891-0.275 0.857-0.857 1.576-1.615 2.031 0.743-0.089 1.451-0.286 2.109-0.578-0.491 0.737-1.115 1.384-1.832 1.902z">
-                                                    </path>
-                                                </svg> </span> <span
-                                                class="cms-title text-grey cms-hidden-laptop cms-hidden-tablet_extra cms-hidden-tablet cms-hidden-mobile_extra cms-hidden-mobile">Twitter</span>
-                                        </a> <a
-                                            class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-9cf85f9 text-accent text-hover-white"
-                                            href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"> <span
-                                                class="cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM11.351 24.188h-3.897v-11.723h3.897zM9.402 10.863h-0.025c-1.308 0-2.153-0.9-2.153-2.025 0-1.15 0.872-2.026 2.205-2.026s2.153 0.875 2.179 2.026c0 1.125-0.846 2.025-2.205 2.025zM25.401 24.188h-3.896v-6.272c0-1.576-0.564-2.651-1.974-2.651-1.076 0-1.718 0.725-1.999 1.425-0.103 0.25-0.128 0.601-0.128 0.951v6.547h-3.896s0.051-10.624 0-11.723h3.896v1.66c0.518-0.799 1.444-1.935 3.512-1.935 2.564 0 4.486 1.676 4.486 5.276z">
-                                                    </path>
-                                                </svg> </span> <span
-                                                class="cms-title text-grey cms-hidden-laptop cms-hidden-tablet_extra cms-hidden-tablet cms-hidden-mobile_extra cms-hidden-mobile">LinkedIn</span>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="cms-header-main container-fluid d-flex gap-30 justify-content-between cms-radius-tltr-16 bg-white">
-                <div class="site-branding flex-auto d-flex justify-content-start"><a class="site-logo" href="index.html"
-                        title="Wealth Up" rel="home"><img width="197" height="49" alt="Wealth Up"
-                            src="wp-content/uploads/logo.png" data-mobile="assets/harmonic_eng.png"
-                            data-sticky="./wp-content/uploads/logo.png"
-                            data-sticky-mobile="assets/harmonic_eng.png" /></a></div>
-                <nav class="site-navigation site-navigation-dropdown justify-content-end flex-basic d-flex">
-                    <ul id="mastmenu" class="cms-primary-menu cms-primary-menu-dropdown">
-                        
-                        <li id="menu-item-78"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-icon menu-item-78">
-                            <a href="about-us/index.html" class="cms-menu-link"><span
-                                    class="menu-title title flex-basic d-flex">About<span
-                                        class="menu-icon order-left fa fa-gitlab"></span></span><span
-                                    class="main-menu-toggle text-10 lh-0 rtl-flip"><svg
-                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                        fill-hover="currentColor" viewBox="0 0 10 11"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path class="cms-hover-move-1"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                        <path class="cms-hover-move-2"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                    </svg></span></a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-145"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- has-icon menu-item-145">
-                                    <a href="about-us/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">About Us<span
-                                                class="menu-icon order-left fa fa-area-chart"></span></span></a></li>
-                                <li id="menu-item-79"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-79">
-                                    <a href="leadership/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Leadership Team</span></a></li>
-                                <li id="menu-item-80"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-80">
-                                    <a href="awards/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Awards &#038;
-                                            Recognition</span></a></li>
-                                <li id="menu-item-81"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-81">
-                                    <a href="request-consultation/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Request Consultation</span></a>
-                                </li>
-                                <li id="menu-item-483"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a
-                                        href="charts/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Charts and Graphs</span></a></li>
-                                <li id="menu-item-82"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-82">
-                                    <a href="pricing/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Pricing Plans</span></a></li>
-                                <li id="menu-item-83"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-83">
-                                    <a href="faqs/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Help &#038; FAQs</span></a></li>
-                                <li id="menu-item-84"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-84">
-                                    <a href="contacts/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Contact Us</span></a></li>
-                                <li id="menu-item-86"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-86">
-                                    <a href="careers/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Careers</span></a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-87"
-                            class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
-                            <a href="services/index.html" class="cms-menu-link"><span
-                                    class="menu-title title flex-basic d-flex">Services</span><span
-                                    class="main-menu-toggle text-10 lh-0 rtl-flip"><svg
-                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                        fill-hover="currentColor" viewBox="0 0 10 11"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path class="cms-hover-move-1"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                        <path class="cms-hover-move-2"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                    </svg></span></a>
-                            <div class="sub-menu sub-megamenu cms-megamenu-auto">
-                                <div data-elementor-type="wp-post" data-elementor-id="164"
-                                    class="elementor elementor-164">
-                                    <div class="elementor-element elementor-element-4fc5fab e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
-                                        data-id="4fc5fab" data-element_type="container"
-                                        data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
-                                        <div class="e-con-inner">
-                                            <div class="elementor-element elementor-element-a6c965f e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                                                data-id="a6c965f" data-element_type="container"
-                                                data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                                                <div class="elementor-element elementor-element-2a4b511 elementor-widget elementor-widget-cms_navigation_menu"
-                                                    data-id="2a4b511" data-element_type="widget"
-                                                    data-widget_type="cms_navigation_menu.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="cms-emenu cms-emenu--mega">
-                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20"> <a
-                                                                    class="text-heading"
-                                                                    href="services/index.html">Services</a></h2>
-                                                            <ul id="menu-footer-services"
-                                                                class="cms-menu cms-dropdown-mega">
-                                                                <li id="menu-item-118"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="service/financial-planning/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Financial
-                                                                            Planning</span></a></li>
-                                                                <li id="menu-item-119"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-119 cms-dropdown-mega-item">
-                                                                    <a href="service/wealth-management/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Wealth
-                                                                            Management</span></a></li>
-                                                                <li id="menu-item-120"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-120 cms-dropdown-mega-item">
-                                                                    <a href="service/portfolio-consulting/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Portfolio
-                                                                            Consulting</span></a></li>
-                                                                <li id="menu-item-121"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-121 cms-dropdown-mega-item">
-                                                                    <a href="service/mergers-acquisitions/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Mergers
-                                                                            &#038; Acquisitions</span></a></li>
-                                                                <li id="menu-item-122"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-122 cms-dropdown-mega-item">
-                                                                    <a href="service/sustainability-assurance/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Sustainability
-                                                                            Assurance</span></a></li>
-                                                                <li id="menu-item-123"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-123 cms-dropdown-mega-item">
-                                                                    <a href="service/crisis-management/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Crisis
-                                                                            Management</span></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-329d6db e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                                                data-id="329d6db" data-element_type="container"
-                                                data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                                                <div class="elementor-element elementor-element-9dbaf15 elementor-widget elementor-widget-cms_navigation_menu"
-                                                    data-id="9dbaf15" data-element_type="widget"
-                                                    data-widget_type="cms_navigation_menu.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="cms-emenu cms-emenu--mega">
-                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20"> <a
-                                                                    class="text-heading"
-                                                                    href="industries/index.html">Industries</a></h2>
-                                                            <ul id="menu-footer-industries"
-                                                                class="cms-menu cms-dropdown-mega">
-                                                                <li id="menu-item-124"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-124 cms-dropdown-mega-item">
-                                                                    <a href="industry/banking-finance/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Banking
-                                                                            &#038; Finance</span></a></li>
-                                                                <li id="menu-item-125"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-125 cms-dropdown-mega-item">
-                                                                    <a href="industry/sciences-healthcare/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Sciences
-                                                                            &#038; Healthcare</span></a></li>
-                                                                <li id="menu-item-126"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-126 cms-dropdown-mega-item">
-                                                                    <a href="industry/technology-software/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Technology
-                                                                            &#038; Software</span></a></li>
-                                                                <li id="menu-item-127"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-127 cms-dropdown-mega-item">
-                                                                    <a href="industry/education-training/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Education
-                                                                            &#038; Training</span></a></li>
-                                                                <li id="menu-item-128"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-128 cms-dropdown-mega-item">
-                                                                    <a href="industry/hospitality-leisure/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Hospitality
-                                                                            &#038; Leisure</span></a></li>
-                                                                <li id="menu-item-129"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-129 cms-dropdown-mega-item">
-                                                                    <a href="industry/power-utilities/index.html"
-                                                                        class="cms-menu-link text-link text-hover-link"><span
-                                                                            class="menu-child-icon flex-auto"><span
-                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                    class="cms-arrow-up cms-arrow-up-right"
-                                                                                    fill="currentColor"
-                                                                                    fill-hover="currentColor"
-                                                                                    viewBox="0 0 10 11"
-                                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                                    <path class="cms-hover-move-1"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                    <path class="cms-hover-move-2"
-                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                </svg></span></span><span
-                                                                            class="menu-title title flex-basic d-flex">Power
-                                                                            &#038; Utilities</span></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="menu-item-89"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-89">
-                            <a href="case-studies-modern/index.html" class="cms-menu-link"><span
-                                    class="menu-title title flex-basic d-flex">Case Studies</span><span
-                                    class="main-menu-toggle text-10 lh-0 rtl-flip"><svg
-                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                        fill-hover="currentColor" viewBox="0 0 10 11"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path class="cms-hover-move-1"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                        <path class="cms-hover-move-2"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                    </svg></span></a>
-                        </li>
-                        <li id="menu-item-92"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-92">
-                            <a href="blog-grid/index.html" class="cms-menu-link"><span
-                                    class="menu-title title flex-basic d-flex">Insights</span><span
-                                    class="main-menu-toggle text-10 lh-0 rtl-flip"><svg
-                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                        fill-hover="currentColor" viewBox="0 0 10 11"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path class="cms-hover-move-1"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                        <path class="cms-hover-move-2"
-                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                    </svg></span></a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-146"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-146">
-                                    <a href="blog-grid/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Blog Grid</span></a></li>
-                                <li id="menu-item-72"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-72">
-                                    <a href="blog-standard/index.html" class="cms-menu-link"><span
-                                            class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Blog Standard</span></a></li>
-                                <li id="menu-item-147"
-                                    class="menu-item menu-item-type-post_type menu-item-object-post megamenu- menu-item-147">
-                                    <a href="empowered-consumers-are-prepared-to-make-changes-in-response-to-disruptions/index.html"
-                                        class="cms-menu-link"><span class="menu-child-icon flex-auto"><span
-                                                class="d-block text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Single Post</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div
-                    class="site-tools has-tools site-tools flex-auto d-flex gap-20 justify-content-end align-items-center">
-                    <div class="site-header-item site-header-button pr-10 pr-tablet-extra-0"> <a
-                            class="h-btn h-btn1 btn-h-header bg-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up cms-radius-trbl-16"
-                            data-classes={"default":"bg-accent--text-white","transparent":"bg-accent--text-white"}
-                            href="request-consultation/index.html" target="_self" aria-label="Free Consultation "> <span
-                                class="cms-hidden-laptop-large">Free Consultation </span><span
-                                class="order-last text-10 lh-0"><svg class="cms-arrow-up cms-arrow-up-right"
-                                    fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path class="cms-hover-move-1"
-                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                    <path class="cms-hover-move-2"
-                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                </svg></span> <span class="screen-reader-text">Free Consultation </span> </a></div>
-                    
-                    <div class="site-side-navs cms-modal site-header-item" data-modal="#cms-side-nav"
-                        data-modal-mode="slide" data-modal-slide="right" data-modal-class="bg-white"
-                        data-modal-width="400px" data-modal-space="30px" data-close-text=""> <span
-                            class="cms-svg-icon cms-eicon lh-0 site-side-nav text-22 menu-color rtl-flip"><svg
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0 1.28572C0 0.812334 0.38376 0.428574 0.857143 0.428574H19.1429C19.6162 0.428574 20 0.812334 20 1.28572C20 1.7591 19.6162 2.14286 19.1429 2.14286H0.857143C0.38376 2.14286 0 1.7591 0 1.28572ZM0 7C0 6.52663 0.38376 6.14286 0.857143 6.14286H19.1429C19.6162 6.14286 20 6.52663 20 7C20 7.47337 19.6162 7.85715 19.1429 7.85715H0.857143C0.38376 7.85715 0 7.47337 0 7ZM0 12.7143C0 12.2409 0.38376 11.8571 0.857143 11.8571H19.1429C19.6162 11.8571 20 12.2409 20 12.7143C20 13.1877 19.6162 13.5714 19.1429 13.5714H0.857143C0.38376 13.5714 0 13.1877 0 12.7143Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0.201933 9.45757L9.11883 0.15299C9.31433 -0.0509968 9.63217 -0.0509968 9.82767 0.15299C10.0231 0.356977 10.0231 0.688603 9.82767 0.892591L1.63618 9.44017H19.4987C19.7754 9.44017 20 9.67452 20 9.96322C20 10.253 19.7754 10.4863 19.4987 10.4863H1.68529L9.82758 18.9826C10.0231 19.1866 10.0231 19.5182 9.82758 19.7222C9.63108 19.9272 9.31533 19.9262 9.11883 19.7222L0.201556 10.4183C0.174725 10.3917 -0.0219848 10.1897 0.00202705 9.88391C0.0210131 9.6427 0.164855 9.49383 0.201933 9.45757Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M13.588 13.9998C13.4826 13.9998 13.3772 13.9594 13.2965 13.8796L7 7.58222L0.703479 13.8796C0.542072 14.0401 0.281845 14.0401 0.120438 13.8796C-0.0401459 13.7182 -0.0401459 13.4579 0.120438 13.2965L6.41778 7L0.120438 0.703479C-0.0401459 0.542072 -0.0401459 0.281845 0.120438 0.120438C0.281845 -0.0401459 0.542072 -0.0401459 0.703479 0.120438L7 6.41778L13.2965 0.120438C13.4579 -0.0401459 13.7182 -0.0401459 13.8796 0.120438C14.0401 0.281845 14.0401 0.542072 13.8796 0.703479L7.58222 7L13.8796 13.2965C14.0401 13.4579 14.0401 13.7182 13.8796 13.8796C13.7989 13.9594 13.6935 13.9998 13.588 13.9998Z" />
-                            </svg> </span></div>
-                    <div id="main-menu-mobile" class="main-menu-mobile site-header-item cms-hidden-desktop-menu"> <span
-                            class="cms-svg-icon cms-eicon lh-0 open-menu text-22 menu-color rtl-flip"><svg
-                                viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0 1.28572C0 0.812334 0.38376 0.428574 0.857143 0.428574H19.1429C19.6162 0.428574 20 0.812334 20 1.28572C20 1.7591 19.6162 2.14286 19.1429 2.14286H0.857143C0.38376 2.14286 0 1.7591 0 1.28572ZM0 7C0 6.52663 0.38376 6.14286 0.857143 6.14286H19.1429C19.6162 6.14286 20 6.52663 20 7C20 7.47337 19.6162 7.85715 19.1429 7.85715H0.857143C0.38376 7.85715 0 7.47337 0 7ZM0 12.7143C0 12.2409 0.38376 11.8571 0.857143 11.8571H19.1429C19.6162 11.8571 20 12.2409 20 12.7143C20 13.1877 19.6162 13.5714 19.1429 13.5714H0.857143C0.38376 13.5714 0 13.1877 0 12.7143Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M13.588 13.9998C13.4826 13.9998 13.3772 13.9594 13.2965 13.8796L7 7.58222L0.703479 13.8796C0.542072 14.0401 0.281845 14.0401 0.120438 13.8796C-0.0401459 13.7182 -0.0401459 13.4579 0.120438 13.2965L6.41778 7L0.120438 0.703479C-0.0401459 0.542072 -0.0401459 0.281845 0.120438 0.120438C0.281845 -0.0401459 0.542072 -0.0401459 0.703479 0.120438L7 6.41778L13.2965 0.120438C13.4579 -0.0401459 13.7182 -0.0401459 13.8796 0.120438C14.0401 0.281845 14.0401 0.542072 13.8796 0.703479L7.58222 7L13.8796 13.2965C14.0401 13.4579 14.0401 13.7182 13.8796 13.8796C13.7989 13.9594 13.6935 13.9998 13.588 13.9998Z" />
-                            </svg> </span></div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main id="cms-main" class="cms-main is-elementor">
+<main id="cms-main" class="cms-main is-elementor">
         <div data-elementor-type="wp-page" data-elementor-id="10" class="elementor elementor-10">
             <div class="elementor-element elementor-element-9dd3828 e-con-full-no-space e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
                 data-id="9dd3828" data-element_type="container"
@@ -1036,7 +31,7 @@
                             <div class="swiper-wrapper">
                                 <div class="cms-slider-item swiper-slide relative "> <img loading="lazy"
                                         decoding="async" width="1920" height="1838"
-                                        src="wp-content/uploads/slider-1.webp"
+                                        src="/harmonic/engineering_excellence_2.jpg"
                                         class="cms-lazy lazy-loading cms-slider-img cms-slider-img-effect img-cover cms-slider-img0"
                                         alt="" loading="lazy" data-duration="4900" />
                                     <div class="cms-slider-content cms-overlay d-flex">
@@ -1047,17 +42,13 @@
                                                     data-cms-animation-delay="subtitle_animation_delay"></div>
                                                 <h2 class="cms-slider-title heading mt-n10 empty-none text-75 text-tablet-60 text-mobile-40 lh-108 text-white "
                                                     data-cms-animation="title_animation"
-                                                    data-cms-animation-delay="title_animation_delay">Providing
-                                                    Accurate<br /> & Actionable Advice<br /> To Help Our Clients!</h2>
+                                                    data-cms-animation-delay="title_animation_delay">Engineering Excellence<br /> with Integrity<br /> To Help Our Clients!</h2>
                                                 <div class="cms-slider-desc text-line-3 empty-none text-17 font-700 pt-10 text-white cms-hidden-mobile"
                                                     data-cms-animation="description_animation"
-                                                    data-cms-animation-delay="description_animation_delay">Our
-                                                    specialist team of consultants understands the importance of
-                                                    maintaining a long lasting relationships with clients to deliver
-                                                    specific investment solutions.</div>
+                                                    data-cms-animation-delay="description_animation_delay" style="color: light-gray;">We deliver top-quality structural engineering and construction solutions across Nepal, prioritizing safety and client satisfaction to bring your vision to life.</div>
                                                 <div
                                                     class="cms-slider-buttons d-flex gap-30 justify-content-start pt-35 empty-none">
-                                                    <a href="services/index.html"
+                                                    <a href="/service/q/all"
                                                         class="cms-slider-btn btn btn-lg btn-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_primary_animation"
                                                         data-cms-animation-delay="button_primary_animation_delay"> Our
@@ -1070,7 +61,7 @@
                                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                                 <path class="cms-hover-move-2"
                                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span> </a> <a href="about-us/index.html"
+                                                            </svg></span> </a> <a href="about"
                                                         class="cms-slider-btn btn btn-lg btn-white text-primary btn-hover-accent text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_secondary_animation"
                                                         data-cms-animation-delay="button_secondary_animation_delay">
@@ -1081,18 +72,11 @@
                                 </div>
                                 <div class="cms-slider-item swiper-slide relative "> <img loading="lazy"
                                         decoding="async" width="1920" height="1280"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                        data-src="/wp-content/uploads/slider-2.webp"
+                                        src="/harmonic/trusted.jpg"
+                                        
                                         class="cms-lazy lazy-loading cms-slider-img cms-slider-img-effect img-cover cms-slider-img1 lazyload"
                                         alt="" loading="lazy" data-duration="4900"
-                                        data-srcset="/wp-content/uploads/slider-2.webp 1920w, /wp-content/uploads/slider-2-570x380.webp 570w"
-                                        sizes="(max-width: 1920px) 100vw, 1920px" /><noscript><img loading="lazy"
-                                            decoding="async" width="1920" height="1280"
-                                            src="wp-content/uploads/slider-2.webp"
-                                            class="cms-lazy lazy-loading cms-slider-img cms-slider-img-effect img-cover cms-slider-img1 lazyload"
-                                            alt="" loading="lazy" data-duration="4900"
-                                            srcset="/wp-content/uploads/slider-2.webp 1920w, /wp-content/uploads/slider-2-570x380.webp 570w"
-                                            sizes="(max-width: 1920px) 100vw, 1920px" /></noscript>
+/><
                                     <div class="cms-slider-content cms-overlay d-flex">
                                         <div class="container d-flex justify-content-start text-start">
                                             <div class="cms-slider--content pt-120 pt-tablet-60 pt-mobile-30">
@@ -1101,17 +85,13 @@
                                                     data-cms-animation-delay="subtitle_animation_delay"></div>
                                                 <h2 class="cms-slider-title heading mt-n10 empty-none text-75 text-tablet-60 text-mobile-40 lh-108 text-white "
                                                     data-cms-animation="title_animation"
-                                                    data-cms-animation-delay="title_animation_delay">We Build Trust And
-                                                    <br /> Maintaining A Long <br /> Lasting Relations!</h2>
+                                                    data-cms-animation-delay="title_animation_delay">Transforming Spaces,<br /> Building Futures with Lasting Projects!</h2>
                                                 <div class="cms-slider-desc text-line-3 empty-none text-17 font-700 pt-10 text-white cms-hidden-mobile"
                                                     data-cms-animation="description_animation"
-                                                    data-cms-animation-delay="description_animation_delay">Our
-                                                    specialist team of consultants understands the importance of
-                                                    maintaining a long lasting relationships with clients to deliver
-                                                    specific investment solutions.</div>
+                                                    data-cms-animation-delay="description_animation_delay">From concept to construction, we turn innovative ideas into lasting structures, offering expertise in architectural design, feasibility studies, and project management for both public and private sectors.</div>
                                                 <div
                                                     class="cms-slider-buttons d-flex gap-30 justify-content-start pt-35 empty-none">
-                                                    <a href="services/index.html"
+                                                    <a href="/service/q/all"
                                                         class="cms-slider-btn btn btn-lg btn-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_primary_animation"
                                                         data-cms-animation-delay="button_primary_animation_delay"> Our
@@ -1124,7 +104,7 @@
                                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                                 <path class="cms-hover-move-2"
                                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span> </a> <a href="about-us/index.html"
+                                                            </svg></span> </a> <a href="about"
                                                         class="cms-slider-btn btn btn-lg btn-white text-primary btn-hover-accent text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_secondary_animation"
                                                         data-cms-animation-delay="button_secondary_animation_delay">
@@ -1135,18 +115,8 @@
                                 </div>
                                 <div class="cms-slider-item swiper-slide relative "> <img loading="lazy"
                                         decoding="async" width="1920" height="1281"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                        data-src="/wp-content/uploads/slider-3.webp"
-                                        class="cms-lazy lazy-loading cms-slider-img cms-slider-img-effect img-cover cms-slider-img2 lazyload"
-                                        alt="" loading="lazy" data-duration="4900"
-                                        data-srcset="/wp-content/uploads/slider-3.webp 1920w, /wp-content/uploads/slider-3-570x380.webp 570w"
-                                        sizes="(max-width: 1920px) 100vw, 1920px" /><noscript><img loading="lazy"
-                                            decoding="async" width="1920" height="1281"
-                                            src="wp-content/uploads/slider-3.webp"
-                                            class="cms-lazy lazy-loading cms-slider-img cms-slider-img-effect img-cover cms-slider-img2 lazyload"
-                                            alt="" loading="lazy" data-duration="4900"
-                                            srcset="/wp-content/uploads/slider-3.webp 1920w, /wp-content/uploads/slider-3-570x380.webp 570w"
-                                            sizes="(max-width: 1920px) 100vw, 1920px" /></noscript>
+                                        src="/harmonic/supervision.jpg"
+                                         />
                                     <div class="cms-slider-content cms-overlay d-flex">
                                         <div class="container d-flex justify-content-start text-start">
                                             <div class="cms-slider--content pt-120 pt-tablet-60 pt-mobile-30">
@@ -1155,17 +125,13 @@
                                                     data-cms-animation-delay="subtitle_animation_delay"></div>
                                                 <h2 class="cms-slider-title heading mt-n10 empty-none text-75 text-tablet-60 text-mobile-40 lh-108 text-white "
                                                     data-cms-animation="title_animation"
-                                                    data-cms-animation-delay="title_animation_delay">Global Consulting
-                                                    <br /> Firm Experienced In <br /> Financial Business!</h2>
+                                                    data-cms-animation-delay="title_animation_delay">Your Trusted Partner in </br> Infrastructure Development</h2>
                                                 <div class="cms-slider-desc text-line-3 empty-none text-17 font-700 pt-10 text-white cms-hidden-mobile"
                                                     data-cms-animation="description_animation"
-                                                    data-cms-animation-delay="description_animation_delay">Our
-                                                    specialist team of consultants understands the importance of
-                                                    maintaining a long lasting relationships with clients to deliver
-                                                    specific investment solutions.</div>
+                                                    data-cms-animation-delay="description_animation_delay">With a reputation built on trust and technical excellence, We offer a full suite of engineering services tailored to meet diverse project needs. We prioritize client success through personalized support and efficient, on-budget solutions.</div>
                                                 <div
                                                     class="cms-slider-buttons d-flex gap-30 justify-content-start pt-35 empty-none">
-                                                    <a href="services/index.html"
+                                                    <a href="/service/q/all"
                                                         class="cms-slider-btn btn btn-lg btn-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_primary_animation"
                                                         data-cms-animation-delay="button_primary_animation_delay"> Our
@@ -1178,7 +144,7 @@
                                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                                 <path class="cms-hover-move-2"
                                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span> </a> <a href="about-us/index.html"
+                                                            </svg></span> </a> <a href="about"
                                                         class="cms-slider-btn btn btn-lg btn-white text-primary btn-hover-accent text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_secondary_animation"
                                                         data-cms-animation-delay="button_secondary_animation_delay">
@@ -1207,19 +173,19 @@
                                         <div class="cms-dots-divider cms-divider-grow relative bg-white-50 mb-25">
                                             <div class="cms-dots--divider cms-divider--grow bg-white"
                                                 style="--cms-divider-duration:4900ms"></div>
-                                        </div> We help our clientsachieve their goals
+                                        </div> Excellence
                                     </span> <span
                                         class="cms-swiper-pagination-bullet cms-dots-text lh-147 max-180 text-line-3">
                                         <div class="cms-dots-divider cms-divider-grow relative bg-white-50 mb-25">
                                             <div class="cms-dots--divider cms-divider--grow bg-white"
                                                 style="--cms-divider-duration:4900ms"></div>
-                                        </div> Providing experience to your company
+                                        </div> Transforming Space and Lasting Projects
                                     </span> <span
                                         class="cms-swiper-pagination-bullet cms-dots-text lh-147 max-180 text-line-3">
                                         <div class="cms-dots-divider cms-divider-grow relative bg-white-50 mb-25">
                                             <div class="cms-dots--divider cms-divider--grow bg-white"
                                                 style="--cms-divider-duration:4900ms"></div>
-                                        </div> Knowledge to guide across process
+                                        </div> Trusted by many
                                     </span></div>
                             </div>
                         </div>
@@ -1235,28 +201,21 @@
                         data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;}">
                         <div class="elementor-element elementor-element-02eec69 cms-sticky elementor-widget elementor-widget-cms_video_player"
                             data-id="02eec69" data-element_type="widget"
-                            data-settings="{&quot;video_link&quot;:&quot;https:\/\/www.youtube.com\/watch?v=iYf3OgEdGmo&quot;,&quot;lightbox&quot;:&quot;yes&quot;}"
+                            data-settings="{&quot;video_link&quot;:&quot;https:\/\/www.youtube.com\/watch?v=&quot;,&quot;lightbox&quot;:&quot;yes&quot;}"
                             data-widget_type="cms_video_player.default">
                             <div class="elementor-widget-container">
                                 <div class="relative">
                                     <div
                                         class="cms-evideo   cms-evideo-3 relative cms-gradient-black-bt cms-radius-24 cms-shadow-1">
                                         <img loading="lazy" decoding="async" width="730" height="554"
-                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                            data-src="/wp-content/uploads/elementor/thumbs/banner-video-1-qro4zeq74u8udzxjwagkpgd5eo2aj8ua9mgzk4eq78.webp"
-                                            alt="banner-video-1"
-                                            class="cms-lazy lazy-loading img-cover cms-radius-24 lazyload"
-                                            loading="lazy" style="max-height:554px;min-height:554px" /><noscript><img
-                                                loading="lazy" decoding="async" width="730" height="554"
-                                                src="wp-content/uploads/elementor/thumbs/banner-video-1-qro4zeq74u8udzxjwagkpgd5eo2aj8ua9mgzk4eq78.webp"
-                                                alt="banner-video-1"
-                                                class="cms-lazy lazy-loading img-cover cms-radius-24 lazyload"
-                                                loading="lazy" style="max-height:554px;min-height:554px" /></noscript>
+                                            src="harmonic/harmonic-front.jpg"
+                                            
+                                            />
                                         <div class="absolute top-left mt-165">
                                             <div class="ml-n100 ml-laptop-n40 ml-tablet-extra-n20 d-inline-block">
                                                 <div class="cms-btn-video layout-3 bg-accent bg-hover-accent-darken text-white cms-radius-tl-16 p-20 text-center cms-transition"
                                                     data-elementor-open-lightbox="yes"
-                                                    data-elementor-lightbox="{&quot;type&quot;:&quot;video&quot;,&quot;videoType&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/embed\/iYf3OgEdGmo?feature=oembed&amp;mode=opaque&amp;loop=1&amp;autoplay=1&amp;controls=0&amp;mute=0&amp;rel=0&amp;modestbranding=0&quot;,&quot;modalOptions&quot;:{&quot;id&quot;:&quot;cms-lightbox-&quot;,&quot;entranceAnimation&quot;:&quot;&quot;,&quot;entranceAnimation_tablet&quot;:&quot;&quot;,&quot;entranceAnimation_mobile&quot;:&quot;&quot;,&quot;videoAspectRatio&quot;:169}}">
+                                                    data-elementor-lightbox="{&quot;type&quot;:&quot;video&quot;,&quot;videoType&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/embed\/?feature=oembed&amp;mode=opaque&amp;loop=1&amp;autoplay=1&amp;controls=0&amp;mute=0&amp;rel=0&amp;modestbranding=0&quot;,&quot;modalOptions&quot;:{&quot;id&quot;:&quot;cms-lightbox-&quot;,&quot;entranceAnimation&quot;:&quot;&quot;,&quot;entranceAnimation_tablet&quot;:&quot;&quot;,&quot;entranceAnimation_mobile&quot;:&quot;&quot;,&quot;videoAspectRatio&quot;:169}}">
                                                     <div class="cms-btn--video inner_class">
                                                         <div class="cms-btn-video-content d-flex flex-column gap-15">
                                                             <span
@@ -1336,49 +295,28 @@
                             data-id="045e304" data-element_type="widget" data-widget_type="cms_heading.default">
                             <div class="elementor-widget-container">
                                 <div class="cms-eheading cms-eheading-3 text-start">
-                                    <div class="cms-desc-bold empty-none text-body mt-n7">Our specialist team of
-                                        consultants understands the importance of maintaining a long lasting business
-                                        relationships with clients to deliver specific investment solutions for a long
-                                        term success.<br /> <br /> We also offer expert guidance, unlocking your
-                                        potential for growth and profitability that helps proof business investment in
-                                        our mission as business advisors!<br /></div>
+                                    <div class="cms-desc-bold empty-none text-body mt-n7">Harmonic Engineering Pvt. Ltd., based in Kathmandu, Nepal, is a leading structural engineering and construction firm, operating since 2017 and serving both public and private sectors.
+                                        <br /> <br /> The company specializes in a comprehensive range of services, from feasibility studies, surveys, and structural analysis to design, supervision, and cost estimation for various development projects. <br /></div>
                                     <div
                                         class="cms-heading-cta divider divider-left divider-accent-darken hover-icon-bounce bg-secondary-lighten cms-radius-16 pt-40 pb-30 p-lr-40 p-lr-smobile-20 mt-30 mb-20">
                                         <div
                                             class="cms-eicon text-64 text-accent text-hover-accent lh-0 cms-cta-icon mb-25">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="480pt" viewBox="0 0 480 480"
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="480pt" viewBox="0 0 24 24"
                                                 width="480pt">
-                                                <path
-                                                    d="m8 480h464c4.414062 0 8-3.585938 8-8v-48c0-4.414062-3.585938-8-8-8h-8v-112c0-4.414062-3.585938-8-8-8h-32c-4.414062 0-8 3.585938-8 8v16h-24c-4.414062 0-8 3.585938-8 8v24h-24c-4.414062 0-8 3.585938-8 8v16h-24c-4.414062 0-8 3.585938-8 8v32h-24v-8c0-.71875-.097656-1.449219-.296875-2.144531l-27.800781-99.992188c54.664062 19.425781 118.074218 7.464844 161.746094-36.207031l16-16c3.128906-3.128906 3.128906-8.183594 0-11.3125l-173.648438-173.65625v-60.6875c0-4.414062-3.585938-8-8-8-17.078125 0-32.742188 6.023438-45.105469 16h-26.894531c-92.640625 0-168 75.359375-168 168v232h-16c-4.414062 0-8 3.585938-8 8v48c0 4.414062 3.585938 8 8 8zm424-168h16v104h-16zm-32 24h16v80h-16zm-32 32h16v48h-16zm-32 24h16v24h-16zm-80-375.433594v55.433594c0 2.121094.839844 4.160156 2.34375 5.65625l170.34375 170.34375-10.34375 10.34375c-54.222656 54.222656-142.464844 54.222656-196.6875 0l-11.3125 11.3125c11.671875 11.671875 24.777344 21.039062 38.734375 28.199219l30.921875 111.234375v6.910156h-184v-232c0-57.34375 46.65625-104 104-104 4.414062 0 8-3.585938 8-8 0-28.167969 20.894531-51.535156 48-55.433594zm-216 167.433594c0-83.816406 68.183594-152 152-152h12.222656c-6.328125 9.425781-10.535156 20.390625-11.808594 32.238281-62.644531 3.929688-112.414062 56.136719-112.414062 119.761719v136h-24v16h24v16h-24v16h24v16h-24v16h24v16h-40zm-24 248h448v32h-24v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-16v-16h-16v16h-24zm0 0">
-                                                </path>
-                                                <path
-                                                    d="m288 192h8c4.414062 0 8-3.585938 8-8 0-30.878906-25.121094-56-56-56h-8c-4.414062 0-8 3.585938-8 8 0 30.878906 25.121094 56 56 56zm-.808594-16.007812c-18.960937-.375-34.71875-14.007813-38.390625-31.984376 18.960938.375 34.726563 14.007813 38.390625 31.984376zm0 0">
-                                                </path>
-                                                <path d="m112 384h16v16h-16zm0 0"></path>
-                                                <path d="m144 384h16v16h-16zm0 0"></path>
-                                                <path d="m176 384h16v16h-16zm0 0"></path>
+                                                <path d="M12.5 22.0001H4.07997C2.91997 22.0001 1.96997 21.0701 1.96997 19.9301V5.09011C1.96997 2.47011 3.91997 1.2801 6.30997 2.4501L10.75 4.63011C11.71 5.10011 12.5 6.3501 12.5 7.4101V22.0001Z" stroke="#292D32" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.97 15.0602V18.8402C21.97 21.0002 20.97 22.0002 18.81 22.0002H12.5V10.4202L12.97 10.5202L17.47 11.5302L19.5 11.9802C20.82 12.2702 21.9 12.9502 21.96 14.8702C21.97 14.9302 21.97 14.9902 21.97 15.0602Z" stroke="#292D32" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M5.5 9H8.97" stroke="#292D32" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M5.5 13H8.97" stroke="#292D32" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.47 11.53V14.75C17.47 15.99 16.46 17 15.22 17C13.98 17 12.97 15.99 12.97 14.75V10.52L17.47 11.53Z" stroke="#292D32" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.96 14.87C21.9 16.05 20.92 17 19.72 17C18.48 17 17.47 15.99 17.47 14.75V11.53L19.5 11.98C20.82 12.27 21.9 12.95 21.96 14.87Z" stroke="#292D32" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg></div>
-                                        <div class="cms-cta-text font-500 text-primary">We believe investing powers each
-                                            fund and aim to increase the diversity of ideas and to reduce volatility of
-                                            our investors funds!</div> <a
-                                            class="cms-cta-link cms-link font-700 text-15 mt-20 text-accent text-hover-accent cms-hover-underline cms-hover-move-icon-up"
-                                            href="request-consultation/index.html"> <span class="text-10 lh-0"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span> Get Started </a>
+                                        <div class="cms-cta-text font-500 text-primary">We also oversee construction and equipment installation, ensure production management and quality control, and offer institutional strengthening, management advisory, and training services.</div> 
                                     </div>
-                                    <div class="cms-desc pt-20 empty-none text-body">Financial success depends on
-                                        relying on a team of experts with in depth knowledge, unique ideas and a massive
-                                        experience in business application solutions to guide you through the process.
+                                    <div class="cms-desc pt-20 empty-none text-body">Harmonic Engineering relies on strong client relationships, a skilled workforce, efficient project management, and investments in advanced technology, all of which drive high-quality project delivery.
                                     </div>
                                     <div class="cms-heading-buttons d-flex gap-30 pt-30 justify-content-start"> <a
                                             class="btn btn-lg cms-hover-move-icon-up btn-accent text-white btn-hover-accent-darken text-hover-white"
-                                            href="request-consultation/index.html"> Find Your Advisor <span
+                                            href="contact"> Discuss Your Project <span
                                                 class="text-10 lh-0"><svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -1388,7 +326,7 @@
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                 </svg></span> </a> <a
                                             class="btn btn-lg btn-primary text-white btn-hover-accent text-hover-white"
-                                            href="about-us/index.html"> Read More </a></div>
+                                            href="about"> Read More </a></div>
                                     <div class="cms-heading-features pt-30 d-flex flex-col-1 flex-col-smobile-1 ">
                                         <div class="cms-list text-body hover-icon-bounce d-flex gap-15"> <span
                                                 class="cms-svg-icon cms-eicon lh-0 cms--ficon flex-auto text-8 d-flex align-items-center justify-content-center bg-secondary-lighten circle text-accent rtl-flip"><svg
@@ -1399,8 +337,7 @@
                                                     </path>
                                                 </svg> </span>
                                             <div class="feature-content flex-basic">
-                                                <div class="feature-title text-17 font-500 text-heading">Helping in make
-                                                    smart financial decisions.</div>
+                                                <div class="feature-title text-17 font-500 text-heading">Helping with constructing services</div>
                                                 <div class="desc text-15 pt-15 empty-none"></div>
                                             </div>
                                         </div>
@@ -1413,8 +350,7 @@
                                                     </path>
                                                 </svg> </span>
                                             <div class="feature-content flex-basic">
-                                                <div class="feature-title text-17 font-500 text-heading">Highly
-                                                    qualified consultants at service.</div>
+                                                <div class="feature-title text-17 font-500 text-heading">Highly qualified consulting services</div>
                                                 <div class="desc text-15 pt-15 empty-none"></div>
                                             </div>
                                         </div>
@@ -1433,8 +369,7 @@
                                     <div
                                         class="cms-smallheading text-accent-darken pb-20 mt-n7 text-17 font-500 empty-none">
                                     </div>
-                                    <h2 class="cms-heading empty-none text-heading mt-n8 lh-1375">Committed to provide
-                                        accurate and actionable advice to help our clients take finance decisions.</h2>
+                                    <h2 class="cms-heading empty-none text-heading mt-n8 lh-1375">Committed to offering clear, actionable advice for informed construction decisions.</h2>
                                 </div>
                             </div>
                         </div>
@@ -1454,9 +389,9 @@
                             <div class="cms-eheading cms-eheading-1 text-center">
                                 <div
                                     class="cms-smallheading text-accent-darken pb-20 mt-n7 text-17 font-500 empty-none">
-                                    Helping in make smart financial decisions.</div>
+                                    Helping in make smart cunstruction decisions.</div>
                                 <h2 class="cms-heading empty-none text-heading mt-n8 lh-1375">Putting the right
-                                    solutionsand methods in place.</h2>
+                                    solutions and methods in place.</h2>
                             </div>
                         </div>
                     </div>
@@ -1540,19 +475,8 @@
                                             <div class="cms-post-thumbnail relative pr-40">
                                                 <div class="overflow-hidden cms-radius-16"><img loading="lazy"
                                                         decoding="async" width="570" height="570"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/service-6-570x570.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:570px"
-                                                        data-srcset="/wp-content/uploads/service-6-570x570.webp 570w, /wp-content/uploads/service-6-600x600.webp 600w, /wp-content/uploads/service-6-150x150.webp 150w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="570" height="570"
-                                                            src="wp-content/uploads/service-6-570x570.webp"
-                                                            class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                            alt="" loading="lazy" data-duration=""
-                                                            style="max-height:570px"
-                                                            srcset="/wp-content/uploads/service-6-570x570.webp 570w, /wp-content/uploads/service-6-600x600.webp 600w, /wp-content/uploads/service-6-150x150.webp 150w"
-                                                            sizes="(max-width: 570px) 100vw, 570px" /></noscript></div>
+                                                        src="/harmonic/1.avif"
+                                                        /></div>
                                                 <div
                                                     class="cms-post-icon text-white text-64 lh-0 absolute bottom-right bg-accent cms-radius-tr-16 p-15 mb-80">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="480pt"
@@ -1571,22 +495,8 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/financial-planning/index.html">Financial
-                                                        Planning</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Financial
-                                                    planning is the process of taking a comprehensive look at your
-                                                    financial situation & building a specific financial plan to reach
-                                                    your goals.</div> <a href="service/financial-planning/index.html"
-                                                    class="btn btn-smd btn-outline-primary text-primary btn-hover-accent text-hover-white">Read
-                                                    More<span class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span></a>
+                                                        href="service/financial-planning/index.html">Feasibility study</a></h3>
+                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">A feasibility study is conducted to assess the practicality and viability of a proposed project. <br> (Soil, Buildings, and Bridges)</div> 
                                             </div>
                                         </div>
                                         <div
@@ -1594,19 +504,8 @@
                                             <div class="cms-post-thumbnail relative pr-40">
                                                 <div class="overflow-hidden cms-radius-16"><img loading="lazy"
                                                         decoding="async" width="570" height="570"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/service-5-570x570.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:570px"
-                                                        data-srcset="/wp-content/uploads/service-5-570x570.webp 570w, /wp-content/uploads/service-5-600x600.webp 600w, /wp-content/uploads/service-5-150x150.webp 150w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="570" height="570"
-                                                            src="wp-content/uploads/service-5-570x570.webp"
-                                                            class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                            alt="" loading="lazy" data-duration=""
-                                                            style="max-height:570px"
-                                                            srcset="/wp-content/uploads/service-5-570x570.webp 570w, /wp-content/uploads/service-5-600x600.webp 600w, /wp-content/uploads/service-5-150x150.webp 150w"
-                                                            sizes="(max-width: 570px) 100vw, 570px" /></noscript></div>
+                                                        src="/harmonic/2.avif"
+                                                        /></div>
                                                 <div
                                                     class="cms-post-icon text-white text-64 lh-0 absolute bottom-right bg-accent cms-radius-tr-16 p-15 mb-80">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="484pt"
@@ -1622,22 +521,10 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/wealth-management/index.html">Wealth
-                                                        Management</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Wealth
-                                                    management is an investment advisory practice focused on serving the
-                                                    needs of wealthy individuals, and practice a wide range of services.
-                                                </div> <a href="service/wealth-management/index.html"
-                                                    class="btn btn-smd btn-outline-primary text-primary btn-hover-accent text-hover-white">Read
-                                                    More<span class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span></a>
+                                                        href="service/wealth-management/index.html">Survey</a></h3>
+                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">A survey involves collecting data and measurements related to the project site, including topography, environmental factors, feasibility and design.
+
+                                                </div>
                                             </div>
                                         </div>
                                         <div
@@ -1645,19 +532,8 @@
                                             <div class="cms-post-thumbnail relative pr-40">
                                                 <div class="overflow-hidden cms-radius-16"><img loading="lazy"
                                                         decoding="async" width="570" height="570"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/service-4-570x570.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:570px"
-                                                        data-srcset="/wp-content/uploads/service-4-570x570.webp 570w, /wp-content/uploads/service-4-600x600.webp 600w, /wp-content/uploads/service-4-150x150.webp 150w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="570" height="570"
-                                                            src="wp-content/uploads/service-4-570x570.webp"
-                                                            class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                            alt="" loading="lazy" data-duration=""
-                                                            style="max-height:570px"
-                                                            srcset="/wp-content/uploads/service-4-570x570.webp 570w, /wp-content/uploads/service-4-600x600.webp 600w, /wp-content/uploads/service-4-150x150.webp 150w"
-                                                            sizes="(max-width: 570px) 100vw, 570px" /></noscript></div>
+                                                        src="/harmonic/building.png"
+                                                        /></div>
                                                 <div
                                                     class="cms-post-icon text-white text-64 lh-0 absolute bottom-right bg-accent cms-radius-tr-16 p-15 mb-80">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="480pt"
@@ -1687,42 +563,17 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/portfolio-consulting/index.html">Portfolio
-                                                        Consulting</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Control and tax
-                                                    efficiency are important to many investors. That’s why we offer many
-                                                    managed accounts for a diverse range of investment objectives.</div>
-                                                <a href="service/portfolio-consulting/index.html"
-                                                    class="btn btn-smd btn-outline-primary text-primary btn-hover-accent text-hover-white">Read
-                                                    More<span class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span></a>
+                                                        href="service/portfolio-consulting/index.html">Design</a></h3>
+                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Design refers to the creation of detailed plans and specifications for the construction of the project.</div>
+                                                
                                             </div>
                                         </div>
                                         <div
                                             class="cms-item cms-swiper-item swiper-slide hover-image-zoom-out cms-hover-change item-4">
                                             <div class="cms-post-thumbnail relative pr-40">
-                                                <div class="overflow-hidden cms-radius-16"><img loading="lazy"
+                                                <div class="overflow-hidden cms-radius-16"><img oading="lazy"
                                                         decoding="async" width="570" height="570"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/service-3-570x570.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:570px"
-                                                        data-srcset="/wp-content/uploads/service-3-570x570.webp 570w, /wp-content/uploads/service-3-600x600.webp 600w, /wp-content/uploads/service-3-150x150.webp 150w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="570" height="570"
-                                                            src="wp-content/uploads/service-3-570x570.webp"
-                                                            class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                            alt="" loading="lazy" data-duration=""
-                                                            style="max-height:570px"
-                                                            srcset="/wp-content/uploads/service-3-570x570.webp 570w, /wp-content/uploads/service-3-600x600.webp 600w, /wp-content/uploads/service-3-150x150.webp 150w"
-                                                            sizes="(max-width: 570px) 100vw, 570px" /></noscript></div>
+                                                        src="/harmonic/3.avif"" /></div>
                                                 <div
                                                     class="cms-post-icon text-white text-64 lh-0 absolute bottom-right bg-accent cms-radius-tr-16 p-15 mb-80">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="480pt"
@@ -1746,22 +597,9 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/mergers-acquisitions/index.html">Mergers &#038;
-                                                        Acquisitions</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">The term
-                                                    mergers and acquisitions (M&A) refers to the consolidation of
-                                                    companies or their business assets through financial transactions.
-                                                </div> <a href="service/mergers-acquisitions/index.html"
-                                                    class="btn btn-smd btn-outline-primary text-primary btn-hover-accent text-hover-white">Read
-                                                    More<span class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span></a>
+                                                        href="service/mergers-acquisitions/index.html">Supervision</a></h3>
+                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">The term oversees the construction work to ensure that it adheres to the approved designs, specifications, and schedules.
+                                                </div> 
                                             </div>
                                         </div>
                                         <div
@@ -1769,19 +607,8 @@
                                             <div class="cms-post-thumbnail relative pr-40">
                                                 <div class="overflow-hidden cms-radius-16"><img loading="lazy"
                                                         decoding="async" width="570" height="570"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/service-2-570x570.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:570px"
-                                                        data-srcset="/wp-content/uploads/service-2-570x570.webp 570w, /wp-content/uploads/service-2-600x600.webp 600w, /wp-content/uploads/service-2-150x150.webp 150w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="570" height="570"
-                                                            src="wp-content/uploads/service-2-570x570.webp"
-                                                            class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                            alt="" loading="lazy" data-duration=""
-                                                            style="max-height:570px"
-                                                            srcset="/wp-content/uploads/service-2-570x570.webp 570w, /wp-content/uploads/service-2-600x600.webp 600w, /wp-content/uploads/service-2-150x150.webp 150w"
-                                                            sizes="(max-width: 570px) 100vw, 570px" /></noscript></div>
+                                                        src="/wp-content/uploads/service-2-570x570.webp"
+                                                         /></div>
                                                 <div
                                                     class="cms-post-icon text-white text-64 lh-0 absolute bottom-right bg-accent cms-radius-tr-16 p-15 mb-80">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="480pt"
@@ -1807,22 +634,9 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/sustainability-assurance/index.html">Sustainability
-                                                        Assurance</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Sustainability
-                                                    issues are taking the centre stage now. Environmental & social
-                                                    related risks consistently rank amongst the top assessed risks.
-                                                </div> <a href="service/sustainability-assurance/index.html"
-                                                    class="btn btn-smd btn-outline-primary text-primary btn-hover-accent text-hover-white">Read
-                                                    More<span class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span></a>
+                                                        href="service/sustainability-assurance/index.html">Structural analysis</a></h3>
+                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25"> Engineers perform this analysis assessing the behavior of a structure under various conditions which ensure that the structure will be stable, safe, and durable.
+                                                </div> 
                                             </div>
                                         </div>
                                         <div
@@ -1830,19 +644,8 @@
                                             <div class="cms-post-thumbnail relative pr-40">
                                                 <div class="overflow-hidden cms-radius-16"><img loading="lazy"
                                                         decoding="async" width="570" height="570"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/service-1-570x570.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:570px"
-                                                        data-srcset="/wp-content/uploads/service-1-570x570.webp 570w, /wp-content/uploads/service-1-600x600.webp 600w, /wp-content/uploads/service-1-150x150.webp 150w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="570" height="570"
-                                                            src="wp-content/uploads/service-1-570x570.webp"
-                                                            class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                            alt="" loading="lazy" data-duration=""
-                                                            style="max-height:570px"
-                                                            srcset="/wp-content/uploads/service-1-570x570.webp 570w, /wp-content/uploads/service-1-600x600.webp 600w, /wp-content/uploads/service-1-150x150.webp 150w"
-                                                            sizes="(max-width: 570px) 100vw, 570px" /></noscript></div>
+                                                        src="/harmonic/4.avif"
+                                                        /></div>
                                                 <div
                                                     class="cms-post-icon text-white text-64 lh-0 absolute bottom-right bg-accent cms-radius-tr-16 p-15 mb-80">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="480pt"
@@ -1893,22 +696,8 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/crisis-management/index.html">Crisis
-                                                        Management</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">As the world
-                                                    becomes complex and connected, the threat of crisis looms more
-                                                    difficult as a reason of economic turmoil, geopolitical and climate
-                                                    change.</div> <a href="service/crisis-management/index.html"
-                                                    class="btn btn-smd btn-outline-primary text-primary btn-hover-accent text-hover-white">Read
-                                                    More<span class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span></a>
+                                                        href="service/crisis-management/index.html">Cost estimation</a></h3>
+                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Predicting the total cost of the project involves estimating expenses from the planning stage through to completion, accounting for materials, labor, permits, and unforeseen variables. </div> 
                                             </div>
                                         </div>
                                     </div>
@@ -1936,22 +725,11 @@
                         data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
                         data-widget_type="cms_cta.default">
                         <div class="elementor-widget-container">
-                            <div class="cms-cta cms-cta-2 text-15 text-body text-center"> We can help you work smarter
-                                and help you achieve your business goals. Speak to one of our advisers and <a
-                                    class="cms-link text-primary text-hover-accent font-700 cms-hover-underline cms-hover-move-icon-up"
-                                    href="request-consultation/index.html"> get free advice!<span
-                                        class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path class="cms-hover-move-1"
-                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                            <path class="cms-hover-move-2"
-                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                        </svg></span> </a>
+                            <div class="cms-cta cms-cta-2 text-15 text-body text-center"> No matter your project’s scale or industry, we provide the expertise, support, and solutions to help you build smarter and achieve your goals.
+
                                 <div class="cms-cta-btn text-center"> <a
                                         class="btn btn-lg cms-hover-move-icon-up btn-accent text-white btn-hover-accent-darken text-hover-white mt-25 empty-none"
-                                        href="services/index.html"> Explore All Services<span
+                                        href="/contact"> Contact US<span
                                             class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
                                                 class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                 fill-hover="currentColor" viewBox="0 0 10 11"
@@ -2000,48 +778,6 @@
                                             <div class="counter-item relative  hover-icon-bounce mb-n7">
                                                 <div
                                                     class="cms-eicon text-64 text-white text-hover-white lh-0 cms-counter-icon mb-145 mb-mobile-extra-40">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" height="496pt"
-                                                        viewBox="0 -8 496 496" width="496pt">
-                                                        <path
-                                                            d="m24 480h16v-64c0-2.128906-.839844-4.160156-2.34375-5.65625l-21.65625-21.65625v-68.6875c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v56h16v-128c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v232h16v-232c0-13.230469-10.769531-24-24-24-6.167969 0-11.742188 2.40625-16 6.238281-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.832031-9.832031-6.238281-16-6.238281-13.230469 0-24 10.769531-24 24v49.472656c-2.511719-.898437-5.183594-1.472656-8-1.472656-13.230469 0-24 10.769531-24 24v72c0 2.128906.839844 4.160156 2.34375 5.65625l21.65625 21.65625zm0 0">
-                                                        </path>
-                                                        <path
-                                                            d="m290.34375 218.34375c-1.503906 1.496094-2.34375 3.527344-2.34375 5.65625v256h16v-252.6875l21.65625-21.65625c1.503906-1.496094 2.34375-3.527344 2.34375-5.65625v-176c0-13.230469-10.769531-24-24-24s-24 10.769531-24 24v41.472656c-2.511719-.898437-5.183594-1.472656-8-1.472656-6.167969 0-11.742188 2.40625-16 6.238281-4.257812-3.839843-9.832031-6.238281-16-6.238281-2.816406 0-5.488281.574219-8 1.472656v-41.472656c0-13.230469-10.769531-24-24-24s-24 10.769531-24 24v96h-24c-4.414062 0-8 3.574219-8 8v48c0 2.128906.839844 4.160156 2.34375 5.65625l37.65625 37.65625v260.6875h16v-264c0-2.128906-.839844-4.160156-2.34375-5.65625l-37.65625-37.65625v-36.6875h70.632812c-3.304687 9.3125-12.199218 16-22.632812 16h-24v16h24c21.398438 0 38.785156-16.9375 39.808594-38.078125.0625-.058594.128906-.105469.191406-.160156 4.257812 3.839843 9.832031 6.238281 16 6.238281 13.230469 0 24-10.769531 24-24v-88c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v172.6875zm-50.34375-138.34375c4.40625 0 8 3.585938 8 8v24c0 4.414062-3.59375 8-8 8s-8-3.585938-8-8v-24c0-4.414062 3.59375-8 8-8zm-40-56c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v88c0 2.816406.574219 5.488281 1.472656 8h-17.472656zm72 96c-4.40625 0-8-3.585938-8-8v-24c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v24c0 4.414062-3.59375 8-8 8zm0 0">
-                                                        </path>
-                                                        <path
-                                                            d="m472 224c-6.167969 0-11.742188 2.40625-16 6.238281-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.839843-9.832031-6.238281-16-6.238281-13.230469 0-24 10.769531-24 24v49.472656c-2.511719-.898437-5.183594-1.472656-8-1.472656-13.230469 0-24 10.769531-24 24v72c0 2.128906.839844 4.160156 2.34375 5.65625l21.65625 21.65625v60.6875h16v-64c0-2.128906-.839844-4.160156-2.34375-5.65625l-21.65625-21.65625v-68.6875c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v56h16v-128c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v232h16v-232c0-13.230469-10.769531-24-24-24zm0 0">
-                                                        </path>
-                                                        <path d="m352 112h16v16h-16zm0 0"></path>
-                                                        <path d="m384 112h16v16h-16zm0 0"></path>
-                                                        <path d="m384 144h16v16h-16zm0 0"></path>
-                                                        <path d="m384 80h16v16h-16zm0 0"></path>
-                                                        <path d="m416 112h16v16h-16zm0 0"></path>
-                                                        <path d="m416 144h16v16h-16zm0 0"></path>
-                                                        <path d="m416 176h16v16h-16zm0 0"></path>
-                                                        <path d="m416 80h16v16h-16zm0 0"></path>
-                                                        <path d="m416 48h16v16h-16zm0 0"></path>
-                                                        <path d="m112 112h16v16h-16zm0 0"></path>
-                                                        <path d="m80 112h16v16h-16zm0 0"></path>
-                                                        <path d="m80 144h16v16h-16zm0 0"></path>
-                                                        <path d="m80 80h16v16h-16zm0 0"></path>
-                                                        <path d="m48 112h16v16h-16zm0 0"></path>
-                                                        <path d="m48 144h16v16h-16zm0 0"></path>
-                                                        <path d="m48 176h16v16h-16zm0 0"></path>
-                                                        <path d="m48 80h16v16h-16zm0 0"></path>
-                                                        <path d="m48 48h16v16h-16zm0 0"></path>
-                                                    </svg></div>
-                                                <div
-                                                    class="cms-counter-numbers text-40 heading font-500 d-flex lh-1 mb-20 text-white mt-n7">
-                                                    <span class="prefix"></span> <span
-                                                        class="cms-counter-number elementor-counter-number text-white"
-                                                        data-duration="3000" data-to-value="6154"
-                                                        data-delimiter=",">1</span> <span class="suffix"></span></div>
-                                                <div class="cms-counter-title text-15 text-white">Released projects and
-                                                    strategies planned by company in 2024.</div>
-                                            </div>
-                                            <div class="counter-item relative  hover-icon-bounce mb-n7">
-                                                <div
-                                                    class="cms-eicon text-64 text-white text-hover-white lh-0 cms-counter-icon mb-145 mb-mobile-extra-40">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="480pt"
                                                         viewBox="0 0 480 480" width="480pt">
                                                         <path
@@ -2080,15 +816,58 @@
                                                         <path d="m64 120h16v16h-16zm0 0"></path>
                                                         <path d="m0 168h16v16h-16zm0 0"></path>
                                                         <path d="m248 224h16v16h-16zm0 0"></path>
-                                                    </svg></div>
+                                                    </svg>    
+                                                </div>
                                                 <div
                                                     class="cms-counter-numbers text-40 heading font-500 d-flex lh-1 mb-20 text-white mt-n7">
                                                     <span class="prefix"></span> <span
                                                         class="cms-counter-number elementor-counter-number text-white"
-                                                        data-duration="3000" data-to-value="1784"
+                                                        data-duration="3000" data-to-value="29"
+                                                        data-delimiter=",">1</span> <span class="suffix"></span></div>
+                                                <div class="cms-counter-title text-15 text-white">Projects made by us till now.</div>
+                                            </div>
+                                            <div class="counter-item relative  hover-icon-bounce mb-n7">
+                                                <div
+                                                    class="cms-eicon text-64 text-white text-hover-white lh-0 cms-counter-icon mb-145 mb-mobile-extra-40">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="496pt"
+                                                        viewBox="0 -8 496 496" width="496pt">
+                                                        <path
+                                                            d="m24 480h16v-64c0-2.128906-.839844-4.160156-2.34375-5.65625l-21.65625-21.65625v-68.6875c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v56h16v-128c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v232h16v-232c0-13.230469-10.769531-24-24-24-6.167969 0-11.742188 2.40625-16 6.238281-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.832031-9.832031-6.238281-16-6.238281-13.230469 0-24 10.769531-24 24v49.472656c-2.511719-.898437-5.183594-1.472656-8-1.472656-13.230469 0-24 10.769531-24 24v72c0 2.128906.839844 4.160156 2.34375 5.65625l21.65625 21.65625zm0 0">
+                                                        </path>
+                                                        <path
+                                                            d="m290.34375 218.34375c-1.503906 1.496094-2.34375 3.527344-2.34375 5.65625v256h16v-252.6875l21.65625-21.65625c1.503906-1.496094 2.34375-3.527344 2.34375-5.65625v-176c0-13.230469-10.769531-24-24-24s-24 10.769531-24 24v41.472656c-2.511719-.898437-5.183594-1.472656-8-1.472656-6.167969 0-11.742188 2.40625-16 6.238281-4.257812-3.839843-9.832031-6.238281-16-6.238281-2.816406 0-5.488281.574219-8 1.472656v-41.472656c0-13.230469-10.769531-24-24-24s-24 10.769531-24 24v96h-24c-4.414062 0-8 3.574219-8 8v48c0 2.128906.839844 4.160156 2.34375 5.65625l37.65625 37.65625v260.6875h16v-264c0-2.128906-.839844-4.160156-2.34375-5.65625l-37.65625-37.65625v-36.6875h70.632812c-3.304687 9.3125-12.199218 16-22.632812 16h-24v16h24c21.398438 0 38.785156-16.9375 39.808594-38.078125.0625-.058594.128906-.105469.191406-.160156 4.257812 3.839843 9.832031 6.238281 16 6.238281 13.230469 0 24-10.769531 24-24v-88c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v172.6875zm-50.34375-138.34375c4.40625 0 8 3.585938 8 8v24c0 4.414062-3.59375 8-8 8s-8-3.585938-8-8v-24c0-4.414062 3.59375-8 8-8zm-40-56c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v88c0 2.816406.574219 5.488281 1.472656 8h-17.472656zm72 96c-4.40625 0-8-3.585938-8-8v-24c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v24c0 4.414062-3.59375 8-8 8zm0 0">
+                                                        </path>
+                                                        <path
+                                                            d="m472 224c-6.167969 0-11.742188 2.40625-16 6.238281-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.839843-9.832031-6.238281-16-6.238281s-11.742188 2.40625-16 6.238281c-4.257812-3.839843-9.832031-6.238281-16-6.238281-13.230469 0-24 10.769531-24 24v49.472656c-2.511719-.898437-5.183594-1.472656-8-1.472656-13.230469 0-24 10.769531-24 24v72c0 2.128906.839844 4.160156 2.34375 5.65625l21.65625 21.65625v60.6875h16v-64c0-2.128906-.839844-4.160156-2.34375-5.65625l-21.65625-21.65625v-68.6875c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v56h16v-128c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v104h16v-104c0-4.414062 3.59375-8 8-8s8 3.585938 8 8v232h16v-232c0-13.230469-10.769531-24-24-24zm0 0">
+                                                        </path>
+                                                        <path d="m352 112h16v16h-16zm0 0"></path>
+                                                        <path d="m384 112h16v16h-16zm0 0"></path>
+                                                        <path d="m384 144h16v16h-16zm0 0"></path>
+                                                        <path d="m384 80h16v16h-16zm0 0"></path>
+                                                        <path d="m416 112h16v16h-16zm0 0"></path>
+                                                        <path d="m416 144h16v16h-16zm0 0"></path>
+                                                        <path d="m416 176h16v16h-16zm0 0"></path>
+                                                        <path d="m416 80h16v16h-16zm0 0"></path>
+                                                        <path d="m416 48h16v16h-16zm0 0"></path>
+                                                        <path d="m112 112h16v16h-16zm0 0"></path>
+                                                        <path d="m80 112h16v16h-16zm0 0"></path>
+                                                        <path d="m80 144h16v16h-16zm0 0"></path>
+                                                        <path d="m80 80h16v16h-16zm0 0"></path>
+                                                        <path d="m48 112h16v16h-16zm0 0"></path>
+                                                        <path d="m48 144h16v16h-16zm0 0"></path>
+                                                        <path d="m48 176h16v16h-16zm0 0"></path>
+                                                        <path d="m48 80h16v16h-16zm0 0"></path>
+                                                        <path d="m48 48h16v16h-16zm0 0"></path>
+                                                    </svg>
+                                                    </div>
+                                                <div
+                                                    class="cms-counter-numbers text-40 heading font-500 d-flex lh-1 mb-20 text-white mt-n7">
+                                                    <span class="prefix"></span> <span
+                                                        class="cms-counter-number elementor-counter-number text-white"
+                                                        data-duration="3000" data-to-value="100"
                                                         data-delimiter=",">1</span> <span class="suffix"></span></div>
                                                 <div class="cms-counter-title text-15 text-white">Satisfied and happy
-                                                    clients we have served all over the world.</div>
+                                                    clients we have served.</div>
                                             </div>
                                             <div class="counter-item relative  hover-icon-bounce mb-n7">
                                                 <div
@@ -2114,10 +893,10 @@
                                                     </svg></div>
                                                 <div
                                                     class="cms-counter-numbers text-40 heading font-500 d-flex lh-1 mb-20 text-white mt-n7">
-                                                    <span class="prefix">0,</span> <span
+                                                    <span
                                                         class="cms-counter-number elementor-counter-number text-white"
-                                                        data-duration="3000" data-to-value="512"
-                                                        data-delimiter=".">1</span> <span class="suffix"></span></div>
+                                                        data-duration="3000" data-to-value="15"
+                                                        data-delimiter=",">1</span> <span class="suffix"></span></div>
                                                 <div class="cms-counter-title text-15 text-white">Qualified and
                                                     dedicated team of financial experts to help you.</div>
                                             </div>
@@ -2137,16 +916,8 @@
                                         <h2 class="cms-title mt-n8 text-white empty-none">Committed to clients, focused
                                             on results.</h2> <a
                                             class="btn-circle-1 cms-hover-move-icon-up text-white text-hover-primary mt-65"
-                                            href="contacts/index.html"> <span class="relative z-top"><span
-                                                    class="cms-svg-icon cms-eicon lh-0 text-10 d-block rtl-flip"><svg
-                                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                        fill-hover="currentColor" viewBox="0 0 10 11"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path class="cms-hover-move-1"
-                                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        <path class="cms-hover-move-2"
-                                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg></span>Schedule A Visit</span> </a>
+                                            href="/contact"> <span class="relative z-top"><span
+                                                    class="lh-0 text-10 d-block rtl-flip"></span>Schedule A Visit</span> </a>
                                     </div>
                                 </div>
                             </div>
@@ -2159,9 +930,8 @@
                         <div class="elementor-widget-container">
                             <div class="cms-eheading cms-eheading-1 text-start">
                                 <div class="cms-smallheading text-white pb-20 mt-n7 text-17 font-500 empty-none">A
-                                    global strategy designed to solve tomorrow’s challenges.</div>
-                                <h2 class="cms-heading empty-none text-white mt-n8 lh-1375">Take control of your
-                                    financial future and start growing your wealth and achieve your desired outcomes!
+                                    national strategy designed to solve tomorrow’s challenges.</div>
+                                <h2 class="cms-heading empty-none text-white mt-n8 lh-1375">We are committed to expanding our solutions to ensure resilience and minimize risk, building a foundation for lasting project.
                                 </h2>
                             </div>
                         </div>
@@ -2200,325 +970,131 @@
                                 <div class="elementor-widget-container">
                                     <div class="cms-pacc cms-pacc-1 cms-tabs">
                                         <div class="cms-pacc-item relative d-flex align-items-start gap-30 cms-tab-title cms-hover-change "
-                                            data-target="#cms-pacc-117">
+                                            data-target="#cms-pacc-117" >
                                             <div
-                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition">
-                                                <a href="industry/banking-finance/index.html"
-                                                    class="cms-readmore btn-circle-4 flex-auto cms-hover-show cms-hover-move-icon-up text-primary-regular bg-white text-hover-white bg-hover-accent-regular"
-                                                    data-title="Read More" aria-label="Read More"><span
-                                                        class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span><span class="screen-reader-text">Read
-                                                        More</span></a>
+                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition"  style="margin-left: 50px;">
+                                               
                                                 <div class="cms-content cms-img-cursor flex-basic">
-                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white"><a
-                                                            href="industry/banking-finance/index.html">Banking &#038;
-                                                            Finance</a></h3>
+                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white">Feasibility study</h3>
                                                     <div id="cms-pacc-117"
                                                         class="cms-excerpt text-15 pt-15 cms-tabs-content text-grey ">
-                                                        Our deep industry insight, technical expertise and technology
-                                                        solutions can become your platform for success in this market.
-                                                    </div> <span class="cms-cursor-pointer"> <span
-                                                            class="cms-cursor--pointer">
-                                                            <div class="post-thumb"><img loading="lazy" decoding="async"
-                                                                    width="220" height="220"
-                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                                    data-src="/wp-content/uploads/elementor/thumbs/industry-5-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                    alt="industry-5"
-                                                                    class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                    loading="lazy"
-                                                                    style="max-height:220px;min-height:220px" /><noscript><img
-                                                                        loading="lazy" decoding="async" width="220"
-                                                                        height="220"
-                                                                        src="wp-content/uploads/elementor/thumbs/industry-5-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                        alt="industry-5"
-                                                                        class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                        loading="lazy"
-                                                                        style="max-height:220px;min-height:220px" /></noscript>
-                                                            </div>
-                                                        </span> </span>
+                                                        A feasibility study is conducted to assess the practicality and viability of a proposed project. It involves determining whether the project is technically, economically, and legally feasible. 
+                                                    </div> 
                                                 </div>
                                             </div>
                                             <div
                                                 class="cms-post-meta tagcloud order-mobile-first flex-auto flex-mobile-full d-flex gap-10 align-items-start justify-content-end pr-30 pr-tablet-0">
-                                                <a href="industry-category/investment/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Investment</a><a
-                                                    href="industry-category/planning/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Planning</a>
+                                                <div 
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Soil</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Building</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Bridge</div>
                                             </div>
                                         </div>
                                         <div class="cms-pacc-item relative d-flex align-items-start gap-30 cms-tab-title cms-hover-change active"
                                             data-target="#cms-pacc-115">
                                             <div
-                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition">
-                                                <a href="industry/sciences-healthcare/index.html"
-                                                    class="cms-readmore btn-circle-4 flex-auto cms-hover-show cms-hover-move-icon-up text-primary-regular bg-white text-hover-white bg-hover-accent-regular"
-                                                    data-title="Read More" aria-label="Read More"><span
-                                                        class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span><span class="screen-reader-text">Read
-                                                        More</span></a>
+                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition"  style="margin-left: 50px;">
+                                                
                                                 <div class="cms-content cms-img-cursor flex-basic">
-                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white"><a
-                                                            href="industry/sciences-healthcare/index.html">Sciences
-                                                            &#038; Healthcare</a></h3>
+                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white" >Survey</h3>
                                                     <div id="cms-pacc-115"
                                                         class="cms-excerpt text-15 pt-15 cms-tabs-content text-grey active">
-                                                        Sciences and Healthcare practice helps biotech and medical
-                                                        clients develop future focused strategies and programmes.</div>
-                                                    <span class="cms-cursor-pointer"> <span class="cms-cursor--pointer">
-                                                            <div class="post-thumb"><img loading="lazy" decoding="async"
-                                                                    width="220" height="220"
-                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                                    data-src="/wp-content/uploads/elementor/thumbs/Sciences-Healthcare-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.jpg"
-                                                                    alt="Sciences-Healthcare"
-                                                                    class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                    loading="lazy"
-                                                                    style="max-height:220px;min-height:220px" /><noscript><img
-                                                                        loading="lazy" decoding="async" width="220"
-                                                                        height="220"
-                                                                        src="wp-content/uploads/elementor/thumbs/Sciences-Healthcare-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.jpg"
-                                                                        alt="Sciences-Healthcare"
-                                                                        class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                        loading="lazy"
-                                                                        style="max-height:220px;min-height:220px" /></noscript>
-                                                            </div>
-                                                        </span> </span>
+                                                        Survey involves collecting data and measurements related to the project site, including topography and environmental factors. This information is essential for structural analysis, helping to assess the feasibility and design of the project.</div>
                                                 </div>
                                             </div>
                                             <div
                                                 class="cms-post-meta tagcloud order-mobile-first flex-auto flex-mobile-full d-flex gap-10 align-items-start justify-content-end pr-30 pr-tablet-0">
-                                                <a href="industry-category/biotech/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Biotech</a><a
-                                                    href="industry-category/pharmaceutical/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Pharmaceutical</a>
+                                                <div 
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Soil</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Building</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Bridge</div>
                                             </div>
                                         </div>
                                         <div class="cms-pacc-item relative d-flex align-items-start gap-30 cms-tab-title cms-hover-change "
                                             data-target="#cms-pacc-113">
                                             <div
-                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition">
-                                                <a href="industry/technology-software/index.html"
-                                                    class="cms-readmore btn-circle-4 flex-auto cms-hover-show cms-hover-move-icon-up text-primary-regular bg-white text-hover-white bg-hover-accent-regular"
-                                                    data-title="Read More" aria-label="Read More"><span
-                                                        class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span><span class="screen-reader-text">Read
-                                                        More</span></a>
+                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition"  style="margin-left: 50px;">
                                                 <div class="cms-content cms-img-cursor flex-basic">
-                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white"><a
-                                                            href="industry/technology-software/index.html">Technology
-                                                            &#038; Software</a></h3>
+                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white">Structural analysis</h3>
                                                     <div id="cms-pacc-113"
-                                                        class="cms-excerpt text-15 pt-15 cms-tabs-content text-grey ">As
-                                                        artificial intelligence and the internet of things move from
-                                                        concept to reality, all business executives worry about change,
-                                                        but tech companies must cognizant of&hellip;</div> <span
-                                                        class="cms-cursor-pointer"> <span class="cms-cursor--pointer">
-                                                            <div class="post-thumb"><img loading="lazy" decoding="async"
-                                                                    width="220" height="220"
-                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                                    data-src="/wp-content/uploads/elementor/thumbs/industry-3-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                    alt="industry-3"
-                                                                    class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                    loading="lazy"
-                                                                    style="max-height:220px;min-height:220px" /><noscript><img
-                                                                        loading="lazy" decoding="async" width="220"
-                                                                        height="220"
-                                                                        src="wp-content/uploads/elementor/thumbs/industry-3-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                        alt="industry-3"
-                                                                        class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                        loading="lazy"
-                                                                        style="max-height:220px;min-height:220px" /></noscript>
-                                                            </div>
-                                                        </span> </span>
+                                                        class="cms-excerpt text-15 pt-15 cms-tabs-content text-grey ">Process of assessing the behavior of a structure under various conditions. Engineers perform this analysis to ensure that the structure will be stable, safe, and durable.</div> 
                                                 </div>
                                             </div>
                                             <div
                                                 class="cms-post-meta tagcloud order-mobile-first flex-auto flex-mobile-full d-flex gap-10 align-items-start justify-content-end pr-30 pr-tablet-0">
-                                                <a href="industry-category/intelligence/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Intelligence</a><a
-                                                    href="industry-category/security/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Security</a>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Building</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Bridge</div>
                                             </div>
                                         </div>
                                         <div class="cms-pacc-item relative d-flex align-items-start gap-30 cms-tab-title cms-hover-change "
                                             data-target="#cms-pacc-112">
                                             <div
-                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition">
-                                                <a href="industry/education-training/index.html"
-                                                    class="cms-readmore btn-circle-4 flex-auto cms-hover-show cms-hover-move-icon-up text-primary-regular bg-white text-hover-white bg-hover-accent-regular"
-                                                    data-title="Read More" aria-label="Read More"><span
-                                                        class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span><span class="screen-reader-text">Read
-                                                        More</span></a>
+                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition"  style="margin-left: 50px;">
                                                 <div class="cms-content cms-img-cursor flex-basic">
-                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white"><a
-                                                            href="industry/education-training/index.html">Education
-                                                            &#038; Training</a></h3>
+                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white">Design</h3>
                                                     <div id="cms-pacc-112"
                                                         class="cms-excerpt text-15 pt-15 cms-tabs-content text-grey ">
-                                                        Governments across the world are committed to raising attainment
-                                                        skills and access to lifelong learning.</div> <span
-                                                        class="cms-cursor-pointer"> <span class="cms-cursor--pointer">
-                                                            <div class="post-thumb"><img loading="lazy" decoding="async"
-                                                                    width="220" height="220"
-                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                                    data-src="/wp-content/uploads/elementor/thumbs/industry-4-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                    alt="industry-4"
-                                                                    class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                    loading="lazy"
-                                                                    style="max-height:220px;min-height:220px" /><noscript><img
-                                                                        loading="lazy" decoding="async" width="220"
-                                                                        height="220"
-                                                                        src="wp-content/uploads/elementor/thumbs/industry-4-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                        alt="industry-4"
-                                                                        class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                        loading="lazy"
-                                                                        style="max-height:220px;min-height:220px" /></noscript>
-                                                            </div>
-                                                        </span> </span>
+                                                        Design refers to the creation of detailed plans and specifications for the construction of the project.</div> 
                                                 </div>
                                             </div>
                                             <div
                                                 class="cms-post-meta tagcloud order-mobile-first flex-auto flex-mobile-full d-flex gap-10 align-items-start justify-content-end pr-30 pr-tablet-0">
-                                                <a href="industry-category/communities/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Communities</a><a
-                                                    href="industry-category/individuals/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Individuals</a>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Building</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Bridge</div>
                                             </div>
                                         </div>
                                         <div class="cms-pacc-item relative d-flex align-items-start gap-30 cms-tab-title cms-hover-change "
                                             data-target="#cms-pacc-111">
                                             <div
-                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition">
-                                                <a href="industry/hospitality-leisure/index.html"
-                                                    class="cms-readmore btn-circle-4 flex-auto cms-hover-show cms-hover-move-icon-up text-primary-regular bg-white text-hover-white bg-hover-accent-regular"
-                                                    data-title="Read More" aria-label="Read More"><span
-                                                        class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span><span class="screen-reader-text">Read
-                                                        More</span></a>
+                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition"  style="margin-left: 50px;">
                                                 <div class="cms-content cms-img-cursor flex-basic">
-                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white"><a
-                                                            href="industry/hospitality-leisure/index.html">Hospitality
-                                                            &#038; Leisure</a></h3>
+                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white">Supervision</h3>
                                                     <div id="cms-pacc-111"
                                                         class="cms-excerpt text-15 pt-15 cms-tabs-content text-grey ">
-                                                        Hospitality, leisure and tourism are vast areas that work in a
-                                                        variety of sectors from managing local sports centre or hotel.
-                                                    </div> <span class="cms-cursor-pointer"> <span
-                                                            class="cms-cursor--pointer">
-                                                            <div class="post-thumb"><img loading="lazy" decoding="async"
-                                                                    width="220" height="220"
-                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                                    data-src="/wp-content/uploads/elementor/thumbs/industry-1-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                    alt="industry-1"
-                                                                    class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                    loading="lazy"
-                                                                    style="max-height:220px;min-height:220px" /><noscript><img
-                                                                        loading="lazy" decoding="async" width="220"
-                                                                        height="220"
-                                                                        src="wp-content/uploads/elementor/thumbs/industry-1-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.webp"
-                                                                        alt="industry-1"
-                                                                        class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                        loading="lazy"
-                                                                        style="max-height:220px;min-height:220px" /></noscript>
-                                                            </div>
-                                                        </span> </span>
+                                                        Supervision refers to overseeing the construction work to ensure that it adheres to the approved designs, specifications, and schedules.
+                                                    </div> 
                                                 </div>
                                             </div>
                                             <div
                                                 class="cms-post-meta tagcloud order-mobile-first flex-auto flex-mobile-full d-flex gap-10 align-items-start justify-content-end pr-30 pr-tablet-0">
-                                                <a href="industry-category/hotels/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Hotels</a><a
-                                                    href="industry-category/tourism/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Tourism</a>
+                                                <div 
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Soil</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Building</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Bridge</div>
                                             </div>
                                         </div>
                                         <div class="cms-pacc-item relative d-flex align-items-start gap-30 cms-tab-title cms-hover-change "
                                             data-target="#cms-pacc-110">
                                             <div
-                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition">
-                                                <a href="industry/power-utilities/index.html"
-                                                    class="cms-readmore btn-circle-4 flex-auto cms-hover-show cms-hover-move-icon-up text-primary-regular bg-white text-hover-white bg-hover-accent-regular"
-                                                    data-title="Read More" aria-label="Read More"><span
-                                                        class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span><span class="screen-reader-text">Read
-                                                        More</span></a>
+                                                class="cms-pacc--item flex-basic d-flex gap-30 flex-nowrap cms-transition" style="margin-left: 50px;">
+                                                
                                                 <div class="cms-content cms-img-cursor flex-basic">
-                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white"><a
-                                                            href="industry/power-utilities/index.html">Power &#038;
-                                                            Utilities</a></h3>
+                                                    <h3 class="cms-heading text-line-2 text-20 lh-125 text-white">Cost estimation</h3>
                                                     <div id="cms-pacc-110"
                                                         class="cms-excerpt text-15 pt-15 cms-tabs-content text-grey ">
-                                                        Adapting to the climate change and a new energy mix will require
-                                                        new power sectors to think differently about every operations.
-                                                    </div> <span class="cms-cursor-pointer"> <span
-                                                            class="cms-cursor--pointer">
-                                                            <div class="post-thumb"><img loading="lazy" decoding="async"
-                                                                    width="220" height="220"
-                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                                    data-src="/wp-content/uploads/elementor/thumbs/power-utilities-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.jpg"
-                                                                    alt="power-utilities"
-                                                                    class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                    loading="lazy"
-                                                                    style="max-height:220px;min-height:220px" /><noscript><img
-                                                                        loading="lazy" decoding="async" width="220"
-                                                                        height="220"
-                                                                        src="wp-content/uploads/elementor/thumbs/power-utilities-qro4zeq0x6g16ku97q4c55qblenkt94lmt57cz98rc.jpg"
-                                                                        alt="power-utilities"
-                                                                        class="cms-lazy lazy-loading post-img circle lazyload"
-                                                                        loading="lazy"
-                                                                        style="max-height:220px;min-height:220px" /></noscript>
-                                                            </div>
-                                                        </span> </span>
+                                                        
+                                                        Predicting the total cost of the project involves estimating expenses from the planning stage through to completion, accounting for materials, labor, permits, and unforeseen variables. This process helps ensure that the project remains within budget and on schedule.
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div
                                                 class="cms-post-meta tagcloud order-mobile-first flex-auto flex-mobile-full d-flex gap-10 align-items-start justify-content-end pr-30 pr-tablet-0">
-                                                <a href="industry-category/climate/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Climate</a><a
-                                                    href="industry-category/energy/index.html"
-                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Energy</a>
+                                                <div 
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Soil</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Building</div>
+                                                <div
+                                                    class="cms-term tag-cloud-link tag-cloud-link2 text-white">Bridge</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2533,12 +1109,9 @@
                         <div class="elementor-widget-container">
                             <div
                                 class="cms-cta cms-cta-5 text-start d-flex justify-content-between align-items-center align-items-mobile-end gap-20">
-                                <span class="cms-desc text-15 text-body empty-none flex-basic max-510">To help our
-                                    clients go from dreaming to doing, we have our core beliefs that are central to
-                                    their investing success. We’re here to help with any questions you have on your path
-                                    to find financial security.</span> <a
+                                <span class="cms-desc text-15 text-body empty-none flex-basic max-510">Helping clients make informed decisions is our priority. We are committed to providing expert guidance to navigate the critical choices in every project’s journey.                                </span> <a
                                     class="btn-circle-2 bg-white text-primary-regular bg-hover-accent text-hover-white cms-hover-move-icon-up text-10 lh-0 rtl-flip"
-                                    href="contacts/index.html"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                    href="/contact"> <svg class="cms-arrow-up cms-arrow-up-right"
                                         fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path class="cms-hover-move-1"
@@ -2562,11 +1135,10 @@
                             <div class="cms-eheading cms-eheading-4 text-start d-flex gutter">
                                 <div
                                     class="cms-smallheading mt-n7 mb-n20 text-accent-darken font-500 empty-none col-6 col-tablet-5 col-mobile-extra-12">
-                                    Helping in make smart financial decisions.</div>
+                                    Tailored Strategies for Your Construction Success</div>
                                 <h2
                                     class="cms-heading empty-none lh-1375 text-heading mt-n8 col-6 col-tablet-7 col-mobile-extra-12 pl-90 pl-tablet-extra-20">
-                                    No matter how big you are and in what industries you do business, we can help you
-                                    work smarter, provide support and help you achieve all your business goals.</h2>
+                                    No matter your project's scale or industry, we provide the expertise, support, and solutions to help you build smarter and achieve your goals.</h2>
                             </div>
                         </div>
                     </div>
@@ -2585,14 +1157,8 @@
                                 <div
                                     class="cms-ebanner cms-ebanner-2 hover-image-zoom-out cms-radius-tr-64 overflow-hidden">
                                     <img loading="lazy" decoding="async" width="550" height="800"
-                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                        data-src="/wp-content/uploads/elementor/thumbs/banner-process-qro4zeq4xwhonh4ambocfzhxz8ogkrofjg0uq05igw.webp"
-                                        alt="banner-process" class="cms-lazy lazy-loading lazyload"
-                                        loading="lazy" /><noscript><img loading="lazy" decoding="async" width="550"
-                                            height="800"
-                                            src="wp-content/uploads/elementor/thumbs/banner-process-qro4zeq4xwhonh4ambocfzhxz8ogkrofjg0uq05igw.webp"
-                                            alt="banner-process" class="cms-lazy lazy-loading lazyload"
-                                            loading="lazy" /></noscript></div>
+                                        src="/harmonic/single.png"
+                                        /></div>
                             </div>
                         </div>
                     </div>
@@ -2605,16 +1171,11 @@
                             data-widget_type="cms_process.default">
                             <div class="elementor-widget-container">
                                 <div class="cms-eprocess cms-eprocess-1 text-start">
-                                    <h2 class="cms-heading empty-none mt-n7 text-24 text-heading lh-133">Helping people
-                                        make smart financial decisions is the most difficult mission. We are committed
-                                        to provide actionable advice to help our people navigate life’s big personal
-                                        finance decisions.</h2>
-                                    <div class="cms-desc pt-25 empty-none text-body">Our specialist team of consultants
-                                        understands the importance of maintaining a long lasting business relationships
-                                        with clients to deliver specific investment solutions for a long term success.
+                                    <h2 class="cms-heading empty-none mt-n7 text-24 text-heading lh-133">Helping clients make informed decisions is our priority. We are committed to providing expert guidance to navigate the critical choices in every project’s journey.                                    </h2>
+                                    <div class="cms-desc pt-25 empty-none text-body">Our expert team values long-lasting client relationships, delivering tailored engineering solutions that drive long-term success for every project.
                                     </div> <a
                                         class="btn btn-lg cms-hover-move-icon-up btn-accent text-white btn-hover-accent-darken text-hover-white mt-30 mb-110 mb-tablet-40"
-                                        href="request-consultation/index.html"> Request A Free Consultation <span
+                                        href="contact"> Request A Consultation <span
                                             class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
                                                 class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                 fill-hover="currentColor" viewBox="0 0 10 11"
@@ -2633,7 +1194,7 @@
                                         </div>
                                         <div class="cms--process cms-list d-flex gap-20">
                                             <div class="count text-accent font-500 pt-2 flex-auto empty-none">02.</div>
-                                            <div class="heading text-heading text-19 flex-basic empty-none">02. Provide
+                                            <div class="heading text-heading text-19 flex-basic empty-none">Provide
                                                 a comprehensive long term perspective</div>
                                             <div class="desc text-15 w-100 empty-none"></div>
                                         </div>
@@ -2661,13 +1222,8 @@
                             data-id="ae6dc41" data-element_type="widget" data-widget_type="cms_heading.default">
                             <div class="elementor-widget-container">
                                 <div class="cms-eheading cms-eheading-5 text-start">
-                                    <div class="text-heading font-700 mt-n7 empty-none">Our team works across markets
-                                        and capabilities to help you establish a true strategy that addresses the
-                                        realities of your business. Whether you want to improve the performance of work
-                                        or mitigate the risks of mergers and acquisitions.</div>
-                                    <div class="cms-desc-bold pt-20 empty-none text-body">We also offer expert guidance,
-                                        unlocking your potential for growth and profitability that helps proof business
-                                        investment in our mission as business advisors!</div>
+                                    <div class="text-heading font-700 mt-n7 empty-none">Unlocking Potential for Better Growth</div>
+                                    <div class="cms-desc-bold pt-20 empty-none text-body">With expert guidance and strategic insight, we help unlock growth opportunities that drive better project success. We're dedicated to enhancing profitability and ensuring lasting value in every initiative.</div>
                                     <div
                                         class="cms-heading-features cms-lists-2  pt-50 d-flex flex-col-1 flex-col-smobile-1 gap-30">
                                         <div
@@ -2684,10 +1240,8 @@
                                                 </svg></span>
                                             <div class="feature-content flex-basic pb-30 bdr-b-1">
                                                 <div class="feature-title mt-n3 cms-heading text-19 text-heading">
-                                                    Believe in power of implication</div>
-                                                <div class="feature-desc text-15 pt-15 mb-n7 text-body">We believe
-                                                    investing powers each fund and aim to increase diversity of ideas
-                                                    and reduce volatility of investors funds!</div>
+                                                    Believe in the Power of Impact</div>
+                                                <div class="feature-desc text-15 pt-15 mb-n7 text-body">We believe in the transformative power of impactful engineering. Through innovative planning and meticulous execution, we help shape environments that serve communities and clients alike.</div>
                                             </div>
                                         </div>
                                         <div
@@ -2709,11 +1263,8 @@
                                                     <path d="m264 352.003906h16v16h-16zm0 0"></path>
                                                 </svg></span>
                                             <div class="feature-content flex-basic pb-30 bdr-b-1">
-                                                <div class="feature-title mt-n3 cms-heading text-19 text-heading">Invest
-                                                    in great relationships</div>
-                                                <div class="feature-desc text-15 pt-15 mb-n7 text-body">Keeping close
-                                                    contact with our management and spending time on location, drive a
-                                                    deep operational understanding.</div>
+                                                <div class="feature-title mt-n3 cms-heading text-19 text-heading">Investing in Strong Client Partnerships</div>
+                                                <div class="feature-desc text-15 pt-15 mb-n7 text-body">We prioritize close collaboration with our clients, gaining in-depth understanding through on-site engagement and direct communication. These relationships drive effective, informed project execution.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2728,19 +1279,18 @@
                             data-id="c87e51c" data-element_type="widget" data-widget_type="cms_cta.default">
                             <div class="elementor-widget-container">
                                 <div class="cms-lazy lazy-loading cms-bg-cover cms-cta cms-cta-6 p-60 p-lr-smobile-20 cms-radius-bl-64 overflow-hidden hover-image-zoom-out"
-                                    style="--cms-bg-lazyload:url(wp-content/uploads/service-bg.webp);background-image:var(--cms-bg-lazyload-loaded);min-height:533px"
+                                    style="--cms-bg-lazyload:url(/harmonic/image10.jpg);background-image:var(--cms-bg-lazyload-loaded);min-height:533px"
                                     data-as-background="yes">
                                     <div class="p-40 cms-blur-bg cms-radius-24 max-290 cms-backdrop-1"> <a
                                             class="btn-circle-3 cms-hover-move-icon-up bg-white text-primary bg-hover-accent text-hover-white mb-40 text-10 lh-0"
-                                            href="services/index.html"><svg class="cms-arrow-up cms-arrow-up-right"
+                                            href="/service/q/all"><svg class="cms-arrow-up cms-arrow-up-right"
                                                 viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                 <path
                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                             </svg></a>
-                                        <div class="cms-heading text-24 lh-133 mb-n7 mt-n7 text-white">Consulting
-                                            services tailored for your financial needs!</div>
+                                        <div class="cms-heading text-24 lh-133 mb-n7 mt-n7 text-white">Construction services tailored for your projects needs!</div>
                                     </div>
                                 </div>
                             </div>
@@ -2762,7 +1312,7 @@
                                         <div class="text empty-none">The best solution</div>
                                     </div>
                                     <div class="cms-swiper-slide swiper-slide d-flex gap-40 pr-30">
-                                        <div class="text empty-none">for future business!</div>
+                                        <div class="text empty-none">for Your Next Construction Projects</div>
                                     </div>
                                 </div>
                             </div>
@@ -2781,30 +1331,19 @@
                         <div class="elementor-widget-container">
                             <div class="cms-efeature cms-efeature-1 d-flex gutter cms-hovers">
                                 <div class="col-7 col-tablet-6 col-mobile-extra-12 pr-90 pr-tablet-extra-20">
-                                    <div class="cms-smallheading empty-none text-white pb-30 m-tb-n7">We build trust and
-                                        maintaining a long lasting relations!</div>
-                                    <h2 class="cms-heading empty-none text-white m-tb-n7 pb-90">Our specialist team
-                                        understands the importance of a long lasting relationships with clients to
-                                        deliver specific investment solutions.</h2>
+                                    <div class="cms-smallheading empty-none text-white pb-30 m-tb-n7">We build the future where long lasting projects are common</div>
+                                    <h2 class="cms-heading empty-none text-white m-tb-n7 pb-90">Our experienced team recognizes the importance of providing tailored building and construction solutions with the added advantage of specialists.</h2>
                                     <div class="cms-efeature-lists cms-lists cms-lists-3 pl-110 pl-tablet-extra-0">
                                         <div class="cms-list cms-heading text-24 text-white hover-icon-stroke d-flex gap-30 flex-nowrap cms-hover "
                                             data-target="#feature-8d4453d"> <span class="cms-list-icon"><span
-                                                    class="cms-list--icon"></span></span> Long Term Relationships</div>
+                                                    class="cms-list--icon"></span></span> Creating enduring projects</div>
                                         <div class="cms-hidden-max-mobile-extra pt-20 pb-30"> <img loading="lazy"
                                                 decoding="async" width="440" height="540"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                data-src="/wp-content/uploads/elementor/thumbs/feature1-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature1"
-                                                class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" style="max-height:540px" /><noscript><img loading="lazy"
-                                                    decoding="async" width="440" height="540"
-                                                    src="wp-content/uploads/elementor/thumbs/feature1-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                    alt="feature1"
-                                                    class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                    loading="lazy" style="max-height:540px" /></noscript>
+                                                src="/harmonic/6.avif"
+                                                />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-8d4453d cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="services/index.html"> <svg
+                                                    href="/service/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -2812,30 +1351,19 @@
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                         <path class="cms-hover-move-2"
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg> </a> <span class="flex-basic">As artificial intelligence and
-                                                    the internet of things move from concept to reality, all business
-                                                    executives worry about change, but tech companies must cognizant of
-                                                    the forces driving change.</span></div>
+                                                    </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                         </div>
                                         <div class="cms-list cms-heading text-24 text-white hover-icon-stroke d-flex gap-30 flex-nowrap cms-hover active"
                                             data-target="#feature-3c17460"> <span class="cms-list-icon"><span
-                                                    class="cms-list--icon"></span></span> Trust and Confidentiality
+                                                    class="cms-list--icon"></span></span> Maintaining Confidentiality and Trust
                                         </div>
                                         <div class="cms-hidden-max-mobile-extra pt-20 pb-30"> <img loading="lazy"
                                                 decoding="async" width="440" height="540"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                data-src="/wp-content/uploads/elementor/thumbs/feature2-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature2"
-                                                class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" style="max-height:540px" /><noscript><img loading="lazy"
-                                                    decoding="async" width="440" height="540"
-                                                    src="wp-content/uploads/elementor/thumbs/feature2-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                    alt="feature2"
-                                                    class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                    loading="lazy" style="max-height:540px" /></noscript>
+                                                src="/harmonic/7.avif"
+                                                />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-3c17460 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="services/index.html"> <svg
+                                                    href="/service/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -2843,30 +1371,19 @@
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                         <path class="cms-hover-move-2"
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg> </a> <span class="flex-basic">As artificial intelligence and
-                                                    the internet of things move from concept to reality, all business
-                                                    executives worry about change, but tech companies must cognizant of
-                                                    the forces driving change.</span></div>
+                                                    </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                         </div>
                                         <div class="cms-list cms-heading text-24 text-white hover-icon-stroke d-flex gap-30 flex-nowrap cms-hover "
                                             data-target="#feature-d65f5d3"> <span class="cms-list-icon"><span
-                                                    class="cms-list--icon"></span></span> Comprehensive Understanding
+                                                    class="cms-list--icon"></span></span> Deep Project Insight
                                         </div>
                                         <div class="cms-hidden-max-mobile-extra pt-20 pb-30"> <img loading="lazy"
                                                 decoding="async" width="440" height="540"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                data-src="/wp-content/uploads/elementor/thumbs/feature3-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature3"
-                                                class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" style="max-height:540px" /><noscript><img loading="lazy"
-                                                    decoding="async" width="440" height="540"
-                                                    src="wp-content/uploads/elementor/thumbs/feature3-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                    alt="feature3"
-                                                    class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                    loading="lazy" style="max-height:540px" /></noscript>
+                                                src="/harmonic/8.avif"
+                                                />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-d65f5d3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="services/index.html"> <svg
+                                                    href="/service/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -2874,29 +1391,18 @@
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                         <path class="cms-hover-move-2"
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg> </a> <span class="flex-basic">As artificial intelligence and
-                                                    the internet of things move from concept to reality, all business
-                                                    executives worry about change, but tech companies must cognizant of
-                                                    the forces driving change.</span></div>
+                                                    </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                         </div>
                                         <div class="cms-list cms-heading text-24 text-white hover-icon-stroke d-flex gap-30 flex-nowrap cms-hover "
                                             data-target="#feature-70d5f84"> <span class="cms-list-icon"><span
-                                                    class="cms-list--icon"></span></span> Integrity and Expertise</div>
+                                                    class="cms-list--icon"></span></span> Integrity and Skilled Expertise</div>
                                         <div class="cms-hidden-max-mobile-extra pt-20 pb-30"> <img loading="lazy"
                                                 decoding="async" width="440" height="540"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                data-src="/wp-content/uploads/elementor/thumbs/feature4-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature4"
-                                                class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" style="max-height:540px" /><noscript><img loading="lazy"
-                                                    decoding="async" width="440" height="540"
-                                                    src="wp-content/uploads/elementor/thumbs/feature4-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                    alt="feature4"
-                                                    class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                    loading="lazy" style="max-height:540px" /></noscript>
+                                                src="/harmonic/9.avif"
+                                                />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-70d5f84 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="services/index.html"> <svg
+                                                    href="/service/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -2904,29 +1410,18 @@
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                         <path class="cms-hover-move-2"
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg> </a> <span class="flex-basic">As artificial intelligence and
-                                                    the internet of things move from concept to reality, all business
-                                                    executives worry about change, but tech companies must cognizant of
-                                                    the forces driving change.</span></div>
+                                                    </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                         </div>
                                         <div class="cms-list cms-heading text-24 text-white hover-icon-stroke d-flex gap-30 flex-nowrap cms-hover "
                                             data-target="#feature-38a7eb3"> <span class="cms-list-icon"><span
-                                                    class="cms-list--icon"></span></span> Client Centricity</div>
+                                                    class="cms-list--icon"></span></span> Client-Focused Approach</div>
                                         <div class="cms-hidden-max-mobile-extra pt-20 pb-30"> <img loading="lazy"
                                                 decoding="async" width="440" height="540"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                data-src="/wp-content/uploads/elementor/thumbs/feature5-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature5"
-                                                class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" style="max-height:540px" /><noscript><img loading="lazy"
-                                                    decoding="async" width="440" height="540"
-                                                    src="wp-content/uploads/elementor/thumbs/feature5-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                    alt="feature5"
-                                                    class="cms-lazy lazy-loading img-cover cms-radius-tl-64 mb-50 lazyload"
-                                                    loading="lazy" style="max-height:540px" /></noscript>
+                                                src="/harmonic/10.avif"
+                                                />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-38a7eb3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="services/index.html"> <svg
+                                                    href="/service/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -2934,453 +1429,94 @@
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                         <path class="cms-hover-move-2"
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg> </a> <span class="flex-basic">As artificial intelligence and
-                                                    the internet of things move from concept to reality, all business
-                                                    executives worry about change, but tech companies must cognizant of
-                                                    the forces driving change.</span></div>
+                                                    </svg> </a> <span class="flex-basic">At the core of our work is a commitment to building lasting partnerships founded on trust and confidentiality. Our team combines deep project insight with integrity and expertise, ensuring every project is executed to the highest standards. With a client-focused approach, we tailor our services to meet each client's unique vision and requirements, delivering results that exceed expectations.</span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div
                                     class="col-5 col-tablet-6 col-mobile-extra-12 pl-90 pl-tablet-extra-20 cms-hidden-mobile-extra">
                                     <div id="feature-8d4453d" class="feature-item cms-hover-content  pt-50"
-                                        style="display:none;"> <img loading="lazy" decoding="async" width="440"
-                                            height="540"
-                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                            data-src="/wp-content/uploads/elementor/thumbs/feature1-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                            alt="feature1" class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                            loading="lazy" /><noscript><img loading="lazy" decoding="async" width="440"
-                                                height="540"
-                                                src="wp-content/uploads/elementor/thumbs/feature1-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature1"
-                                                class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" /></noscript>
+                                        style="display:none;"> <img loading="lazy"
+                                                decoding="async" width="440" height="540"
+                                                src="/harmonic/6.avif"
+                                                />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-8d4453d cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="services/index.html"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                     <path class="cms-hover-move-2"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg> </a> <span class="flex-basic">As artificial intelligence and the
-                                                internet of things move from concept to reality, all business executives
-                                                worry about change, but tech companies must cognizant of the forces
-                                                driving change.</span></div>
+                                                </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                     </div>
                                     <div id="feature-3c17460" class="feature-item cms-hover-content active pt-50"
-                                        style="display:block;"> <img loading="lazy" decoding="async" width="440"
-                                            height="540"
-                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                            data-src="/wp-content/uploads/elementor/thumbs/feature2-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                            alt="feature2" class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                            loading="lazy" /><noscript><img loading="lazy" decoding="async" width="440"
-                                                height="540"
-                                                src="wp-content/uploads/elementor/thumbs/feature2-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature2"
-                                                class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" /></noscript>
+                                        style="display:block;"> <img loading="lazy"
+                                                decoding="async" width="440" height="540"
+                                                src="/harmonic/7.avif"
+                                                />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-3c17460 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="services/index.html"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                     <path class="cms-hover-move-2"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg> </a> <span class="flex-basic">As artificial intelligence and the
-                                                internet of things move from concept to reality, all business executives
-                                                worry about change, but tech companies must cognizant of the forces
-                                                driving change.</span></div>
+                                                </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                     </div>
                                     <div id="feature-d65f5d3" class="feature-item cms-hover-content  pt-50"
-                                        style="display:none;"> <img loading="lazy" decoding="async" width="440"
-                                            height="540"
-                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                            data-src="/wp-content/uploads/elementor/thumbs/feature3-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                            alt="feature3" class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                            loading="lazy" /><noscript><img loading="lazy" decoding="async" width="440"
-                                                height="540"
-                                                src="wp-content/uploads/elementor/thumbs/feature3-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature3"
-                                                class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" /></noscript>
+                                        style="display:none;"> <img loading="lazy"
+                                                decoding="async" width="440" height="540"
+                                                src="/harmonic/8.avif"
+                                                />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-d65f5d3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="services/index.html"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                     <path class="cms-hover-move-2"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg> </a> <span class="flex-basic">As artificial intelligence and the
-                                                internet of things move from concept to reality, all business executives
-                                                worry about change, but tech companies must cognizant of the forces
-                                                driving change.</span></div>
+                                                </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                     </div>
                                     <div id="feature-70d5f84" class="feature-item cms-hover-content  pt-50"
-                                        style="display:none;"> <img loading="lazy" decoding="async" width="440"
-                                            height="540"
-                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                            data-src="/wp-content/uploads/elementor/thumbs/feature4-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                            alt="feature4" class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                            loading="lazy" /><noscript><img loading="lazy" decoding="async" width="440"
-                                                height="540"
-                                                src="wp-content/uploads/elementor/thumbs/feature4-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature4"
-                                                class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" /></noscript>
+                                        style="display:none;"> <img loading="lazy"
+                                                decoding="async" width="440" height="540"
+                                                src="/harmonic/9.avif"
+                                                />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-70d5f84 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="services/index.html"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                     <path class="cms-hover-move-2"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg> </a> <span class="flex-basic">As artificial intelligence and the
-                                                internet of things move from concept to reality, all business executives
-                                                worry about change, but tech companies must cognizant of the forces
-                                                driving change.</span></div>
+                                                </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                     </div>
                                     <div id="feature-38a7eb3" class="feature-item cms-hover-content  pt-50"
-                                        style="display:none;"> <img loading="lazy" decoding="async" width="440"
-                                            height="540"
-                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                            data-src="/wp-content/uploads/elementor/thumbs/feature5-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                            alt="feature5" class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                            loading="lazy" /><noscript><img loading="lazy" decoding="async" width="440"
-                                                height="540"
-                                                src="wp-content/uploads/elementor/thumbs/feature5-qro4zeq3lnsr6s4r9epdbn0q9edd506d68qex0u3vc.webp"
-                                                alt="feature5"
-                                                class="cms-lazy lazy-loading cms-radius-tl-64 mb-50 lazyload"
-                                                loading="lazy" /></noscript>
+                                        style="display:none;"> <img loading="lazy"
+                                                decoding="async" width="440" height="540"
+                                                src="/harmonic/10.avif"
+                                                />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-38a7eb3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="services/index.html"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                     <path class="cms-hover-move-2"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg> </a> <span class="flex-basic">As artificial intelligence and the
-                                                internet of things move from concept to reality, all business executives
-                                                worry about change, but tech companies must cognizant of the forces
-                                                driving change.</span></div>
+                                                </svg> </a> <span class="flex-basic">We build lasting partnerships grounded in trust, confidentiality, and a client-focused approach. With deep insight, integrity, and expertise, we deliver results tailored to each client’s vision.</span></div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-28b3438 pt-130 pb-80 p-tb-tablet-60 e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
-                data-id="28b3438" data-element_type="container"
-                data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-4a2985d elementor-widget__width-initial pb-25 elementor-invisible elementor-widget elementor-widget-cms_heading"
-                        data-id="4a2985d" data-element_type="widget"
-                        data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                        data-widget_type="cms_heading.default">
-                        <div class="elementor-widget-container">
-                            <div class="cms-eheading cms-eheading-1 text-center">
-                                <div
-                                    class="cms-smallheading text-accent-darken pb-20 mt-n7 text-17 font-500 empty-none">
-                                    New ways to engage & empower clients</div>
-                                <h2 class="cms-heading empty-none text-heading mt-n8 lh-1375">Resources that will
-                                    guideyour decision making.</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-2d2f9ef cms-swiper-full-full cms-carousel-item-shadow-yes elementor-invisible elementor-widget elementor-widget-cms_case_carousel"
-                        data-id="2d2f9ef" data-element_type="widget"
-                        data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;space_between_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_between_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_between_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;infinite&quot;:&quot;yes&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;speed&quot;:500}"
-                        data-widget_type="cms_case_carousel.default">
-                        <div class="elementor-widget-container">
-                            <div id="cms_case_carousel-2d2f9ef" class="cms-post-carousel cms-grid cms-grid-3">
-                                <div class="cms-carousel swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="cms-item cms-swiper-item swiper-slide item-1">
-                                            <div
-                                                class="cms--item cms-radius-16 cms-shadow-2 cms-hover-shadow-2 cms-transition bg-white p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-15 mt-n5 tagcloud"> <a
-                                                        href="case-category/business/index.html"
-                                                        class="cms-term tag-cloud-link">Business</a><a
-                                                        href="case-category/mobile/index.html"
-                                                        class="cms-term tag-cloud-link">Mobile</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238"><a
-                                                        href="cases/how-should-business-adapt-to-support-our-world/index.html">How
-                                                        should business adapt to support our world?</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-3 pt-15 mb-25">Nowadays, we
-                                                    live in an increasingly mobile world, with information, goods and
-                                                    services moving around the globe faster than</div>
-                                                <div class="post-thumb d-flex align-items-end flex-nowrap"><img
-                                                        loading="lazy" decoding="async" width="280" height="200"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/elementor/thumbs/case1-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                        alt="case1"
-                                                        class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                        loading="lazy"
-                                                        style="max-height:200px;min-height:200px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="280" height="200"
-                                                            src="wp-content/uploads/elementor/thumbs/case1-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                            alt="case1"
-                                                            class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                            loading="lazy"
-                                                            style="max-height:200px;min-height:200px" /></noscript> <a
-                                                        href="cases/how-should-business-adapt-to-support-our-world/index.html"
-                                                        class="cms-readmore cms-readmore-2 cms-radius-tlbr-16 bg-accent bg-hover-accent text-white text-hover-white cms-hover-move-icon-up flex-auto"
-                                                        data-title="Read More"><span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span></a></div>
-                                            </div>
-                                        </div>
-                                        <div class="cms-item cms-swiper-item swiper-slide item-2">
-                                            <div
-                                                class="cms--item cms-radius-16 cms-shadow-2 cms-hover-shadow-2 cms-transition bg-white p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-15 mt-n5 tagcloud"> <a
-                                                        href="case-category/pricing/index.html"
-                                                        class="cms-term tag-cloud-link">Pricing</a><a
-                                                        href="case-category/tax/index.html"
-                                                        class="cms-term tag-cloud-link">Tax</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238"><a
-                                                        href="cases/a-catalyst-to-unlock-potential-in-tax-pricing-and-beyond/index.html">A
-                                                        catalyst unlock potential in tax pricing and beyond</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-3 pt-15 mb-25">The value and
-                                                    benefits offers the broader finance function and C-Suite,
-                                                    scalability to accommodate small to large scale</div>
-                                                <div class="post-thumb d-flex align-items-end flex-nowrap"><img
-                                                        loading="lazy" decoding="async" width="280" height="200"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/elementor/thumbs/case2-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                        alt="case2"
-                                                        class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                        loading="lazy"
-                                                        style="max-height:200px;min-height:200px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="280" height="200"
-                                                            src="wp-content/uploads/elementor/thumbs/case2-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                            alt="case2"
-                                                            class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                            loading="lazy"
-                                                            style="max-height:200px;min-height:200px" /></noscript> <a
-                                                        href="cases/a-catalyst-to-unlock-potential-in-tax-pricing-and-beyond/index.html"
-                                                        class="cms-readmore cms-readmore-2 cms-radius-tlbr-16 bg-accent bg-hover-accent text-white text-hover-white cms-hover-move-icon-up flex-auto"
-                                                        data-title="Read More"><span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span></a></div>
-                                            </div>
-                                        </div>
-                                        <div class="cms-item cms-swiper-item swiper-slide item-3">
-                                            <div
-                                                class="cms--item cms-radius-16 cms-shadow-2 cms-hover-shadow-2 cms-transition bg-white p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-15 mt-n5 tagcloud"> <a
-                                                        href="case-category/strategies/index.html"
-                                                        class="cms-term tag-cloud-link">Strategies</a><a
-                                                        href="case-category/tips/index.html"
-                                                        class="cms-term tag-cloud-link">Tips</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238"><a
-                                                        href="cases/strategies-for-attracting-and-retaining-prominent-talents/index.html">Strategies
-                                                        for attracting and retaining prominent talents</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-3 pt-15 mb-25">Trusted
-                                                    Advisors discuss how the search for CEOs has changed and all the
-                                                    steps private businesses can take in order to do the</div>
-                                                <div class="post-thumb d-flex align-items-end flex-nowrap"><img
-                                                        loading="lazy" decoding="async" width="280" height="200"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/elementor/thumbs/case3-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                        alt="case3"
-                                                        class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                        loading="lazy"
-                                                        style="max-height:200px;min-height:200px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="280" height="200"
-                                                            src="wp-content/uploads/elementor/thumbs/case3-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                            alt="case3"
-                                                            class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                            loading="lazy"
-                                                            style="max-height:200px;min-height:200px" /></noscript> <a
-                                                        href="cases/strategies-for-attracting-and-retaining-prominent-talents/index.html"
-                                                        class="cms-readmore cms-readmore-2 cms-radius-tlbr-16 bg-accent bg-hover-accent text-white text-hover-white cms-hover-move-icon-up flex-auto"
-                                                        data-title="Read More"><span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span></a></div>
-                                            </div>
-                                        </div>
-                                        <div class="cms-item cms-swiper-item swiper-slide item-4">
-                                            <div
-                                                class="cms--item cms-radius-16 cms-shadow-2 cms-hover-shadow-2 cms-transition bg-white p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-15 mt-n5 tagcloud"> <a
-                                                        href="case-category/investment/index.html"
-                                                        class="cms-term tag-cloud-link">Investment</a><a
-                                                        href="case-category/tech/index.html"
-                                                        class="cms-term tag-cloud-link">Tech</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238"><a
-                                                        href="cases/can-the-world-reverse-the-fall-in-climate-tech-investment/index.html">Can
-                                                        the world reverse the fallin climate tech investment?</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-3 pt-15 mb-25">The need for
-                                                    climate technology continues to rise, but equity investment in
-                                                    start-ups has declined for a second year amid</div>
-                                                <div class="post-thumb d-flex align-items-end flex-nowrap"><img
-                                                        loading="lazy" decoding="async" width="280" height="200"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/elementor/thumbs/case4-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                        alt="case4"
-                                                        class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                        loading="lazy"
-                                                        style="max-height:200px;min-height:200px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="280" height="200"
-                                                            src="wp-content/uploads/elementor/thumbs/case4-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                            alt="case4"
-                                                            class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                            loading="lazy"
-                                                            style="max-height:200px;min-height:200px" /></noscript> <a
-                                                        href="cases/can-the-world-reverse-the-fall-in-climate-tech-investment/index.html"
-                                                        class="cms-readmore cms-readmore-2 cms-radius-tlbr-16 bg-accent bg-hover-accent text-white text-hover-white cms-hover-move-icon-up flex-auto"
-                                                        data-title="Read More"><span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span></a></div>
-                                            </div>
-                                        </div>
-                                        <div class="cms-item cms-swiper-item swiper-slide item-5">
-                                            <div
-                                                class="cms--item cms-radius-16 cms-shadow-2 cms-hover-shadow-2 cms-transition bg-white p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-15 mt-n5 tagcloud"> <a
-                                                        href="case-category/business/index.html"
-                                                        class="cms-term tag-cloud-link">Business</a><a
-                                                        href="case-category/wealth/index.html"
-                                                        class="cms-term tag-cloud-link">Wealth</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238"><a
-                                                        href="cases/why-trustworthy-data-matters-to-your-business-and-brand/index.html">Why
-                                                        trustworthy data mattersto your business and brand?</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-3 pt-15 mb-25">Investment
-                                                    screening will introduce risk to a variety of firms, including those
-                                                    in asset wealth management, private equity</div>
-                                                <div class="post-thumb d-flex align-items-end flex-nowrap"><img
-                                                        loading="lazy" decoding="async" width="280" height="200"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/elementor/thumbs/case5-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                        alt="case5"
-                                                        class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                        loading="lazy"
-                                                        style="max-height:200px;min-height:200px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="280" height="200"
-                                                            src="wp-content/uploads/elementor/thumbs/case5-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                            alt="case5"
-                                                            class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                            loading="lazy"
-                                                            style="max-height:200px;min-height:200px" /></noscript> <a
-                                                        href="cases/why-trustworthy-data-matters-to-your-business-and-brand/index.html"
-                                                        class="cms-readmore cms-readmore-2 cms-radius-tlbr-16 bg-accent bg-hover-accent text-white text-hover-white cms-hover-move-icon-up flex-auto"
-                                                        data-title="Read More"><span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span></a></div>
-                                            </div>
-                                        </div>
-                                        <div class="cms-item cms-swiper-item swiper-slide item-6">
-                                            <div
-                                                class="cms--item cms-radius-16 cms-shadow-2 cms-hover-shadow-2 cms-transition bg-white p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-15 mt-n5 tagcloud"> <a
-                                                        href="case-category/investment/index.html"
-                                                        class="cms-term tag-cloud-link">Investment</a><a
-                                                        href="case-category/tips/index.html"
-                                                        class="cms-term tag-cloud-link">Tips</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238"><a
-                                                        href="cases/building-stakeholder-trust-for-a-sustainable-performance/index.html">Building
-                                                        stakeholder trust fora sustainable performance</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-3 pt-15 mb-25">Not only could
-                                                    they not reliably follow the balance of all their emissions, but
-                                                    they also didn’t have complete records and</div>
-                                                <div class="post-thumb d-flex align-items-end flex-nowrap"><img
-                                                        loading="lazy" decoding="async" width="280" height="200"
-                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                        data-src="/wp-content/uploads/elementor/thumbs/case6-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                        alt="case6"
-                                                        class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                        loading="lazy"
-                                                        style="max-height:200px;min-height:200px" /><noscript><img
-                                                            loading="lazy" decoding="async" width="280" height="200"
-                                                            src="wp-content/uploads/elementor/thumbs/case6-qro4zeq1nhpfs3v2e7p2l4dbwqf6zlh333i1fgbljk.webp"
-                                                            alt="case6"
-                                                            class="cms-lazy lazy-loading post-img img-cover cms-radius-tltrbl-16 flex-basic lazyload"
-                                                            loading="lazy"
-                                                            style="max-height:200px;min-height:200px" /></noscript> <a
-                                                        href="cases/building-stakeholder-trust-for-a-sustainable-performance/index.html"
-                                                        class="cms-readmore cms-readmore-2 cms-radius-tlbr-16 bg-accent bg-hover-accent text-white text-hover-white cms-hover-move-icon-up flex-auto"
-                                                        data-title="Read More"><span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span></a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-68d91d3 elementor-widget__width-initial text-15 pt-15 elementor-invisible elementor-widget elementor-widget-cms_cta"
-                        data-id="68d91d3" data-element_type="widget"
-                        data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                        data-widget_type="cms_cta.default">
-                        <div class="elementor-widget-container">
-                            <div class="cms-cta cms-cta-4 text-center"> <span
-                                    class="cms-desc text-body empty-none">Highly effective and professional working
-                                    company to guide and consult companies to sustainable success. Learn about our
-                                    expertise and successful projects in business! </span> <a
-                                    class="cms-link ml-5 text-primary-darken text-hover-accent-regular cms-hover-move-icon-up font-700"
-                                    href="contacts/index.html"> Get In Touch <span class="text-10 lh-0 rtl-flip"><svg
-                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path class="cms-hover-move-1"
-                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                            <path class="cms-hover-move-2"
-                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                        </svg></span> </a></div>
                         </div>
                     </div>
                 </div>
@@ -3484,7 +1620,8 @@
             </div>
             <div class="elementor-element elementor-element-ae1cdf2 cms-radius-64 overflow-hidden e-con-full-boxed-space-start e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
                 data-id="ae1cdf2" data-element_type="container"
-                data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;container_gradient&quot;:&quot;primary-overlay&quot;,&quot;content_width&quot;:&quot;full-boxed-space-start&quot;}">
+                data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;container_gradient&quot;:&quot;primary-overlay&quot;,&quot;content_width&quot;:&quot;full-boxed-space-start&quot;}"
+                style="background-image: url(/harmonic/11.avif);">
                 <div class="cms-gradient-render cms-econ-gradient cms-gradient-primary-overlay cms-overlay"></div>
                 <div class="elementor-element elementor-element-3340b09 e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no elementor-invisible e-con e-child"
                     data-id="3340b09" data-element_type="container"
@@ -3494,35 +1631,12 @@
                         <div class="elementor-widget-container">
                             <div class="cms-newsletter cms-newsletter-1 text-start"
                                 style="--cms-form-field-border:none;">
-                                <h2 class="cms-title cms-heading empty-none text-white pb-30 m-tb-n7">Delivering cutting
-                                    edge services for all your needs.</h2>
+                                <h2 class="cms-title cms-heading empty-none text-white pb-30 m-tb-n7">Provide modern facilities services for all of your requirements.
+                                </h2>
                                 <div class="cms-desc empty-none text-grey pb-40 m-tb-n7">
-                                    <p>Our specialist team understands the importance of a long lasting relationships
-                                        with clients to deliver specific solutions.</p>
+                                    <p>Our knowledgeable staff is aware that delivering long-lasting customized solutions requires solid client relationships.</p>
                                 </div>
-                                <form method="post"
-                                    action="/?page_id=271&amp;na=s"
-                                    class="cms-nlf-1 relative d-flex gap-20"> <input type="hidden" name="nlang"
-                                        value="">
-                                    <div class="tnp-field tnp-field-email"><input class="tnp-email" type="email"
-                                            name="ne" id="tnp-1" value="" placeholder="Type your email" required></div>
-                                    <div class="tnp-field tnp-field-button"><button
-                                            class="btn btn-lg btn-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up"
-                                            type="submit" value="Subscribe">Subscribe<span
-                                                class="text-10 lh-0 rtl-flip"><svg
-                                                    class="cms-arrow-up cms-arrow-up-right rtl-flip" fill="currentColor"
-                                                    fill-hover="currentColor" viewBox="0 0 10 11"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path class="cms-hover-move-1"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    <path class="cms-hover-move-2"
-                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                </svg></span></button></div>
-                                </form>
-                                <div class="cms-pp text-15 empty-none text-grey pt-15"> <span class="pp-text">By
-                                        subscribing, you accept the</span> <a
-                                        class="pp-link cms-hover-underline text-grey text-hover-grey"
-                                        href="privacy-policy/index.html">Privacy Policy</a></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -3538,20 +1652,14 @@
                                             <div class="cms-ttmn-content">
                                                 <div
                                                     class="cms-ttmn-desc heading text-24 lh-133 font-500 font-italic text-grey text-start swiper-nav-vert">
-                                                    They were professionals and made the right changes and adjustments
-                                                    to align project team with our culture and needs. Also, they took
-                                                    time to understand our operations which was essential for our
-                                                    providers and clients.</div>
+                                                    The experience has been fantastic. The consultants from Harmonic Engineering are trustworthy. For the benefit of our employees and clients, they took the time to learn about our business and requirements.</div>
                                             </div>
                                         </div>
                                         <div class="cms-ttmn-item cms-carousel-item swiper-slide">
                                             <div class="cms-ttmn-content">
                                                 <div
                                                     class="cms-ttmn-desc heading text-24 lh-133 font-500 font-italic text-grey text-start swiper-nav-vert">
-                                                    It’s been an excellent experience. Harmonic Engineering team of consultants is a
-                                                    trusted partner; they took the necessary time to understand our
-                                                    operations and needs, which was essential for our providers and
-                                                    clients.</div>
+                                                    They were experts who made necessary changes to match the project team with our culture and requirements. They also made sure to learn how we work, which was important for our staff and customers.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -3625,120 +1733,7 @@
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form
-                                        action="/#wpcf7-f272-p10-o1"
-                                        method="post" class="wpcf7-form init" aria-label="Contact form"
-                                        novalidate="novalidate" data-status="init">
-                                        <div style="display: none;"> <input type="hidden" name="_wpcf7" value="272" />
-                                            <input type="hidden" name="_wpcf7_version" value="5.9.8" /> <input
-                                                type="hidden" name="_wpcf7_locale" value="en_US" /> <input type="hidden"
-                                                name="_wpcf7_unit_tag" value="wpcf7-f272-p10-o1" /> <input type="hidden"
-                                                name="_wpcf7_container_post" value="10" /> <input type="hidden"
-                                                name="_wpcf7_posted_data_hash" value="" /></div>
-                                        <div class="row gutterx-40 guttery-30">
-                                            <div class="col-6 col-smobile-12"> <label class="label">Your name</label>
-                                                <span class="wpcf7-form-control-wrap" data-name="your-name"><input
-                                                        size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                        autocomplete="name" aria-required="true" aria-invalid="false"
-                                                        placeholder="Harmonic Engineering" value="" type="text"
-                                                        name="your-name" /></span></div>
-                                            <div class="col-6 col-smobile-12"> <label class="label">Email
-                                                    Address</label> <span class="wpcf7-form-control-wrap"
-                                                    data-name="your-email"><input size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                        autocomplete="email" aria-required="true" aria-invalid="false"
-                                                        placeholder="Name@Harmonic Engineering.com" value="" type="email"
-                                                        name="your-email" /></span></div>
-                                            <div class="col-6 col-smobile-12"> <label class="label">Company Name</label>
-                                                <span class="wpcf7-form-control-wrap" data-name="company"><input
-                                                        size="40" maxlength="400" class="wpcf7-form-control wpcf7-text"
-                                                        aria-invalid="false" placeholder="Harmonic Engineering" value="" type="text"
-                                                        name="company" /></span></div>
-                                            <div class="col-6 col-smobile-12"> <label class="label">Phone Number</label>
-                                                <span class="wpcf7-form-control-wrap" data-name="phone"><input size="40"
-                                                        maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-                                                        aria-required="true" aria-invalid="false"
-                                                        placeholder="002 010668811" value="" type="tel"
-                                                        name="phone" /></span></div>
-                                            <div class="col-6 col-smobile-12"> <label class="label">Website</label>
-                                                <span class="wpcf7-form-control-wrap" data-name="website"><input
-                                                        size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-url wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-url"
-                                                        aria-required="true" aria-invalid="false"
-                                                        placeholder="www.Harmonic Engineering.com" value="" type="url"
-                                                        name="website" /></span></div>
-                                            <div class="col-6 col-smobile-12"> <label class="label">Budget</label> <span
-                                                    class="wpcf7-form-control-wrap" data-name="budget"><select
-                                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                        aria-required="true" aria-invalid="false" name="budget">
-                                                        <option value="No capital required">No capital required</option>
-                                                        <option value="Uncertain">Uncertain</option>
-                                                        <option value="Under $500,000">Under $500,000</option>
-                                                        <option value="$50,000 - $100,000" selected="selected">$50,000 -
-                                                            $100,000</option>
-                                                        <option value="$500,000 - $999,999">$500,000 - $999,999</option>
-                                                        <option value="$1,000,000 - $2,499,999">$1,000,000 - $2,499,999
-                                                        </option>
-                                                        <option value="$2,500,000 - $4,999,999">$2,500,000 - $4,999,999
-                                                        </option>
-                                                        <option value="$5,000,000 - $9,999,999">$5,000,000 - $9,999,999
-                                                        </option>
-                                                        <option value="$10,000,000 or more">$10,000,000 or more</option>
-                                                    </select></span></div>
-                                            <div class="col-6 col-smobile-12"> <label class="label">Industry</label>
-                                                <span class="wpcf7-form-control-wrap" data-name="industry"><select
-                                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                        aria-required="true" aria-invalid="false" name="industry">
-                                                        <option value="Banking &amp; Finance">Banking &amp; Finance
-                                                        </option>
-                                                        <option value="Sciences &amp; Healthcare">Sciences &amp;
-                                                            Healthcare</option>
-                                                        <option value="Technology &amp; Software">Technology &amp;
-                                                            Software</option>
-                                                        <option value="Education &amp; Training">Education &amp;
-                                                            Training</option>
-                                                        <option value="Hospitality &amp; Leisure">Hospitality &amp;
-                                                            Leisure</option>
-                                                        <option value="Power &amp; Utilities">Power &amp; Utilities
-                                                        </option>
-                                                    </select></span></div>
-                                            <div class="col-6 col-smobile-12"> <label class="label">Expertise</label>
-                                                <span class="wpcf7-form-control-wrap" data-name="expertise"><select
-                                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                        aria-required="true" aria-invalid="false" name="expertise">
-                                                        <option value="Financial Planning">Financial Planning</option>
-                                                        <option value="Wealth Management">Wealth Management</option>
-                                                        <option value="Portfolio Consulting">Portfolio Consulting
-                                                        </option>
-                                                        <option value="Mergers &amp; Acquisitions">Mergers &amp;
-                                                            Acquisitions</option>
-                                                        <option value="Sustainability Assurance">Sustainability
-                                                            Assurance</option>
-                                                        <option value="Crisis Management">Crisis Management</option>
-                                                    </select></span></div>
-                                            <div class="col-12"> <label class="label">Business Description</label> <span
-                                                    class="wpcf7-form-control-wrap" data-name="your-message"><textarea
-                                                        cols="40" rows="10" maxlength="2000"
-                                                        class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"
-                                                        placeholder="Kindly provide enough information about your business..."
-                                                        name="your-message"></textarea></span></div>
-                                            <div class="col-12"><button
-                                                    class="wpcf7-form-control wpcf7-submit btn btn-lg btn-white text-primary btn-hover-accent text-hover-white w-100 cms-hover-move-icon-up"
-                                                    type="submit">Submit Request<span
-                                                        class="cms-svg-icon cms-eicon lh-0 wpcf7-submit-icon text-10 rtl-flip"><svg
-                                                            class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                            fill-hover="currentColor" viewBox="0 0 10 11"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path class="cms-hover-move-1"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            <path class="cms-hover-move-2"
-                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        </svg></span></button></div>
-                                        </div>
-                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                    </form>
+                                    @include("inner.contactus")
                                 </div>
                                 <div class="cms-note pt-30 text-15 font-italic text-grey empty-none"></div>
                             </div>
@@ -3746,803 +1741,6 @@
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-7519cee pt-130 pb-80 p-tb-tablet-60 e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
-                data-id="7519cee" data-element_type="container"
-                data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-b2e6af6 pb-25 elementor-invisible elementor-widget elementor-widget-cms_heading"
-                        data-id="b2e6af6" data-element_type="widget"
-                        data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                        data-widget_type="cms_heading.default">
-                        <div class="elementor-widget-container">
-                            <div class="cms-eheading cms-eheading-1 text-center">
-                                <div
-                                    class="cms-smallheading text-accent-darken pb-20 mt-n7 text-17 font-500 empty-none">
-                                    Our media Room</div>
-                                <h2 class="cms-heading empty-none text-heading mt-n8 lh-1375">News & Articles</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-591fb95 elementor-invisible elementor-widget elementor-widget-cms_blog_grid"
-                        data-id="591fb95" data-element_type="widget"
-                        data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-                        data-widget_type="cms_blog_grid.default">
-                        <div class="elementor-widget-container">
-                            <div id="cms_blog_grid-591fb95" class="cms-post-grid cms-grid cms-grid-1" data-layout="grid"
-                                data-start-page="1" data-max-pages="3" data-total="7" data-perpage="3"
-                                data-next-link="page/2/index.html">
-                                <div
-                                    class="cms-grid-content d-flex gutter flex-col-3 flex-col-tablet-2 flex-col-smobile-1">
-                                    <div class="cms-item hover-image-zoom-out cms-hover-change item-1">
-                                        <div class="cms--item cms-radius-16 cms-hover-shadow-2 cms-transition bg-white">
-                                            <div class="cms-post-thumbnail overflow-hidden relative cms-radius-16"><img
-                                                    loading="lazy" decoding="async" width="570" height="380"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                    data-src="/wp-content/uploads/blog-6-570x380.webp"
-                                                    class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                    alt="" loading="lazy" data-duration="" style="max-height:380px"
-                                                    data-srcset="/wp-content/uploads/blog-6-570x380.webp 570w, /wp-content/uploads/blog-6.webp 1280w"
-                                                    sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                        loading="lazy" decoding="async" width="570" height="380"
-                                                        src="wp-content/uploads/blog-6-570x380.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:380px"
-                                                        srcset="/wp-content/uploads/blog-6-570x380.webp 570w, /wp-content/uploads/blog-6.webp 1280w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /></noscript>
-                                                <div
-                                                    class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8 text-white">
-                                                    <div
-                                                        class="date text-40 text-mobile-30 heading font-500 lh-07 pb-12">
-                                                        21</div>
-                                                    <div class="month text-15 lh-08">Jun</div>
-                                                </div>
-                                            </div>
-                                            <div class="cms-content p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-10 mt-n5"> <a
-                                                        href="category/business/index.html"
-                                                        class="cms-term cms-hover-underline">Business</a>, <a
-                                                        href="category/digital/index.html"
-                                                        class="cms-term cms-hover-underline">Digital</a>, <a
-                                                        href="category/mobile/index.html"
-                                                        class="cms-term cms-hover-underline">Mobile</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238 pr-10"><a
-                                                        href="empowered-consumers-are-prepared-to-make-changes-in-response-to-disruptions/index.html">Empowered
-                                                        consumers are prepared to make changes in response to
-                                                        disruptions!</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-15">Global
-                                                    uncertainties and supply chain issues are also leading many
-                                                    consumers to look to their home markets, eight in ten respondents
-                                                    expressed a willingness to&hellip;</div> <a
-                                                    href="empowered-consumers-are-prepared-to-make-changes-in-response-to-disruptions/index.html"
-                                                    class="cms-readmore cms-readmore-1 cms-hover-move-icon-up"> <span
-                                                        class="cms-readmore--1 d-flex gap-10 align-items-center pr-10">
-                                                        <span class="text relative z-top">Read More</span> <span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span> </span> </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cms-item hover-image-zoom-out cms-hover-change item-2">
-                                        <div class="cms--item cms-radius-16 cms-hover-shadow-2 cms-transition bg-white">
-                                            <div class="cms-post-thumbnail overflow-hidden relative cms-radius-16"><img
-                                                    loading="lazy" decoding="async" width="570" height="380"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                    data-src="/wp-content/uploads/blog-5-570x380.webp"
-                                                    class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                    alt="" loading="lazy" data-duration="" style="max-height:380px"
-                                                    data-srcset="/wp-content/uploads/blog-5-570x380.webp 570w, /wp-content/uploads/blog-5.webp 1280w"
-                                                    sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                        loading="lazy" decoding="async" width="570" height="380"
-                                                        src="wp-content/uploads/blog-5-570x380.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:380px"
-                                                        srcset="/wp-content/uploads/blog-5-570x380.webp 570w, /wp-content/uploads/blog-5.webp 1280w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /></noscript>
-                                                <div
-                                                    class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8 text-white">
-                                                    <div
-                                                        class="date text-40 text-mobile-30 heading font-500 lh-07 pb-12">
-                                                        15</div>
-                                                    <div class="month text-15 lh-08">Jun</div>
-                                                </div>
-                                            </div>
-                                            <div class="cms-content p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-10 mt-n5"> <a
-                                                        href="category/growth/index.html"
-                                                        class="cms-term cms-hover-underline">Growth</a>, <a
-                                                        href="category/leadership/index.html"
-                                                        class="cms-term cms-hover-underline">Leadership</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238 pr-10"><a
-                                                        href="family-business-stands-to-gain-from-next-generations-focus-on-growth-and-sustainability/index.html">Family
-                                                        business stands to gain from next generation’s focus on growth
-                                                        and sustainability.</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-15">Leaders have
-                                                    become more engaged and committed to the business, the challenge is
-                                                    to build confidence between the current and next generation
-                                                    communication has...</div> <a
-                                                    href="family-business-stands-to-gain-from-next-generations-focus-on-growth-and-sustainability/index.html"
-                                                    class="cms-readmore cms-readmore-1 cms-hover-move-icon-up"> <span
-                                                        class="cms-readmore--1 d-flex gap-10 align-items-center pr-10">
-                                                        <span class="text relative z-top">Read More</span> <span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span> </span> </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cms-item hover-image-zoom-out cms-hover-change item-3">
-                                        <div class="cms--item cms-radius-16 cms-hover-shadow-2 cms-transition bg-white">
-                                            <div class="cms-post-thumbnail overflow-hidden relative cms-radius-16"><img
-                                                    loading="lazy" decoding="async" width="570" height="380"
-                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                    data-src="/wp-content/uploads/blog-4-570x380.webp"
-                                                    class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                    alt="" loading="lazy" data-duration="" style="max-height:380px"
-                                                    data-srcset="/wp-content/uploads/blog-4-570x380.webp 570w, /wp-content/uploads/blog-4.webp 1280w"
-                                                    sizes="(max-width: 570px) 100vw, 570px" /><noscript><img
-                                                        loading="lazy" decoding="async" width="570" height="380"
-                                                        src="wp-content/uploads/blog-4-570x380.webp"
-                                                        class="cms-lazy lazy-loading img-cover swiper-nav-vert lazyload"
-                                                        alt="" loading="lazy" data-duration="" style="max-height:380px"
-                                                        srcset="/wp-content/uploads/blog-4-570x380.webp 570w, /wp-content/uploads/blog-4.webp 1280w"
-                                                        sizes="(max-width: 570px) 100vw, 570px" /></noscript>
-                                                <div
-                                                    class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8 text-white">
-                                                    <div
-                                                        class="date text-40 text-mobile-30 heading font-500 lh-07 pb-12">
-                                                        13</div>
-                                                    <div class="month text-15 lh-08">Jun</div>
-                                                </div>
-                                            </div>
-                                            <div class="cms-content p-40 p-lr-smobile-20">
-                                                <div class="cms-post-meta text-13 pb-10 mt-n5"> <a
-                                                        href="category/challenges/index.html"
-                                                        class="cms-term cms-hover-underline">Challenges</a>, <a
-                                                        href="category/performance/index.html"
-                                                        class="cms-term cms-hover-underline">Performance</a></div>
-                                                <h3 class="cms-heading text-line-2 text-21 lh-1238 pr-10"><a
-                                                        href="productivity-risen-with-remote-working-but-worker-trust-may-pose-a-larger-challenge/index.html">Productivity
-                                                        risen with remote working, but worker trust may pose a larger
-                                                        challenge!</a></h3>
-                                                <div class="cms-excerpt text-15 text-line-4 pt-20 mb-15">Remote working
-                                                    seems to have boosted the productivity of a majority of business
-                                                    leaders, they said that their organisations performed better against
-                                                    workforce performance...</div> <a
-                                                    href="productivity-risen-with-remote-working-but-worker-trust-may-pose-a-larger-challenge/index.html"
-                                                    class="cms-readmore cms-readmore-1 cms-hover-move-icon-up"> <span
-                                                        class="cms-readmore--1 d-flex gap-10 align-items-center pr-10">
-                                                        <span class="text relative z-top">Read More</span> <span
-                                                            class="cms-svg-icon cms-eicon lh-0 text-10 rtl-flip"><svg
-                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                fill="currentColor" fill-hover="currentColor"
-                                                                viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
-                                                                <path class="cms-hover-move-1"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                <path class="cms-hover-move-2"
-                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                            </svg></span> </span> </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cms-grid-pagination d-none"
-                                    data-loadmore="{&quot;post_type&quot;:&quot;post&quot;,&quot;taxonomy&quot;:&quot;category&quot;,&quot;startPage&quot;:1,&quot;maxPages&quot;:3,&quot;total&quot;:7,&quot;perpage&quot;:3,&quot;nextLink&quot;:&quot;https:\/\/demo.cmssuperheroes.com\/themeforest\/Harmonic Engineering\/page\/2\/&quot;,&quot;pagination_type&quot;:&quot;false&quot;,&quot;layout&quot;:&quot;1&quot;,&quot;source&quot;:&quot;&quot;,&quot;orderby&quot;:&quot;date&quot;,&quot;order&quot;:&quot;desc&quot;,&quot;limit&quot;:3,&quot;thumbnail_size&quot;:&quot;medium&quot;,&quot;thumbnail_custom_dimension&quot;:{&quot;width&quot;:570,&quot;height&quot;:380},&quot;num_words&quot;:25,&quot;readmore_text&quot;:&quot;Read More&quot;,&quot;item_class&quot;:&quot;hover-image-zoom-out cms-hover-change&quot;}"
-                                    data-query="{&quot;post_type&quot;:&quot;post&quot;,&quot;post_status&quot;:&quot;publish&quot;,&quot;posts_per_page&quot;:3,&quot;order&quot;:&quot;desc&quot;,&quot;orderby&quot;:&quot;date&quot;,&quot;tax_query&quot;:{&quot;relation&quot;:&quot;OR&quot;},&quot;post__not_in&quot;:[10]}">
-                                    <nav class="navigation posts-pagination ajax">
-                                        <div class="posts-page-links d-flex"> <span aria-current="page"
-                                                class="page-numbers current">1</span> <a class="page-numbers"
-                                                href="#2">2</a> <a class="page-numbers" href="#3">3</a> <a
-                                                class="next page-numbers" href="#2">Next<span
-                                                    class="text-10 lh-0 d-inline-block"><svg
-                                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                        fill-hover="currentColor" viewBox="0 0 10 11"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path class="cms-hover-move-1"
-                                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        <path class="cms-hover-move-2"
-                                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg></span></a></div>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
-    <footer id="cms-footer" class="cms-footer relative cms-footer-elementor">
-        <div data-elementor-type="wp-post" data-elementor-id="135" class="elementor elementor-135">
-            <div class="elementor-element elementor-element-4718cf2 bg-primary text-white pt-110 pt-tablet-40 e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
-                data-id="4718cf2" data-element_type="container"
-                data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-3f08385 e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                        data-id="3f08385" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                        <div class="elementor-element elementor-element-e03ad9a elementor-widget elementor-widget-cms_navigation_menu"
-                            data-id="e03ad9a" data-element_type="widget" data-widget_type="cms_navigation_menu.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-emenu cms-emenu-1">
-                                    <h2 class="cms-title heading text-19 text-white mb-25 mt-n5"> About</h2>
-                                    <ul id="menu-footer-about" class="cms-navigation-menu cms-menu text-14">
-                                        <li id="menu-item-98"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98">
-                                            <a href="about-us/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">About Us</span></a></li>
-                                        <li id="menu-item-100"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100">
-                                            <a href="awards/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Sustainability</span></a>
-                                        </li>
-                                        <li id="menu-item-99"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
-                                            <a href="leadership/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Leadership
-                                                    Team</span></a></li>
-                                        <li id="menu-item-103"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103">
-                                            <a href="blog-grid/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">News &#038;
-                                                    Media</span></a></li>
-                                        <li id="menu-item-102"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102">
-                                            <a href="careers/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Careers</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-caa7556 e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                        data-id="caa7556" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                        <div class="elementor-element elementor-element-eda61b4 elementor-widget elementor-widget-cms_navigation_menu"
-                            data-id="eda61b4" data-element_type="widget" data-widget_type="cms_navigation_menu.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-emenu cms-emenu-1">
-                                    <h2 class="cms-title heading text-19 text-white mb-25 mt-n5"> Services</h2>
-                                    <ul id="menu-footer-services-1" class="cms-navigation-menu cms-menu text-14">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118">
-                                            <a href="service/financial-planning/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Financial
-                                                    Planning</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-119">
-                                            <a href="service/wealth-management/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Wealth
-                                                    Management</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-120">
-                                            <a href="service/portfolio-consulting/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Portfolio
-                                                    Consulting</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-121">
-                                            <a href="service/mergers-acquisitions/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Mergers &#038;
-                                                    Acquisitions</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-122">
-                                            <a href="service/sustainability-assurance/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Sustainability
-                                                    Assurance</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-123">
-                                            <a href="service/crisis-management/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Crisis
-                                                    Management</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-d451b84 e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                        data-id="d451b84" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                        <div class="elementor-element elementor-element-fdc6ec5 elementor-widget elementor-widget-cms_navigation_menu"
-                            data-id="fdc6ec5" data-element_type="widget" data-widget_type="cms_navigation_menu.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-emenu cms-emenu-1">
-                                    <h2 class="cms-title heading text-19 text-white mb-25 mt-n5"> Industries</h2>
-                                    <ul id="menu-footer-industries-1" class="cms-navigation-menu cms-menu text-14">
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-124">
-                                            <a href="industry/banking-finance/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Banking &#038;
-                                                    Finance</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-125">
-                                            <a href="industry/sciences-healthcare/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Sciences &#038;
-                                                    Healthcare</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-126">
-                                            <a href="industry/technology-software/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Technology &#038;
-                                                    Software</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-127">
-                                            <a href="industry/education-training/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Education &#038;
-                                                    Training</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-128">
-                                            <a href="industry/hospitality-leisure/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Hospitality &#038;
-                                                    Leisure</span></a></li>
-                                        <li
-                                            class="menu-item menu-item-type-post_type menu-item-object-cms-industry menu-item-129">
-                                            <a href="industry/power-utilities/index.html"
-                                                class="cms-menu-link text-white text-hover-white"><span
-                                                    class="menu-title title flex-basic d-flex">Power &#038;
-                                                    Utilities</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-767afed e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                        data-id="767afed" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                        <div class="elementor-element elementor-element-f9e7cee elementor-widget elementor-widget-cms_quickcontact"
-                            data-id="f9e7cee" data-element_type="widget" data-widget_type="cms_quickcontact.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-eqc cms-eqc-1 ">
-                                    <h2 class="cms-title text-19 text-white mb-30 mt-n5">Quick Contact</h2> <a
-                                        class="cms-eqc-item d-flex align-items-center gap-10  cms-email text-accent text-hover-white"
-                                        href="mailto:Harmonic Engineering@cmsheroes.com" target="_blank"> <span
-                                            class="cms-email-title cms-icon-color text-accent empty-none "></span> <span
-                                            class="cms-email-text text-accent text-hover-white">Harmonic Engineering@cmsheroes.com</span>
-                                    </a> <a
-                                        class="cms-eqc-item d-flex align-items-center gap-10 mt-15  cms-phone text-white text-hover-accent"
-                                        href="tel:+201161145741"> <span
-                                            class="cms-phone-title cms-icon-color text-primary empty-none "></span>
-                                        <span class="cms-phone-text">+2 011 6114 5741</span> </a>
-                                    <div
-                                        class="cms-social-icons cms-social-icons-1 d-flex align-items-center gap-15 text-13 pt-30 ">
-                                        <a class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-8db3903 text-white text-hover-accent-regular"
-                                            href="https://facebook.com/" target="_blank" aria-label="Facebook"> <span
-                                                class="cms-eicon lh-0 cms-icon text-20"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M32 16c0-8.838-7.163-16-16-16s-16 7.162-16 16 7.162 16 16 16c0.094 0 0.188 0 0.281-0.006v-12.45h-3.438v-4.006h3.438v-2.95c0-3.419 2.087-5.281 5.137-5.281 1.462 0 2.719 0.106 3.081 0.156v3.575h-2.1c-1.656 0-1.981 0.787-1.981 1.944v2.55h3.969l-0.519 4.006h-3.45v11.844c6.688-1.919 11.581-8.075 11.581-15.381z">
-                                                    </path>
-                                                </svg></span> </a> <a
-                                            class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-2ec25cb text-white text-hover-accent-regular"
-                                            href="https://twitter.com/" target="_blank" aria-label="Twitter"> <span
-                                                class="cms-eicon lh-0 cms-icon text-20"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM23.305 12.475c0.007 0.157 0.011 0.316 0.011 0.475 0 4.853-3.694 10.449-10.449 10.449v0c-2.074 0-4.004-0.608-5.629-1.65 0.287 0.034 0.58 0.051 0.876 0.051 1.721 0 3.304-0.587 4.561-1.572-1.608-0.030-2.963-1.092-3.431-2.551 0.224 0.043 0.454 0.066 0.69 0.066 0.335 0 0.66-0.045 0.969-0.129-1.68-0.336-2.946-1.822-2.946-3.6 0-0.017 0-0.031 0-0.047 0.495 0.275 1.061 0.441 1.663 0.459-0.986-0.658-1.634-1.783-1.634-3.057 0-0.673 0.182-1.303 0.497-1.846 1.811 2.222 4.518 3.684 7.57 3.837-0.063-0.269-0.095-0.549-0.095-0.837 0-2.027 1.645-3.672 3.673-3.672 1.056 0 2.011 0.447 2.681 1.16 0.837-0.165 1.622-0.471 2.332-0.891-0.275 0.857-0.857 1.576-1.615 2.031 0.743-0.089 1.451-0.286 2.109-0.578-0.491 0.737-1.115 1.384-1.832 1.902z">
-                                                    </path>
-                                                </svg></span> </a> <a
-                                            class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-578789e text-white text-hover-accent-regular"
-                                            href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"> <span
-                                                class="cms-eicon lh-0 cms-icon text-20"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM11.351 24.188h-3.897v-11.723h3.897zM9.402 10.863h-0.025c-1.308 0-2.153-0.9-2.153-2.025 0-1.15 0.872-2.026 2.205-2.026s2.153 0.875 2.179 2.026c0 1.125-0.846 2.025-2.205 2.025zM25.401 24.188h-3.896v-6.272c0-1.576-0.564-2.651-1.974-2.651-1.076 0-1.718 0.725-1.999 1.425-0.103 0.25-0.128 0.601-0.128 0.951v6.547h-3.896s0.051-10.624 0-11.723h3.896v1.66c0.518-0.799 1.444-1.935 3.512-1.935 2.564 0 4.486 1.676 4.486 5.276z">
-                                                    </path>
-                                                </svg></span> </a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-f21d708 e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                        data-id="f21d708" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                        <div class="elementor-element elementor-element-065782a elementor-widget elementor-widget-cms_banner"
-                            data-id="065782a" data-element_type="widget" data-widget_type="cms_banner.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-ebanner cms-ebanner-1"> <img width="100" height="102"
-                                        src="wp-content/uploads/elementor/thumbs/footer-logo-qro4zepzgjwbnpe9ejus6emvyh63ugpk84jr7yevi4.png"
-                                        alt="footer-logo" class="cms-lazy lazy-loading cms-radius-24" loading="lazy" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-2c85d7a bg-primary text-white pb-50 pb-tablet-0 e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
-                data-id="2c85d7a" data-element_type="container"
-                data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-9df7eb8 e-con-full mb-10 e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                        data-id="9df7eb8" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                        <div class="elementor-element elementor-element-4147a64 text-15 elementor-widget elementor-widget-cms_copyright"
-                            data-id="4147a64" data-element_type="widget" data-widget_type="cms_copyright.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-ecopyright cms-ecopyright-1 text-grey"> 2024 Wealth Up, All Rights
-                                    Reserved. With Love by <a
-                                        class="text-accent-regular text-hover-grey cms-hover-underline"
-                                        href="https://cmssuperheroes.com/" target="_blank"
-                                        rel="nofollow noopener">CMSSuperHeroes</a></div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-253d56f text-15 elementor-widget elementor-widget-cms_navigation_menu"
-                            data-id="253d56f" data-element_type="widget" data-widget_type="cms_navigation_menu.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-emenu cms-emenu-3">
-                                    <ul id="menu-footer-menu" class="cms-menu cms-menu-horz ">
-                                        <li id="menu-item-133"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133">
-                                            <a href="terms-conditions/index.html"
-                                                class="cms-menu-link text-white text-hover-accent-regular"><span
-                                                    class="menu-title title flex-basic d-flex">Terms &#038;
-                                                    Conditions</span></a></li>
-                                        <li id="menu-item-132"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132">
-                                            <a href="privacy-policy/index.html"
-                                                class="cms-menu-link text-white text-hover-accent-regular"><span
-                                                    class="menu-title title flex-basic d-flex">Privacy Policy</span></a>
-                                        </li>
-                                        <li id="menu-item-134"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134">
-                                            <a href="#" class="cms-menu-link text-white text-hover-accent-regular"><span
-                                                    class="menu-title title flex-basic d-flex">Sitemap</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-a622f02 e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
-                        data-id="a622f02" data-element_type="container"
-                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                        <div class="elementor-element elementor-element-76f2ccd elementor-widget__width-initial text-end mt-n70 mt-tablet-n0 elementor-widget-tablet__width-inherit elementor-widget elementor-widget-cms_contact_form"
-                            data-id="76f2ccd" data-element_type="widget" data-widget_type="cms_contact_form.default">
-                            <div class="elementor-widget-container">
-                                <div class="cms-ecf7-field-popup cms-ctf7-modal cms-modal cursor-pointer  heading font-100 text-105 text-tablet-80 text-mobile-40 lh-1 text-white cms-hover-icon-alternate"
-                                    data-modal-move="#ctf7-form-310-76f2ccd-move" data-modal="#ctf7-form-310-76f2ccd"
-                                    data-modal-mode="slide" data-modal-slide="up" data-modal-class="center"> Get in
-                                    Touch <span class="text-55"><svg class="rtl-flip" fill="currentColor"
-                                            fill-hover="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 101.7 101.7">
-                                            <g fill="none" stroke="currentColor" stroke-width="6">
-                                                <path d="m.7 101 100-100"></path>
-                                                <path d="M.7 1h100" stroke-width="9"> </path>
-                                                <path d="M100.7 1v100" stroke-width="9"></path>
-                                            </g>
-                                        </svg></span></div>
-                                <div id="ctf7-form-310-76f2ccd-move">
-                                    <div id="ctf7-form-310-76f2ccd" class="cms-ecf7 cms-ecf7-2 cms-modal-html"
-                                        style="--cms-modal-width:1280px; --cms-modal-content-width:1280px;">
-                                        <div class="cms-modal-content bg-white">
-                                            <div class="cms-modal--content cms-mousewheel">
-                                                <h2
-                                                    class="cms-title cms-heading text-40 text-smobile-30 text-heading mb-15 empty-none bg- d-flex gap-10">
-                                                </h2>
-                                                <div class="cms-desc text-body pb-30 empty-none"></div>
-                                                <div class="wpcf7 no-js" id="wpcf7-f310-o2" lang="en-US" dir="ltr">
-                                                    <div class="screen-reader-response">
-                                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                                        <ul></ul>
-                                                    </div>
-                                                    <form
-                                                        action="/#wpcf7-f310-o2"
-                                                        method="post" class="wpcf7-form init" aria-label="Contact form"
-                                                        novalidate="novalidate" data-status="init">
-                                                        <div style="display: none;"> <input type="hidden" name="_wpcf7"
-                                                                value="310" /> <input type="hidden"
-                                                                name="_wpcf7_version" value="5.9.8" /> <input
-                                                                type="hidden" name="_wpcf7_locale" value="en_US" />
-                                                            <input type="hidden" name="_wpcf7_unit_tag"
-                                                                value="wpcf7-f310-o2" /> <input type="hidden"
-                                                                name="_wpcf7_container_post" value="0" /> <input
-                                                                type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                                        </div>
-                                                        <div class="row gutterx-40 guttery-30">
-                                                            <div class="col-6 col-smobile-12"> <label class="label">Your
-                                                                    name</label> <span class="wpcf7-form-control-wrap"
-                                                                    data-name="your-name"><input size="40"
-                                                                        maxlength="400"
-                                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                        autocomplete="name" aria-required="true"
-                                                                        aria-invalid="false" placeholder="Harmonic Engineering"
-                                                                        value="" type="text" name="your-name" /></span>
-                                                            </div>
-                                                            <div class="col-6 col-smobile-12"> <label
-                                                                    class="label">Email Address</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="your-email"><input size="40"
-                                                                        maxlength="400"
-                                                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                                        autocomplete="email" aria-required="true"
-                                                                        aria-invalid="false"
-                                                                        placeholder="Name@Harmonic Engineering.com" value=""
-                                                                        type="email" name="your-email" /></span></div>
-                                                            <div class="col-6 col-smobile-12"> <label
-                                                                    class="label">Company Name</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="company"><input size="40" maxlength="400"
-                                                                        class="wpcf7-form-control wpcf7-text"
-                                                                        aria-invalid="false" placeholder="Harmonic Engineering"
-                                                                        value="" type="text" name="company" /></span>
-                                                            </div>
-                                                            <div class="col-6 col-smobile-12"> <label
-                                                                    class="label">Phone Number</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="phone"><input size="40" maxlength="400"
-                                                                        class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-                                                                        aria-required="true" aria-invalid="false"
-                                                                        placeholder="002 010668811" value="" type="tel"
-                                                                        name="phone" /></span></div>
-                                                            <div class="col-6 col-smobile-12"> <label
-                                                                    class="label">Website</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="website"><input size="40" maxlength="400"
-                                                                        class="wpcf7-form-control wpcf7-url wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-url"
-                                                                        aria-required="true" aria-invalid="false"
-                                                                        placeholder="www.Harmonic Engineering.com" value=""
-                                                                        type="url" name="website" /></span></div>
-                                                            <div class="col-6 col-smobile-12"> <label
-                                                                    class="label">Budget</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="budget"><select
-                                                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                                        aria-required="true" aria-invalid="false"
-                                                                        name="budget">
-                                                                        <option value="No capital required">No capital
-                                                                            required</option>
-                                                                        <option value="Uncertain">Uncertain</option>
-                                                                        <option value="Under $500,000">Under $500,000
-                                                                        </option>
-                                                                            selected="selected">$50,000 - $100,000
-                                                                        </option>
-                                                                        <option value="$500,000 - $999,999">$500,000 -
-                                                                            $999,999</option>
-                                                                        <option value="$1,000,000 - $2,499,999">
-                                                                            $1,000,000 - $2,499,999</option>
-                                                                        <option value="$2,500,000 - $4,999,999">
-                                                                            $2,500,000 - $4,999,999</option>
-                                                                        <option value="$5,000,000 - $9,999,999">
-                                                                            $5,000,000 - $9,999,999</option>
-                                                                        <option value="$10,000,000 or more">$10,000,000
-                                                                            or more</option>
-                                                                    </select></span></div>
-                                                            <div class="col-6 col-smobile-12"> <label
-                                                                    class="label">Industry</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="industry"><select
-                                                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                                        aria-required="true" aria-invalid="false"
-                                                                        name="industry">
-                                                                        <option value="Banking &amp; Finance">Banking
-                                                                            &amp; Finance</option>
-                                                                        <option value="Sciences &amp; Healthcare">
-                                                                            Sciences &amp; Healthcare</option>
-                                                                        <option value="Technology &amp; Software">
-                                                                            Technology &amp; Software</option>
-                                                                        <option value="Education &amp; Training">
-                                                                            Education &amp; Training</option>
-                                                                        <option value="Hospitality &amp; Leisure">
-                                                                            Hospitality &amp; Leisure</option>
-                                                                        <option value="Power &amp; Utilities">Power
-                                                                            &amp; Utilities</option>
-                                                                    </select></span></div>
-                                                            <div class="col-6 col-smobile-12"> <label
-                                                                    class="label">Expertise</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="expertise"><select
-                                                                        class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                                        aria-required="true" aria-invalid="false"
-                                                                        name="expertise">
-                                                                        <option value="Financial Planning">Financial
-                                                                            Planning</option>
-                                                                        <option value="Wealth Management">Wealth
-                                                                            Management</option>
-                                                                        <option value="Portfolio Consulting">Portfolio
-                                                                            Consulting</option>
-                                                                        <option value="Mergers &amp; Acquisitions">
-                                                                            Mergers &amp; Acquisitions</option>
-                                                                        <option value="Sustainability Assurance">
-                                                                            Sustainability Assurance</option>
-                                                                        <option value="Crisis Management">Crisis
-                                                                            Management</option>
-                                                                    </select></span></div>
-                                                            <div class="col-12"> <label class="label">Business
-                                                                    Description</label> <span
-                                                                    class="wpcf7-form-control-wrap"
-                                                                    data-name="your-message"><textarea cols="40"
-                                                                        rows="10" maxlength="2000"
-                                                                        class="wpcf7-form-control wpcf7-textarea"
-                                                                        aria-invalid="false"
-                                                                        placeholder="Kindly provide enough information about your business..."
-                                                                        name="your-message"></textarea></span></div>
-                                                            <div class="col-12"><button
-                                                                    class="wpcf7-form-control wpcf7-submit btn btn-lg btn-primary text-white btn-hover-accent text-hover-white w-100 cms-hover-move-icon-up"
-                                                                    type="submit">Submit Request<span
-                                                                        class="cms-svg-icon cms-eicon lh-0 wpcf7-submit-icon text-10 rtl-flip"><svg
-                                                                            class="cms-arrow-up cms-arrow-up-right"
-                                                                            fill="currentColor"
-                                                                            fill-hover="currentColor"
-                                                                            viewBox="0 0 10 11"
-                                                                            xmlns="http://www.w3.org/2000/svg">
-                                                                            <path class="cms-hover-move-1"
-                                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                            <path class="cms-hover-move-2"
-                                                                                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                        </svg></span></button></div>
-                                                        </div>
-                                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                                    </form>
-                                                </div>
-                                                <div class="cms-note pt-30 font-italic text-body empty-none"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> <a href="#" class="scroll-top text-16 bg-white text-primary cms-shadow-2 circle cms-hover-move-icon-up">
-        <svg class="cms-arrow-up cms-arrow-up-right" fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="cms-hover-move-1"
-                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-            <path class="cms-hover-move-2"
-                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-        </svg> </a>
-    <div id="cms-theme-cursor"></div>
-    <div class="cms-modal-overlay cursor-close-white cms-transition"></div> <template id="tp-language"
-        data-tp-language="en_US"></template>
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <div id="cms-side-nav" class="cms-modal-html cms-modal-sidenav"> <span
-            class="cms-modal-close cms-close d-flex align-items-center gap-20 gap-mobile-10 p-30"> <span
-                class="close-icon text-14 lh-0"><svg viewBox="0 0 14 14" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M13.588 13.9998C13.4826 13.9998 13.3772 13.9594 13.2965 13.8796L7 7.58222L0.703479 13.8796C0.542072 14.0401 0.281845 14.0401 0.120438 13.8796C-0.0401459 13.7182 -0.0401459 13.4579 0.120438 13.2965L6.41778 7L0.120438 0.703479C-0.0401459 0.542072 -0.0401459 0.281845 0.120438 0.120438C0.281845 -0.0401459 0.542072 -0.0401459 0.703479 0.120438L7 6.41778L13.2965 0.120438C13.4579 -0.0401459 13.7182 -0.0401459 13.8796 0.120438C14.0401 0.281845 14.0401 0.542072 13.8796 0.703479L7.58222 7L13.8796 13.2965C14.0401 13.4579 14.0401 13.7182 13.8796 13.8796C13.7989 13.9594 13.6935 13.9998 13.588 13.9998Z" />
-                </svg> </span> </span>
-        <div class="cms-modal-content">
-            <div class="cms-sidenav-content cms-mousewheel">
-                <div class="cms-sidenav--content">
-                    <div data-elementor-type="wp-post" data-elementor-id="150" class="elementor elementor-150">
-                        <div class="elementor-element elementor-element-c8433bf e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
-                            data-id="c8433bf" data-element_type="container"
-                            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
-                            <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-cd51405 elementor-widget elementor-widget-cms_cta"
-                                    data-id="cd51405" data-element_type="widget" data-widget_type="cms_cta.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="cms-cta cms-cta-1"> <img width="200" height="50"
-                                                src="wp-content/uploads/logo.png" class="cms-lazy lazy-loading mb-25"
-                                                alt="" loading="lazy" data-duration="" />
-                                            <div class="cms-desc text-primary">Our specialist team understands the
-                                                importance of maintaining a lasting relationships with clients to
-                                                deliver specific investment solutions.</div> <a
-                                                class="btn btn-lg btn-accent text-white btn-hover-primary text-hover-white mt-25"
-                                                href="#"> Get Started <span class="text-10 lh-0"><svg
-                                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
-                                                        fill-hover="currentColor" viewBox="0 0 10 11"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path class="cms-hover-move-1"
-                                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                        <path class="cms-hover-move-2"
-                                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg></span> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-f13f559 elementor-widget elementor-widget-cms_quickcontact"
-                                    data-id="f13f559" data-element_type="widget"
-                                    data-widget_type="cms_quickcontact.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="cms-eqc cms-eqc-5 ">
-                                            <h2 class="cms-title text-19 text-heading mb-20 mt-n5">Contact Info</h2> <a
-                                                class="cms-eqc-item d-flex align-items-center gap-10  cms-email text-accent text-hover-accent"
-                                                href="mailto:Harmonic Engineering@cmsheroes.com" target="_blank"> <span
-                                                    class="cms-email-title cms-icon-color text-accent empty-none "></span>
-                                                <span
-                                                    class="cms-email-text text-accent text-hover-accent">Harmonic Engineering@cmsheroes.com</span>
-                                            </a> <a
-                                                class="cms-eqc-item d-flex align-items-center gap-10 mt-5  cms-phone text-primary text-hover-accent"
-                                                href="tel:0201061245741"> <span
-                                                    class="cms-phone-title cms-icon-color text-primary empty-none "></span>
-                                                <span class="cms-phone-text">02 01061245741</span> </a>
-                                            <div
-                                                class="cms-social-icons cms-social-icons-5 d-flex align-items-center gap-15 text-13 pt-20 ">
-                                                <a class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-cbb75f9 text-primary text-hover-accent"
-                                                    href="https://facebook.com/" target="_blank"> <span
-                                                        class="cms-eicon lh-0 cms-icon text-20"><svg
-                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path
-                                                                d="M32 16c0-8.838-7.163-16-16-16s-16 7.162-16 16 7.162 16 16 16c0.094 0 0.188 0 0.281-0.006v-12.45h-3.438v-4.006h3.438v-2.95c0-3.419 2.087-5.281 5.137-5.281 1.462 0 2.719 0.106 3.081 0.156v3.575h-2.1c-1.656 0-1.981 0.787-1.981 1.944v2.55h3.969l-0.519 4.006h-3.45v11.844c6.688-1.919 11.581-8.075 11.581-15.381z">
-                                                            </path>
-                                                        </svg></span> <span class="screen-reader-text">Facebook</span>
-                                                </a> <a
-                                                    class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-e49f23b text-primary text-hover-accent"
-                                                    href="https://twitter.com/" target="_blank"> <span
-                                                        class="cms-eicon lh-0 cms-icon text-20"><svg
-                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path
-                                                                d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM23.305 12.475c0.007 0.157 0.011 0.316 0.011 0.475 0 4.853-3.694 10.449-10.449 10.449v0c-2.074 0-4.004-0.608-5.629-1.65 0.287 0.034 0.58 0.051 0.876 0.051 1.721 0 3.304-0.587 4.561-1.572-1.608-0.030-2.963-1.092-3.431-2.551 0.224 0.043 0.454 0.066 0.69 0.066 0.335 0 0.66-0.045 0.969-0.129-1.68-0.336-2.946-1.822-2.946-3.6 0-0.017 0-0.031 0-0.047 0.495 0.275 1.061 0.441 1.663 0.459-0.986-0.658-1.634-1.783-1.634-3.057 0-0.673 0.182-1.303 0.497-1.846 1.811 2.222 4.518 3.684 7.57 3.837-0.063-0.269-0.095-0.549-0.095-0.837 0-2.027 1.645-3.672 3.673-3.672 1.056 0 2.011 0.447 2.681 1.16 0.837-0.165 1.622-0.471 2.332-0.891-0.275 0.857-0.857 1.576-1.615 2.031 0.743-0.089 1.451-0.286 2.109-0.578-0.491 0.737-1.115 1.384-1.832 1.902z">
-                                                            </path>
-                                                        </svg></span> <span class="screen-reader-text">Twitter</span>
-                                                </a> <a
-                                                    class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-76336cb text-primary text-hover-accent"
-                                                    href="https://linkedin.com/" target="_blank"> <span
-                                                        class="cms-eicon lh-0 cms-icon text-20"><svg
-                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path 
-                                                                d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM11.351 24.188h-3.897v-11.723h3.897zM9.402 10.863h-0.025c-1.308 0-2.153-0.9-2.153-2.025 0-1.15 0.872-2.026 2.205-2.026s2.153 0.875 2.179 2.026c0 1.125-0.846 2.025-2.205 2.025zM25.401 24.188h-3.896v-6.272c0-1.576-0.564-2.651-1.974-2.651-1.076 0-1.718 0.725-1.999 1.425-0.103 0.25-0.128 0.601-0.128 0.951v6.547h-3.896s0.051-10.624 0-11.723h3.896v1.66c0.518-0.799 1.444-1.935 3.512-1.935 2.564 0 4.486 1.676 4.486 5.276z">
-                                                            </path>
-                                                        </svg></span> <span class="screen-reader-text">LinkedIn</span>
-                                                </a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="cms-modal-search" class="cms-modal-html cms-modal-search cms-transition bg-white"> <span
-            class="cms-modal-close cms-close d-flex align-items-center gap-20 p-mobile-20 mt-40 mr-30"> <span
-                class="box-68 bg-accent bg-hover-red text-white text-hover-white text-14 lh-0 cms-radius-8 d-flex align-items-center justify-content-center cms-transition"><svg
-                    viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M13.588 13.9998C13.4826 13.9998 13.3772 13.9594 13.2965 13.8796L7 7.58222L0.703479 13.8796C0.542072 14.0401 0.281845 14.0401 0.120438 13.8796C-0.0401459 13.7182 -0.0401459 13.4579 0.120438 13.2965L6.41778 7L0.120438 0.703479C-0.0401459 0.542072 -0.0401459 0.281845 0.120438 0.120438C0.281845 -0.0401459 0.542072 -0.0401459 0.703479 0.120438L7 6.41778L13.2965 0.120438C13.4579 -0.0401459 13.7182 -0.0401459 13.8796 0.120438C14.0401 0.281845 14.0401 0.542072 13.8796 0.703479L7.58222 7L13.8796 13.2965C14.0401 13.4579 14.0401 13.7182 13.8796 13.8796C13.7989 13.9594 13.6935 13.9998 13.588 13.9998Z" />
-                </svg> </span> </span>
-        <div class="cms-modal-content">
-            <form role="search" method="get" class="cms-search-form d-flex gap"
-                action="https://demo.cmssuperheroes.com/themeforest/Harmonic Engineering/"> <input type="text" name="s"
-                    class="cms-search-field" placeholder="Search..." /> <button type="submit"
-                    class="cms-search-submit text-26" data-title="Search"><svg viewBox="0 0 20 20" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M8.91893 1.62162C4.88874 1.62162 1.62162 4.88874 1.62162 8.91893C1.62162 12.9491 4.88874 16.2162 8.91893 16.2162C12.9491 16.2162 16.2162 12.9491 16.2162 8.91893C16.2162 4.88874 12.9491 1.62162 8.91893 1.62162ZM0 8.91893C0 3.99314 3.99314 0 8.91893 0C13.8447 0 17.8379 3.99314 17.8379 8.91893C17.8379 11.0899 17.0622 13.0797 15.7729 14.6263L19.7625 18.6159C20.0792 18.9326 20.0792 19.4459 19.7625 19.7625C19.4459 20.0792 18.9326 20.0792 18.6159 19.7625L14.6263 15.773C13.0797 17.0622 11.0899 17.8379 8.91893 17.8379C3.99314 17.8379 0 13.8447 0 8.91893Z" />
-                    </svg> </button></form>
-        </div>
-    </div>
-    <script src="wp-includes/js/dist/hooks.min.js" id="wp-hooks-js"></script>
-    <script src="wp-includes/js/dist/i18n.min.js" id="wp-i18n-js"></script>
-    <script
-        id="wc-order-attribution-js-extra"> var wc_order_attribution = { "params": { "lifetime": 1.0000000000000000818030539140313095458623138256371021270751953125e-5, "session": 30, "base64": false, "ajaxurl": "\/wp-admin\/admin-ajax.php", "prefix": "wc_order_attribution_", "allowTracking": true }, "fields": { "source_type": "current.typ", "referrer": "current_add.rf", "utm_campaign": "current.cmp", "utm_source": "current.src", "utm_medium": "current.mdm", "utm_content": "current.cnt", "utm_id": "current.id", "utm_term": "current.trm", "utm_source_platform": "current.plt", "utm_creative_format": "current.fmt", "utm_marketing_tactic": "current.tct", "session_entry": "current_add.ep", "session_start_time": "current_add.fd", "session_pages": "session.pgs", "session_count": "udata.vst", "user_agent": "udata.uag" } }; </script>
-    <script
-        id="wealthup-main-js-extra"> var main_data = { "ajax_url": "\/wp-admin\/admin-ajax.php" }; </script>
-    <script src="https://www.youtube.com/iframe_api?ver=1.0.0" id="youtube-iframe-api-js-js"></script>
-    <script
-        id="elementor-frontend-js-before"> var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": true }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": true }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": true }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.4", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_optimized_control_loading": true, "e_onboarding": true, "home_screen": true, "ai-layout": true, "e_lazyload": true }, "urls": { "assets": "/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "9ca875d32f" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_mobile_extra", "viewport_tablet", "viewport_tablet_extra", "viewport_laptop"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 10, "title": "Wealth%20Up%20%E2%80%93%20Business%20Consulting%20and%20Finance%20Services%20WordPress%20Theme", "excerpt": "", "featuredImage": false } }; </script>
-    <script defer
-        src="wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-js-850eb7e1f6e46fb9a1effb4db5132cb2.js"></script>
-</body>
-
-</html>
+@endsection
