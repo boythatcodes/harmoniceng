@@ -476,7 +476,7 @@
                         </li>
                         <li id="menu-item-87"
                             class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
-                            <a href="/service/q/all" class="cms-menu-link"><span
+                            <a href="/public_project/q/all" class="cms-menu-link"><span
                                     class="menu-title title flex-basic d-flex">Services</span><span
                                     class="main-menu-toggle text-10 lh-0 rtl-flip"><svg
                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
@@ -510,7 +510,7 @@
                                                                 @foreach($projectsMap["building"] as $project )
                                                                 <li 
                                                                     class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="/service/{{$project->id}}"
+                                                                    <a href="/public_project/{{$project->id}}"
                                                                     class="cms-menu-link text-link text-hover-link"><span
                                                                         class="menu-child-icon flex-auto"><span
                                                                             class="d-block text-10 lh-0 rtl-flip"><svg
@@ -528,7 +528,7 @@
                                                                 @endforeach
                                                                 <li 
                                                                     class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="/service/q/building"
+                                                                    <a href="/public_project/q/building"
                                                                     class="cms-menu-link text-link text-hover-link"><span
                                                                         class="menu-child-icon flex-auto"><span
                                                                             class="d-block text-10 lh-0 rtl-flip"><svg
@@ -564,7 +564,7 @@
                                                                 @foreach($projectsMap["bridge"] as $project)
                                                                 <li 
                                                                     class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="/service/{{$project->id}}"
+                                                                    <a href="/public_project/{{$project->id}}"
                                                                     class="cms-menu-link text-link text-hover-link"><span
                                                                         class="menu-child-icon flex-auto"><span
                                                                             class="d-block text-10 lh-0 rtl-flip"><svg
@@ -582,7 +582,86 @@
                                                                 @endforeach
                                                                 <li 
                                                                     class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="/service/q/bridge"
+                                                                    <a href="/public_project/q/bridge"
+                                                                    class="cms-menu-link text-link text-hover-link"><span
+                                                                        class="menu-child-icon flex-auto"><span
+                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
+                                                                                class="cms-arrow-up cms-arrow-up-right"
+                                                                                fill="currentColor"
+                                                                                fill-hover="currentColor"
+                                                                                viewBox="0 0 10 11"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path class="cms-hover-move-1"
+                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                <path class="cms-hover-move-2"
+                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                            </svg></span></span><span
+                                                                        class="menu-title title flex-basic d-flex">See More</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="menu-item-87"
+                            class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
+                            <a href="/public_project/q/all" class="cms-menu-link"><span
+                                    class="menu-title title flex-basic d-flex">Projects</span><span
+                                    class="main-menu-toggle text-10 lh-0 rtl-flip"><svg
+                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
+                                        fill-hover="currentColor" viewBox="0 0 10 11"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="cms-hover-move-1"
+                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                        <path class="cms-hover-move-2"
+                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                    </svg></span></a>
+                            <div class="sub-menu sub-megamenu cms-megamenu-auto" style="width: 200px !important;">
+                                <div data-elementor-type="wp-post" data-elementor-id="164"
+                                    class="elementor elementor-164">
+                                    <div class="elementor-element elementor-element-4fc5fab e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
+                                        data-id="4fc5fab" data-element_type="container"
+                                        data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                                        <div class="e-con-inner" style="width: 100% !important;">
+                                            <div class="elementor-element elementor-element-a6c965f e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
+                                                data-id="a6c965f" data-element_type="container"
+                                                style="width: 100% !important;">
+                                                <div class="elementor-element elementor-element-2a4b511 elementor-widget elementor-widget-cms_navigation_menu"
+                                                    data-id="2a4b511" data-element_type="widget"
+                                                    data-widget_type="cms_navigation_menu.default" style="width: 100% !important;">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="cms-emenu cms-emenu--mega">
+                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20"> <div
+                                                                    class="text-heading" style="cursor: default;"
+                                                                    >Projects</div></h2>
+                                                            <ul id="menu-footer-services"
+                                                                class="cms-menu cms-dropdown-mega">
+                                                                @foreach(["Completed", "On Going", "Case Studies"] as $project )
+                                                                <li 
+                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
+                                                                    <a href="/public_project/q/{{strtolower(join('', explode(' ', $project)))}}"
+                                                                    class="cms-menu-link text-link text-hover-link"><span
+                                                                        class="menu-child-icon flex-auto"><span
+                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
+                                                                                class="cms-arrow-up cms-arrow-up-right"
+                                                                                fill="currentColor"
+                                                                                fill-hover="currentColor"
+                                                                                viewBox="0 0 10 11"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path class="cms-hover-move-1"
+                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                <path class="cms-hover-move-2"
+                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                            </svg></span></span><span
+                                                                        class="menu-title title flex-basic d-flex">{{$project}}</span></a></li>
+                                                                @endforeach
+                                                                <li 
+                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
+                                                                    <a href="/public_project/q/building"
                                                                     class="cms-menu-link text-link text-hover-link"><span
                                                                         class="menu-child-icon flex-auto"><span
                                                                             class="d-block text-10 lh-0 rtl-flip"><svg
