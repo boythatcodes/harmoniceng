@@ -42,6 +42,22 @@
     @endif
     <input type="file" placeholder="" class="input  input-bordered w-full pt-2.5" name="public_image" value="">
 </div>
+        <div class="form-control w-full undefined">
+            <label class="label">
+                <span class="label-text text-base-content undefined">Status</span>
+            </label>
+            <select name="status" id="" class="select select-bordered w-full capitalize">
+                @if(!empty($project->status))
+                    <option selected value="{{$project->status}}" id="">{{$project->status}}</option>
+                @endif
+                @foreach(["completed", "ongoing", "research"] as $status )
+                    @if($project->status != $status)
+                        <option value="{{$status}}"  id="">{{$status}}</option>
+                    @endif
+
+                @endforeach
+            </select>
+        </div>
     <div class="form-control w-full undefined my-7"><label class="label"><span class="label-text text-base-content undefined">Type Of Service</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="type_of_service" required value="{{$project->type_of_service}}"></div>
     <div class="form-control w-full undefined my-7"><label class="label"><span class="label-text text-base-content undefined">Location</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="location" required value="{{$project->location}}"></div>
     <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">More Info: <small class="text-xs text-red-500 pl-3">(Public)</small></span></label>
