@@ -10,9 +10,6 @@
         as="style">
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='http://use.typekit.net/' />
-    <link rel="alternate" type="application/rss+xml" title="Wealth Up &raquo; Feed" href="feed/index.html" />
-    <link rel="alternate" type="application/rss+xml" title="Wealth Up &raquo; Comments Feed"
-        href="comments/feed/index.html" />
     <link rel='stylesheet' id='Harmonic Engineering-heading-font-css' href='../../../use.typekit.net/ewt3tpu8a54.css?ver=1.0.0'
         media='all' />
 
@@ -48,7 +45,7 @@
                                                     data-cms-animation-delay="description_animation_delay" style="color: light-gray;">We deliver top-quality structural engineering and construction solutions across Nepal, prioritizing safety and client satisfaction to bring your vision to life.</div>
                                                 <div
                                                     class="cms-slider-buttons d-flex gap-30 justify-content-start pt-35 empty-none">
-                                                    <a href="/service/q/all"
+                                                    <a href="/public_project/q/all"
                                                         class="cms-slider-btn btn btn-lg btn-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_primary_animation"
                                                         data-cms-animation-delay="button_primary_animation_delay"> Our
@@ -91,7 +88,7 @@
                                                     data-cms-animation-delay="description_animation_delay">From concept to construction, we turn innovative ideas into lasting structures, offering expertise in architectural design, feasibility studies, and project management for both public and private sectors.</div>
                                                 <div
                                                     class="cms-slider-buttons d-flex gap-30 justify-content-start pt-35 empty-none">
-                                                    <a href="/service/q/all"
+                                                    <a href="/public_project/q/all"
                                                         class="cms-slider-btn btn btn-lg btn-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_primary_animation"
                                                         data-cms-animation-delay="button_primary_animation_delay"> Our
@@ -131,7 +128,7 @@
                                                     data-cms-animation-delay="description_animation_delay">With a reputation built on trust and technical excellence, We offer a full suite of engineering services tailored to meet diverse project needs. We prioritize client success through personalized support and efficient, on-budget solutions.</div>
                                                 <div
                                                     class="cms-slider-buttons d-flex gap-30 justify-content-start pt-35 empty-none">
-                                                    <a href="/service/q/all"
+                                                    <a href="/public_project/q/all"
                                                         class="cms-slider-btn btn btn-lg btn-accent text-white btn-hover-accent-darken text-hover-white cms-hover-move-icon-up "
                                                         data-cms-animation="button_primary_animation"
                                                         data-cms-animation-delay="button_primary_animation_delay"> Our
@@ -1283,7 +1280,7 @@
                                     data-as-background="yes">
                                     <div class="p-40 cms-blur-bg cms-radius-24 max-290 cms-backdrop-1"> <a
                                             class="btn-circle-3 cms-hover-move-icon-up bg-white text-primary bg-hover-accent text-hover-white mb-40 text-10 lh-0"
-                                            href="/service/q/all"><svg class="cms-arrow-up cms-arrow-up-right"
+                                            href="/public_project/q/all"><svg class="cms-arrow-up cms-arrow-up-right"
                                                 viewBox="0 0 10 11" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
@@ -1343,7 +1340,7 @@
                                                 />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-8d4453d cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="/service/q/all"> <svg
+                                                    href="/public_project/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -1363,7 +1360,7 @@
                                                 />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-3c17460 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="/service/q/all"> <svg
+                                                    href="/public_project/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -1383,7 +1380,7 @@
                                                 />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-d65f5d3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="/service/q/all"> <svg
+                                                    href="/public_project/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -1402,7 +1399,7 @@
                                                 />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-70d5f84 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="/service/q/all"> <svg
+                                                    href="/public_project/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -1421,7 +1418,7 @@
                                                 />
                                             <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                     class="btn-circle-2 flex-auto elementor-repeater-item-38a7eb3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                    href="/service/q/all"> <svg
+                                                    href="/public_project/q/all"> <svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -1442,7 +1439,7 @@
                                                 />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-8d4453d cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/public_project/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
@@ -1458,7 +1455,7 @@
                                                 />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-3c17460 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/public_project/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
@@ -1474,7 +1471,7 @@
                                                 />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-d65f5d3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/public_project/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
@@ -1490,7 +1487,7 @@
                                                 />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-70d5f84 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/public_project/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
@@ -1506,7 +1503,7 @@
                                                 />
                                         <div class="cms-list-desc text-white d-flex gap-30"> <a
                                                 class="btn-circle-2 flex-auto elementor-repeater-item-38a7eb3 cms-hover-move-icon-up text-10 lh-0 bg-white text-primary-regular btn-hover-accent-regular text-hover-white"
-                                                href="/service/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
+                                                href="/public_project/q/all"> <svg class="cms-arrow-up cms-arrow-up-right"
                                                     fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path class="cms-hover-move-1"
