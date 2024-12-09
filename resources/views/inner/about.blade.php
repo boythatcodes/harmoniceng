@@ -73,7 +73,9 @@
                                 class="cms-heading cms-nl2br empty-none text-primary text-26 text-smobile-20 lh-133 mt-n5">
                                 Team</div>
                             <div class="cms-desc cms-nl2br empty-none text-body text-17 pt-25">Our team includes over 15 full-time experts in bridge design, architecture, civil engineering, urban planning, socio-economics, IT, GIS, and other fields. We also have a pool of specialists in agriculture, forestry, public health, finance, and geology.</div>
-
+                            <a href="/leadership"
+                                    class="cms-smallheading text-accent-darken pb-20 mt-n7 text-17 font-500 empty-none" style="text-decoration: underline;">
+                                    Meet our highly capable team members.</a>
                         </div>
                     </div>
 
