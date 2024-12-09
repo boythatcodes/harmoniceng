@@ -53,21 +53,18 @@
                     <div class="elementor-widget-container">
                         <div id="cms_case_grid-488014d" class="cms-post-grid cms-grid cms-grid-9" data-layout="grid">
                             <div class="grid-filter-wrap d-flex justify-content-center"
-                                style="--cms-filter-color:primary;--cms-filter-color-hover:accent-regular;"> <a href="/service/q/all"
+                                style="--cms-filter-color:primary;--cms-filter-color-hover:accent-regular;"> <a href="/public_project/q/completed"
                                     class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
                                     data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">All</span> </a> <a href="/service/q/bridge"
+                                        data-hover="Business">Completed</span> </a>
+                                <a href="/public_project/q/ongoing"
                                     class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
                                     data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">Bridges</span> </a>
-                                <a href="/service/q/building"
+                                        data-hover="Business">Ongoing</span> </a>
+                                <a href="/public_project/q/research"
                                     class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
                                     data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">Buildings</span> </a>
-                                <a href="/service/q/soil"
-                                    class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
-                                    data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">Soil</span> </a>
+                                        data-hover="Business">Research</span> </a>
                             </div>
                             <div class="e-con-inner">
                                 <div class="elementor-element elementor-element-6a6a6aa elementor-widget elementor-widget-cms_blog_grid"
@@ -95,10 +92,10 @@
                                                         </div>
                                                         <div class="cms-content p-40 p-lr-smobile-20">
                                                             <div class="cms-post-meta text-13 pb-10 mt-n5"> <a
-                                                                    href="/service/q/{{$project->type_of_service}}"
+                                                                    href="/public_project/q/{{$project->type_of_service}}"
                                                                     class="cms-term cms-hover-underline" style="text-transform: capitalize;">{{$project->type_of_service}}</a></div>
                                                             <h3 class="cms-heading text-line-2 text-21 lh-1238 pr-10"><a
-                                                                    href="/service/{{$project->id}}">
+                                                                    href="/public_project/{{$project->id}}">
                                                                     {{$project->Title}}
                                                                 </a></h3>
                                                             <div class="cms-excerpt text-15 text-line-4 pt-20 mb-15">
@@ -115,7 +112,7 @@
                                                                     <span class="cms-desc empty-none text-body" style="text-transform: capitalize; margin-top: 10px;">{{$project->soil_test?"Yes":"No"}}</span>
                                                                 </div>
                                                             </div> <a
-                                                                href="/service/{{$project->id}}"
+                                                                href="/public_project/{{$project->id}}"
                                                                 class="cms-readmore cms-readmore-1 cms-hover-move-icon-up"> <span
                                                                     class="cms-readmore--1 d-flex gap-10 align-items-center pr-10">
                                                                     <span class="text relative z-top">Read More</span> <span
