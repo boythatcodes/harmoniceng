@@ -36,7 +36,6 @@ class HomeController extends Controller
         $project_count = Project::all()->count();
         $inqueries_count = Db::table("contactus")->get()->count();
         $header_info = "dashboard";
-        // $all_projects = Project::with("User")->orderBy("id", 'desc')->get();
         $active = "Overview";
         $button = ["Refresh", "refresh"];
         return view('home', compact("user", "active", "header_info", "button", "user_count", "project_count", "inqueries_count"));
@@ -124,6 +123,7 @@ class HomeController extends Controller
                 "soil_test" => $request->soil_test == "yes",
                 "user_id" => $user->id,
                 "type_of_service" =>$request->type_of_service,
+                "status" => $request->status,
                 "location" => $request->location
             ]);
         } else {
@@ -139,6 +139,7 @@ class HomeController extends Controller
                 "submission_date" => $request->submission_date,
                 "soil_test" => $request->soil_test == "yes",
                 "user_id" => $user->id,
+                "status" => $request->status,
                 "type_of_service" =>$request->type_of_service,
                 "location" => $request->location
             ];
@@ -180,12 +181,26 @@ class HomeController extends Controller
         if (!(Auth::user()->is_admin)) {
             return redirect("/no-access");
         }
-        User::create([
+        
+        
+
+        $user_info = User::create([
             "name" => $request->name,
             "email" => $request->email,
             "password" => Hash::make($request->password),
-            "is_admin" => $request->type_of_user == "admin"
+            "is_admin" => $request->type_of_user == "admin",
+            "description" => $request->description,
+            "phone" => $request->phone,
+            "since" => $request->since,
+            "image_visible" => $request->is_visible == "yes",
         ]);
+
+        if ($request->public_image != null) {
+            $file = $request->file('public_image');
+            $file_path = $user_info->id . ".jpg";
+            $file->move(public_path('data') . "/users/", $file_path);
+        }
+
         return redirect("/users");
     }
 
