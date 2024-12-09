@@ -1,19 +1,10 @@
 <?php
 
 use App\Models\Project;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 function header_projects(){
     $projects = Project::where(function($query) {
@@ -42,7 +33,8 @@ Route::get('/about', function () {
 
 Route::get('/leadership', function(){
     $projectsMap = header_projects();
-    return view("leadership", compact("projectsMap"));
+    $users = User::where("image_visible", true)->get();
+    return view("leadership", compact("projectsMap", "users"));
 });
 
 Route::get('/contact', function(){
@@ -51,11 +43,11 @@ Route::get('/contact', function(){
 });
 
 
-Route::get('/service/q/{type_of_service}', function($type_of_service){
+Route::get('/public_project/q/{type_of_service}', function($type_of_service){
     $projectsMap = header_projects();
     $projects_data = Project::where("is_visible", true);
     if($type_of_service != "all"){
-        $projects_data->where('type_of_service', 'LIKE', '%'. $type_of_service . '%');
+        $projects_data->where('status', 'LIKE', '%'. $type_of_service . '%');
     }
     $projects_data = $projects_data->get();
     // if(empty($projects_data) || empty($projects_data->id)) {
@@ -64,7 +56,7 @@ Route::get('/service/q/{type_of_service}', function($type_of_service){
     return view("all_services", compact("projectsMap", "projects_data"));
 });
 
-Route::get('/service/{id}', function($id){
+Route::get('/public_project/{id}', function($id){
     $projectsMap = header_projects();
     $project_data = Project::where("is_visible", true)->find($id);
     if(empty($project_data) || empty($project_data->id)) {
