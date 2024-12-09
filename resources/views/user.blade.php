@@ -8,6 +8,7 @@
                 <th>Name</th>
                 <th>Email Id</th>
                 <th>Created At</th>
+                <th>Visible</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
@@ -19,7 +20,9 @@
                     <div class="flex items-center space-x-3">
                         <div class="avatar">
                             <div class="mask mask-squircle w-12 h-12"><img
-                                    src="https://ui-avatars.com/api/?name={{ $loop_user->name }}"
+                                    src="/data/users/{{ $loop_user->id }}.jpg" 
+                                    alt="Image" 
+                                    onerror="this.src='https://ui-avatars.com/api/?name={{ $loop_user->name }}';"
                                     alt="Avatar"></div>
                         </div>
                         <div>
@@ -32,6 +35,9 @@
                 <td>
 
                     {{ date('d M y', strtotime($loop_user->created_at)) }}
+                </td>
+                <td>
+                    <div class="text-sm opacity-50">{{$loop_user->image_visible? "Public": "Private"}} </div>
                 </td>
                 <td>
                     @if($loop_user->is_admin)
@@ -69,18 +75,39 @@
             </form>
         </div>
         <div class="add_user hidden" id="add_user_child">
-            <form action="/users" method="post">
+            <form action="/users" method="post" enctype="multipart/form-data">
                 @csrf
                 <h3 class="font-semibold text-2xl pb-6 text-center">Add New User</h3>
                 <div class="form-control w-full mt-4"><label class="label"><span
                             class="label-text text-base-content undefined">Full Name</span></label><input required type="text"
                         placeholder="" class="input  input-bordered w-full " name="name" value=""></div>
                 <div class="form-control w-full mt-4"><label class="label"><span
+                            class="label-text text-base-content undefined">Description</span></label><input required type="text"
+                        placeholder="" class="input  input-bordered w-full " name="description" value=""></div>
+                <div class="form-control w-full mt-4"><label class="label"><span
+                            class="label-text text-base-content undefined">Phone</span></label><input required type="text"
+                        placeholder="" class="input  input-bordered w-full " name="phone" value=""></div>
+                <div class="form-control w-full mt-4"><label class="label"><span
                             class="label-text text-base-content undefined">Email Id</span></label><input required name="email" type="email"
                         placeholder="" class="input  input-bordered w-full " value=""></div>
                 <div class="form-control w-full mt-4"><label class="label"><span
                             class="label-text text-base-content undefined">Password</span></label><input required name="password" type="text"
                         placeholder="" class="input  input-bordered w-full " value=""></div>
+                <div class="form-control w-full mt-4"><label class="label"><span
+                        class="label-text text-base-content undefined">Working Since</span></label><input required type="text"
+                    placeholder="" class="input  input-bordered w-full " name="since" value=""></div>
+                <div class="form-control w-full mt-4"><label class="label"><span
+                    class="label-text text-base-content undefined">Image</span></label>
+                    <input type="file" placeholder="" class="input  input-bordered w-full pt-2.5" name="public_image" value="">
+                </div>
+                
+                <div class="form-control w-full mt-4 text-start"><label class="label"><span
+                    class="label-text text-base-content undefined">Is Visible to Public</span></label>
+                    <select name="is_visible" id="" class="select select-bordered w-full">
+                        <option value="yes" id="">Yes</option>
+                        <option value="no" id="">No</option>
+                    </select>
+                </div>
                 <div class="form-control w-full mt-4"><label class="label"><span
                             class="label-text text-base-content undefined">Type</span></label>
                     <select name="type_of_user" id="" class="select select-bordered w-full">
