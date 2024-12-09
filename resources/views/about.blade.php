@@ -9,9 +9,6 @@
     as="style">
 <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='http://use.typekit.net/' />
-<link rel="alternate" type="application/rss+xml" title="Wealth Up &raquo; Feed" href="/feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title="Wealth Up &raquo; Comments Feed"
-    href="/comments/feed/index.html" />
 <link rel='stylesheet' id='wealthup-heading-font-css' href='////use.typekit.net/ewt3tpu8a54.css?ver=1.0.0'
     media='all' />
 
@@ -1278,7 +1275,7 @@
                                         <div class="cms-ttmn-content bg-grey cms-radius-16 p-50 p-lr-smobile-20">
                                             <div
                                                 class="cms-ttmn-desc heading text-24 lh-133 font-500 font-italic text-heading text-start m-tb-n10 mr-n10 swiper-nav-vert">
-                                                Wealth Up team take time, effort, and discipline to be successful
+                                                Harmonic team take time, effort, and discipline to be successful
                                                 with their goal. They don’t lured by the schemes of get rich quick
                                                 and too good to be true opportunities that can send them down a
                                                 dangerous path.</div>
