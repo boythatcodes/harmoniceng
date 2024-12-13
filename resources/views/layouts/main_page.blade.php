@@ -480,7 +480,7 @@
 
                             </ul>
                         </li>
-                        <li id="menu-item-87"
+                        <!-- <li id="menu-item-87"
                             class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
                             <a href="/public_project/q/all" class="cms-menu-link"><span
                                     class="menu-title title flex-basic d-flex">Services</span><span
@@ -583,7 +583,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                         <li id="menu-item-87"
                             class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
                             <a href="/public_project/q/all" class="cms-menu-link"><span
@@ -648,6 +648,21 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                        </li>
+                        <li id="menu-item-87"
+                            class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
+                            <a href="/download" class="cms-menu-link"><span
+                                    class="menu-title title flex-basic d-flex">Download</span><span
+                                    class="main-menu-toggle text-10 lh-0 rtl-flip"><svg
+                                        class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
+                                        fill-hover="currentColor" viewBox="0 0 10 11"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="cms-hover-move-1"
+                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                        <path class="cms-hover-move-2"
+                                            d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                    </svg></span></a>
                         </li>
                         <!-- <li id="menu-item-89"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-89">
