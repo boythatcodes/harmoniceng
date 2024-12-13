@@ -25,6 +25,52 @@ Route::get('/', function () {
     return view('welcome', compact("projectsMap"));
 });
 
+Route::get('/download', function (Request $request) {
+    $projectsMap = header_projects();
+    $s = $request->s;
+    $files = [];
+
+    $columns = ['title', 'description', 'file_name', 'client', 'submission_date', 'type_of_service', 'location'];
+    $download_query = Project::where("is_visible", 1);
+    if(!empty($s)){
+        $download_query->where(function ($query) use ($s, $columns) {
+            foreach ($columns as $column) {
+                $query->orWhere($column, 'LIKE', '%' . $s . '%');
+            }
+        });
+    }
+    $download_data = $download_query->get();
+
+    foreach ($download_data as $key => $value) {
+        if(!empty($value->public_image)){
+            array_push($files, [
+                "title" => $value->Title,
+                "file_name" => $value->file_name,
+                "soil_test" => $value->soil_test,
+                "client" => $value->client,
+                "submission_date"=> $value->submission_date,
+                "type_of_service" => $value->type_of_service,
+                "location" => $value->location,
+                "status" => $value->status,
+                "status" => "free",
+                "link" => "/data/".$value->file_path,
+            ]);
+        }
+        array_push($files, [
+            "title" => $value->Title,
+            "file_name" => $value->file_name,
+            "soil_test" => $value->soil_test,
+            "client" => $value->client,
+            "submission_date"=> $value->submission_date,
+            "type_of_service" => $value->type_of_service,
+            "location" => $value->location,
+            "status" => $value->status,
+            "status" => "paid",
+            "link" => "/contact/",
+        ]);
+    }
+    return view('download', compact("projectsMap", "files"));
+});
 
 Route::get('/about', function () {
     $projectsMap = header_projects();
@@ -79,6 +125,7 @@ Route::post("/project/{id}", [App\Http\Controllers\HomeController::class, 'new_p
 
 Route::post('/delete_user', [App\Http\Controllers\HomeController::class, 'delete_user'])->name('delete_user');
 Route::get('/no-access', [App\Http\Controllers\HomeController::class, 'no_access'])->name('no_access');
+
 
 
 Route::post('/contact_us', [App\Http\Controllers\HomeController::class, 'contact_us'])->name('contact_us');
