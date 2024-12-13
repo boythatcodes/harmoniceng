@@ -17,6 +17,7 @@
         body {
             visibility: hidden;
         }
+
         @font-face {
             font-family: 'DM Sans';
             font-style: italic;
@@ -209,7 +210,7 @@
             src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAC5thTg.ttf) format('truetype');
         }
     </style>
-    
+
     <style id='Harmonic Engineering-inline-css'>
         :root {
             --cms-accent-regular-rgb: 1, 160, 76;
@@ -352,8 +353,9 @@
                                 data-widget_type="cms_navigation_menu.default">
                                 <div class="elementor-widget-container">
                                     <span
-                                            class="cms-desc text-grey empty-none">Impartial Construction Services to
-                                            Empower Your Growth!</span> </div>
+                                        class="cms-desc text-grey empty-none">Impartial Construction Services to
+                                        Empower Your Growth!</span>
+                                </div>
                             </div>
                         </div>
                         <div class="" style="width: 50%;"></div>
@@ -395,7 +397,8 @@
                                                     </path>
                                                 </svg> </span> <span
                                                 class="cms-title text-grey cms-hidden-laptop cms-hidden-tablet_extra cms-hidden-tablet cms-hidden-mobile_extra cms-hidden-mobile">LinkedIn</span>
-                                        </a></div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -411,7 +414,7 @@
                             data-sticky-mobile="/harmonic_eng.png" /></a></div>
                 <nav class="site-navigation site-navigation-dropdown justify-content-end flex-basic d-flex">
                     <ul id="mastmenu" class="cms-primary-menu cms-primary-menu-dropdown">
-                        
+
                         <li id="menu-item-78"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-icon menu-item-78">
                             <a href="/about" class="cms-menu-link"><span
@@ -441,7 +444,8 @@
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                 </svg></span></span><span
                                             class="menu-title title flex-basic d-flex">About Us<span
-                                                class="menu-icon order-left fa fa-area-chart"></span></span></a></li>
+                                                class="menu-icon order-left fa fa-area-chart"></span></span></a>
+                                </li>
                                 <li id="menu-item-79"
                                     class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-79">
                                     <a href="leadership/" class="cms-menu-link"><span
@@ -455,8 +459,9 @@
                                                     <path class="cms-hover-move-2"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                 </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Leadership Team</span></a></li>
-                                
+                                            class="menu-title title flex-basic d-flex">Leadership Team</span></a>
+                                </li>
+
                                 <li id="menu-item-84"
                                     class="menu-item menu-item-type-post_type menu-item-object-page megamenu- menu-item-84">
                                     <a href="/contact" class="cms-menu-link"><span
@@ -470,8 +475,9 @@
                                                     <path class="cms-hover-move-2"
                                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                 </svg></span></span><span
-                                            class="menu-title title flex-basic d-flex">Contact Us</span></a></li>
-                                
+                                            class="menu-title title flex-basic d-flex">Contact Us</span></a>
+                                </li>
+
                             </ul>
                         </li>
                         <li id="menu-item-87"
@@ -502,47 +508,33 @@
                                                     data-widget_type="cms_navigation_menu.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="cms-emenu cms-emenu--mega">
-                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20"> <div
-                                                                    class="text-heading" style="cursor: default;"
-                                                                    >Buildings</div></h2>
+                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20">
+                                                                <div
+                                                                    class="text-heading" style="cursor: default;">Buildings</div>
+                                                            </h2>
                                                             <ul id="menu-footer-services"
                                                                 class="cms-menu cms-dropdown-mega">
                                                                 @foreach($projectsMap["building"] as $project )
-                                                                <li 
+                                                                <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
                                                                     <a href="/public_project/{{$project->id}}"
-                                                                    class="cms-menu-link text-link text-hover-link"><span
-                                                                        class="menu-child-icon flex-auto"><span
-                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                                fill="currentColor"
-                                                                                fill-hover="currentColor"
-                                                                                viewBox="0 0 10 11"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path class="cms-hover-move-1"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                <path class="cms-hover-move-2"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                            </svg></span></span><span
-                                                                        class="menu-title title flex-basic d-flex">{{$project->Title}}</span></a></li>
+                                                                        class="cms-menu-link text-link text-hover-link"><span
+                                                                            class="menu-child-icon flex-auto"><span
+                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
+                                                                                    class="cms-arrow-up cms-arrow-up-right"
+                                                                                    fill="currentColor"
+                                                                                    fill-hover="currentColor"
+                                                                                    viewBox="0 0 10 11"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path class="cms-hover-move-1"
+                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                    <path class="cms-hover-move-2"
+                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                </svg></span></span><span
+                                                                            class="menu-title title flex-basic d-flex">{{$project->Title}}</span></a>
+                                                                </li>
                                                                 @endforeach
-                                                                <li 
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="/public_project/q/building"
-                                                                    class="cms-menu-link text-link text-hover-link"><span
-                                                                        class="menu-child-icon flex-auto"><span
-                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                                fill="currentColor"
-                                                                                fill-hover="currentColor"
-                                                                                viewBox="0 0 10 11"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path class="cms-hover-move-1"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                <path class="cms-hover-move-2"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                            </svg></span></span><span
-                                                                        class="menu-title title flex-basic d-flex">See More</span></a></li>
+
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -556,47 +548,32 @@
                                                     data-widget_type="cms_navigation_menu.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="cms-emenu cms-emenu--mega">
-                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20"> <div
-                                                                    class="text-heading" style="cursor: default;"
-                                                                    >Bridges</div></h2>
+                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20">
+                                                                <div
+                                                                    class="text-heading" style="cursor: default;">Bridges</div>
+                                                            </h2>
                                                             <ul id="menu-footer-industries"
                                                                 class="cms-menu cms-dropdown-mega">
                                                                 @foreach($projectsMap["bridge"] as $project)
-                                                                <li 
+                                                                <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
                                                                     <a href="/public_project/{{$project->id}}"
-                                                                    class="cms-menu-link text-link text-hover-link"><span
-                                                                        class="menu-child-icon flex-auto"><span
-                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                                fill="currentColor"
-                                                                                fill-hover="currentColor"
-                                                                                viewBox="0 0 10 11"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path class="cms-hover-move-1"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                <path class="cms-hover-move-2"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                            </svg></span></span><span
-                                                                        class="menu-title title flex-basic d-flex">{{$project->Title}}</span></a></li>
+                                                                        class="cms-menu-link text-link text-hover-link"><span
+                                                                            class="menu-child-icon flex-auto"><span
+                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
+                                                                                    class="cms-arrow-up cms-arrow-up-right"
+                                                                                    fill="currentColor"
+                                                                                    fill-hover="currentColor"
+                                                                                    viewBox="0 0 10 11"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path class="cms-hover-move-1"
+                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                    <path class="cms-hover-move-2"
+                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                </svg></span></span><span
+                                                                            class="menu-title title flex-basic d-flex">{{$project->Title}}</span></a>
+                                                                </li>
                                                                 @endforeach
-                                                                <li 
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="/public_project/q/bridge"
-                                                                    class="cms-menu-link text-link text-hover-link"><span
-                                                                        class="menu-child-icon flex-auto"><span
-                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                                fill="currentColor"
-                                                                                fill-hover="currentColor"
-                                                                                viewBox="0 0 10 11"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path class="cms-hover-move-1"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                <path class="cms-hover-move-2"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                            </svg></span></span><span
-                                                                        class="menu-title title flex-basic d-flex">See More</span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -635,47 +612,33 @@
                                                     data-widget_type="cms_navigation_menu.default" style="width: 100% !important;">
                                                     <div class="elementor-widget-container">
                                                         <div class="cms-emenu cms-emenu--mega">
-                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20"> <div
-                                                                    class="text-heading" style="cursor: default;"
-                                                                    >Projects</div></h2>
+                                                            <h2 class="cms-title text-19 text-heading mt-n5 mb-20">
+                                                                <div
+                                                                    class="text-heading" style="cursor: default;">Projects</div>
+                                                            </h2>
                                                             <ul id="menu-footer-services"
                                                                 class="cms-menu cms-dropdown-mega">
-                                                                @foreach(["Completed", "On Going", "Case Studies"] as $project )
-                                                                <li 
+                                                                @foreach(["Completed", "On Going", "Research"] as $project )
+                                                                <li
                                                                     class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
                                                                     <a href="/public_project/q/{{strtolower(join('', explode(' ', $project)))}}"
-                                                                    class="cms-menu-link text-link text-hover-link"><span
-                                                                        class="menu-child-icon flex-auto"><span
-                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                                fill="currentColor"
-                                                                                fill-hover="currentColor"
-                                                                                viewBox="0 0 10 11"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path class="cms-hover-move-1"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                <path class="cms-hover-move-2"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                            </svg></span></span><span
-                                                                        class="menu-title title flex-basic d-flex">{{$project}}</span></a></li>
+                                                                        class="cms-menu-link text-link text-hover-link"><span
+                                                                            class="menu-child-icon flex-auto"><span
+                                                                                class="d-block text-10 lh-0 rtl-flip"><svg
+                                                                                    class="cms-arrow-up cms-arrow-up-right"
+                                                                                    fill="currentColor"
+                                                                                    fill-hover="currentColor"
+                                                                                    viewBox="0 0 10 11"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path class="cms-hover-move-1"
+                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                    <path class="cms-hover-move-2"
+                                                                                        d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
+                                                                                </svg></span></span><span
+                                                                            class="menu-title title flex-basic d-flex">{{$project}}</span></a>
+                                                                </li>
                                                                 @endforeach
-                                                                <li 
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-cms-service menu-item-118 cms-dropdown-mega-item">
-                                                                    <a href="/public_project/q/building"
-                                                                    class="cms-menu-link text-link text-hover-link"><span
-                                                                        class="menu-child-icon flex-auto"><span
-                                                                            class="d-block text-10 lh-0 rtl-flip"><svg
-                                                                                class="cms-arrow-up cms-arrow-up-right"
-                                                                                fill="currentColor"
-                                                                                fill-hover="currentColor"
-                                                                                viewBox="0 0 10 11"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path class="cms-hover-move-1"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                                <path class="cms-hover-move-2"
-                                                                                    d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                                            </svg></span></span><span
-                                                                        class="menu-title title flex-basic d-flex">See More</span></a></li>
+
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -717,7 +680,7 @@
                                     <path class="cms-hover-move-2"
                                         d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                 </svg></span> <span class="screen-reader-text">Contact US </span> </a></div>
-                    
+
                     <div class="site-side-navs cms-modal site-header-item" data-modal="#cms-side-nav"
                         data-modal-mode="slide" data-modal-slide="right" data-modal-class="bg-white"
                         data-modal-width="400px" data-modal-space="30px" data-close-text=""> <span
@@ -745,7 +708,7 @@
     @yield("content")
     <footer id="cms-footer" class="cms-footer relative cms-footer-elementor" style="margin-top: 50px;">
         <div data-elementor-type="wp-post" data-elementor-id="135" class="elementor elementor-135">
-            
+
             <div style="display: flex; justify-content: end; text-align: right;">
                 <div class="elementor-element elementor-element-2c85d7a bg-primary text-white pb-50 pb-tablet-0 e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
                     data-id="2c85d7a" data-element_type="container"
@@ -825,13 +788,13 @@
                                         <div class="cms-cta cms-cta-1"> <img width="200" height="50"
                                                 src="/wp-content/uploads/logo.png" class="cms-lazy lazy-loading mb-25"
                                                 alt="" loading="lazy" data-duration="" />
-                                            <div class="cms-desc text-primary">We are committed to expanding our solutions, incorporating a variety of perspectives to ensure resilience and minimize project risk. By broadening our approach, we build a foundation for lasting project.</div> 
-                                                @guest
-                                                @if (Route::has('login'))
-                                                <a
-                                                    class="btn btn-lg btn-accent text-white btn-hover-primary text-hover-white mt-25"
-                                                    href="/login"> Login
-                                                        <span class="text-10 lh-0"><svg
+                                            <div class="cms-desc text-primary">We are committed to expanding our solutions, incorporating a variety of perspectives to ensure resilience and minimize project risk. By broadening our approach, we build a foundation for lasting project.</div>
+                                            @guest
+                                            @if (Route::has('login'))
+                                            <a
+                                                class="btn btn-lg btn-accent text-white btn-hover-primary text-hover-white mt-25"
+                                                href="/login"> Login
+                                                <span class="text-10 lh-0"><svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -839,14 +802,14 @@
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                         <path class="cms-hover-move-2"
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg></span>  </a>
-                                                @endif
-                                                
+                                                    </svg></span> </a>
+                                            @endif
+
                                             @else
                                             <a
-                                                    class="btn btn-lg btn-accent text-white btn-hover-primary text-hover-white mt-25"
-                                                    href="/home"> Home
-                                                        <span class="text-10 lh-0"><svg
+                                                class="btn btn-lg btn-accent text-white btn-hover-primary text-hover-white mt-25"
+                                                href="/home"> Home
+                                                <span class="text-10 lh-0"><svg
                                                         class="cms-arrow-up cms-arrow-up-right" fill="currentColor"
                                                         fill-hover="currentColor" viewBox="0 0 10 11"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -854,8 +817,8 @@
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
                                                         <path class="cms-hover-move-2"
                                                             d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-                                                    </svg></span>  </a>
-                                            
+                                                    </svg></span> </a>
+
                                             @endguest
                                         </div>
                                     </div>
@@ -900,11 +863,12 @@
                                                     href="https://linkedin.com/" target="_blank"> <span
                                                         class="cms-eicon lh-0 cms-icon text-20"><svg
                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                                            <path 
+                                                            <path
                                                                 d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM11.351 24.188h-3.897v-11.723h3.897zM9.402 10.863h-0.025c-1.308 0-2.153-0.9-2.153-2.025 0-1.15 0.872-2.026 2.205-2.026s2.153 0.875 2.179 2.026c0 1.125-0.846 2.025-2.205 2.025zM25.401 24.188h-3.896v-6.272c0-1.576-0.564-2.651-1.974-2.651-1.076 0-1.718 0.725-1.999 1.425-0.103 0.25-0.128 0.601-0.128 0.951v6.547h-3.896s0.051-10.624 0-11.723h3.896v1.66c0.518-0.799 1.444-1.935 3.512-1.935 2.564 0 4.486 1.676 4.486 5.276z">
                                                             </path>
                                                         </svg></span> <span class="screen-reader-text">LinkedIn</span>
-                                                </a></div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -949,24 +913,178 @@
         }
         
     </style> -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                setTimeout(function() {
-                    // document.getElementById("loader-container").style.display = "none";
-                    document.body.style.visibility = "visible";
-                }, 1000);
-            });
-        </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                // document.getElementById("loader-container").style.display = "none";
+                document.body.style.visibility = "visible";
+            }, 1000);
+        });
+    </script>
 
     <script src="/wp-includes/js/dist/hooks.min.js" id="wp-hooks-js"></script>
     <script src="/wp-includes/js/dist/i18n.min.js" id="wp-i18n-js"></script>
     <script
-        id="/wc-order-attribution-js-extra"> var wc_order_attribution = { "params": { "lifetime": 1.0000000000000000818030539140313095458623138256371021270751953125e-5, "session": 30, "base64": false, "ajaxurl": "\/wp-admin\/admin-ajax.php", "prefix": "wc_order_attribution_", "allowTracking": true }, "fields": { "source_type": "current.typ", "referrer": "current_add.rf", "utm_campaign": "current.cmp", "utm_source": "current.src", "utm_medium": "current.mdm", "utm_content": "current.cnt", "utm_id": "current.id", "utm_term": "current.trm", "utm_source_platform": "current.plt", "utm_creative_format": "current.fmt", "utm_marketing_tactic": "current.tct", "session_entry": "current_add.ep", "session_start_time": "current_add.fd", "session_pages": "session.pgs", "session_count": "udata.vst", "user_agent": "udata.uag" } }; </script>
+        id="/wc-order-attribution-js-extra">
+        var wc_order_attribution = {
+            "params": {
+                "lifetime": 1.0000000000000000818030539140313095458623138256371021270751953125e-5,
+                "session": 30,
+                "base64": false,
+                "ajaxurl": "\/wp-admin\/admin-ajax.php",
+                "prefix": "wc_order_attribution_",
+                "allowTracking": true
+            },
+            "fields": {
+                "source_type": "current.typ",
+                "referrer": "current_add.rf",
+                "utm_campaign": "current.cmp",
+                "utm_source": "current.src",
+                "utm_medium": "current.mdm",
+                "utm_content": "current.cnt",
+                "utm_id": "current.id",
+                "utm_term": "current.trm",
+                "utm_source_platform": "current.plt",
+                "utm_creative_format": "current.fmt",
+                "utm_marketing_tactic": "current.tct",
+                "session_entry": "current_add.ep",
+                "session_start_time": "current_add.fd",
+                "session_pages": "session.pgs",
+                "session_count": "udata.vst",
+                "user_agent": "udata.uag"
+            }
+        };
+    </script>
+    
     <script
-        id="harmonic-main-js-extra"> var main_data = { "ajax_url": "\/wp-admin\/admin-ajax.php" }; </script>
-    <script src="https://www.youtube.com/iframe_api?ver=1.0.0" id="youtube-iframe-api-js-js"></script>
-    <script
-        id="/elementor-frontend-js-before"> var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": true }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": true }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": true }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.4", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_optimized_control_loading": true, "e_onboarding": true, "home_screen": true, "ai-layout": true, "e_lazyload": true }, "urls": { "assets": "/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "9ca875d32f" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_mobile_extra", "viewport_tablet", "viewport_tablet_extra", "viewport_laptop"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 10, "title": "harmonic%20Up%20%E2%80%93%20Business%20Consulting%20and%20Finance%20Services%20WordPress%20Theme", "excerpt": "", "featuredImage": false } }; </script>
+        id="/elementor-frontend-js-before">
+        var elementorFrontendConfig = {
+            "environmentMode": {
+                "edit": false,
+                "wpPreview": false,
+                "isScriptDebug": false
+            },
+            "i18n": {
+                "shareOnFacebook": "Share on Facebook",
+                "shareOnTwitter": "Share on Twitter",
+                "pinIt": "Pin it",
+                "download": "Download",
+                "downloadImage": "Download image",
+                "fullscreen": "Fullscreen",
+                "zoom": "Zoom",
+                "share": "Share",
+                "playVideo": "Play Video",
+                "previous": "Previous",
+                "next": "Next",
+                "close": "Close",
+                "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right",
+                "a11yCarouselPrevSlideMessage": "Previous slide",
+                "a11yCarouselNextSlideMessage": "Next slide",
+                "a11yCarouselFirstSlideMessage": "This is the first slide",
+                "a11yCarouselLastSlideMessage": "This is the last slide",
+                "a11yCarouselPaginationBulletMessage": "Go to slide"
+            },
+            "is_rtl": false,
+            "breakpoints": {
+                "xs": 0,
+                "sm": 480,
+                "md": 768,
+                "lg": 1025,
+                "xl": 1440,
+                "xxl": 1600
+            },
+            "responsive": {
+                "breakpoints": {
+                    "mobile": {
+                        "label": "Mobile Portrait",
+                        "value": 767,
+                        "default_value": 767,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "mobile_extra": {
+                        "label": "Mobile Landscape",
+                        "value": 880,
+                        "default_value": 880,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "tablet": {
+                        "label": "Tablet Portrait",
+                        "value": 1024,
+                        "default_value": 1024,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "tablet_extra": {
+                        "label": "Tablet Landscape",
+                        "value": 1200,
+                        "default_value": 1200,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "laptop": {
+                        "label": "Laptop",
+                        "value": 1366,
+                        "default_value": 1366,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "widescreen": {
+                        "label": "Widescreen",
+                        "value": 2400,
+                        "default_value": 2400,
+                        "direction": "min",
+                        "is_enabled": false
+                    }
+                }
+            },
+            "version": "3.23.4",
+            "is_static": false,
+            "experimentalFeatures": {
+                "e_optimized_css_loading": true,
+                "e_font_icon_svg": true,
+                "additional_custom_breakpoints": true,
+                "container": true,
+                "container_grid": true,
+                "e_swiper_latest": true,
+                "e_nested_atomic_repeaters": true,
+                "e_optimized_control_loading": true,
+                "e_onboarding": true,
+                "home_screen": true,
+                "ai-layout": true,
+                "e_lazyload": true
+            },
+            "urls": {
+                "assets": "/wp-content\/plugins\/elementor\/assets\/",
+                "ajaxurl": "\/wp-admin\/admin-ajax.php"
+            },
+            "nonces": {
+                "floatingButtonsClickTracking": "9ca875d32f"
+            },
+            "swiperClass": "swiper",
+            "settings": {
+                "page": [],
+                "editorPreferences": []
+            },
+            "kit": {
+                "active_breakpoints": ["viewport_mobile", "viewport_mobile_extra", "viewport_tablet", "viewport_tablet_extra", "viewport_laptop"],
+                "global_image_lightbox": "yes",
+                "lightbox_enable_counter": "yes",
+                "lightbox_enable_fullscreen": "yes",
+                "lightbox_enable_zoom": "yes",
+                "lightbox_enable_share": "yes",
+                "lightbox_title_src": "title",
+                "lightbox_description_src": "description"
+            },
+            "post": {
+                "id": 10,
+                "title": "harmonic%20Up%20%E2%80%93%20Business%20Consulting%20and%20Finance%20Services%20WordPress%20Theme",
+                "excerpt": "",
+                "featuredImage": false
+            }
+        };
+    </script>
     <script defer
         src="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-js-850eb7e1f6e46fb9a1effb4db5132cb2.js"></script>
 </body>
