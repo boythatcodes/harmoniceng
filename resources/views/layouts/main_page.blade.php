@@ -480,7 +480,7 @@
 
                             </ul>
                         </li>
-                        <!-- <li id="menu-item-87"
+                        <li id="menu-item-87"
                             class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
                             <a href="/public_project/q/all" class="cms-menu-link"><span
                                     class="menu-title title flex-basic d-flex">Services</span><span
@@ -583,7 +583,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li> -->
+                        </li>
                         <li id="menu-item-87"
                             class="menu-item menu-item-type-post_type menu-item-object-page megamenu menu-item-has-children menu-item-87">
                             <a href="/public_project/q/all" class="cms-menu-link"><span
