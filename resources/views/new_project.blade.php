@@ -113,7 +113,7 @@
         window.location.href = '/projects';
     }
 
-    @if($project -> id)
+    @if($project->id)
     document.querySelector(".after-upload").style.display = "block";
     document.querySelector(".before-upload").style.display = "none";
     @endif
