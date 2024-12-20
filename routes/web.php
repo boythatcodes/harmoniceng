@@ -108,30 +108,37 @@ Route::get('/public_project/{id}', function($id){
     if(empty($project_data) || empty($project_data->id)) {
         return redirect("/");
     }
-    return view("services", compact("projectsMap", "project_data"));
+    return view("public_projects", compact("projectsMap", "project_data"));
 });
 
 Auth::routes(["register"=>false]);
 
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('users');
+    Route::post('/users', [App\Http\Controllers\HomeController::class, 'new_user'])->name('post_users');
+
+    Route::get("/projects", [App\Http\Controllers\HomeController::class, 'all_projects'])->name('all_projects');
+    Route::get("/project/{id}", [App\Http\Controllers\HomeController::class, 'project'])->name('single_project');
+    Route::post("/project/{id}", [App\Http\Controllers\HomeController::class, 'new_project'])->name('single_project_post');
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/users', [App\Http\Controllers\HomeController::class, 'users'])->name('users');
-Route::post('/users', [App\Http\Controllers\HomeController::class, 'new_user'])->name('post_users');
-
-Route::get("/projects", [App\Http\Controllers\HomeController::class, 'all_projects'])->name('all_projects');
-Route::get("/project/{id}", [App\Http\Controllers\HomeController::class, 'project'])->name('single_project');
-Route::post("/project/{id}", [App\Http\Controllers\HomeController::class, 'new_project'])->name('single_project_post');
+    Route::post("/delete/service", [App\Http\Controllers\HomeController::class, 'delete_services'])->name('delete_services');
+    Route::get("/services", [App\Http\Controllers\HomeController::class, 'all_services'])->name('all_services');
+    Route::get("/service/{id}", [App\Http\Controllers\HomeController::class, 'service'])->name('single_service');
+    Route::post("/service/{id}", [App\Http\Controllers\HomeController::class, 'new_service'])->name('single_service_post');
 
 
-Route::get("/service/{id}", [App\Http\Controllers\HomeController::class, 'service'])->name('single_service');
+    Route::post('/delete_user', [App\Http\Controllers\HomeController::class, 'delete_user'])->name('delete_user');
+    Route::get('/no-access', [App\Http\Controllers\HomeController::class, 'no_access'])->name('no_access');
 
 
-Route::post('/delete_user', [App\Http\Controllers\HomeController::class, 'delete_user'])->name('delete_user');
-Route::get('/no-access', [App\Http\Controllers\HomeController::class, 'no_access'])->name('no_access');
 
+    Route::get('/inqueries', [App\Http\Controllers\HomeController::class, 'inqueries'])->name('inqueries');
+    Route::post('/delete_inquery', [App\Http\Controllers\HomeController::class, 'delete_inquery'])->name('delete_inquery');
+
+});
 
 
 Route::post('/contact_us', [App\Http\Controllers\HomeController::class, 'contact_us'])->name('contact_us');
-Route::get('/inqueries', [App\Http\Controllers\HomeController::class, 'inqueries'])->name('inqueries');
-Route::post('/delete_inquery', [App\Http\Controllers\HomeController::class, 'delete_inquery'])->name('delete_inquery');
