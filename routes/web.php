@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Project;
+use App\Models\Service;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -21,12 +22,10 @@ function header_projects(){
 }
 
 Route::get('/', function () {
-    $projectsMap = header_projects();
-    return view('welcome', compact("projectsMap"));
+    return view('welcome');
 });
 
 Route::get('/download', function (Request $request) {
-    $projectsMap = header_projects();
     $s = $request->s;
     $files = [];
 
@@ -69,28 +68,69 @@ Route::get('/download', function (Request $request) {
             "link" => "/contact/",
         ]);
     }
-    return view('download', compact("projectsMap", "files"));
+    return view('download', compact("files"));
 });
 
 Route::get('/about', function () {
-    $projectsMap = header_projects();
-    return view("about", compact("projectsMap"));
+    return view("about");
 });
 
 Route::get('/leadership', function(){
-    $projectsMap = header_projects();
     $users = User::where("image_visible", true)->get();
-    return view("leadership", compact("projectsMap", "users"));
+    return view("leadership", compact("users"));
 });
 
 Route::get('/contact', function(){
+    return view("contact");
+});
+
+
+Route::get('/public_service/q/{type_of_service}', function($type_of_service){
+
+    if($type_of_service != "all"){
+        $services_data = Service::where('category', '=', $type_of_service)->get();
+    }else{
+        $services_data = Service::get();
+    }
+
+    $projects_data= [];
+    foreach ($services_data as $key => $value) {
+        $append_new = new stdClass();
+        $append_new->id = $value->id;
+        $append_new->Title = $value->type;
+        $append_new->public_image = $value->image;
+        $append_new->submission_date = explode("-", $value->updated_at)[0];
+        $append_new->type_of_service = $value->category;
+        array_push($projects_data, $append_new);
+    }
+    $show_details = false;
+    $url_thing = "public_service";
+    $tags = ["All", "Office Work", "Field Wrok", "Research"];
+    // if(empty($projects_data) || empty($projects_data->id)) {
+    //     return redirect("/");
+    // }
+    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags"));
+});
+
+Route::get('/public_service/{id}', function($id){
     $projectsMap = header_projects();
-    return view("contact", compact("projectsMap"));
+    $service_data = Service::find($id);
+    if(empty($service_data) || empty($service_data->id)) {
+        return redirect("/");
+    }
+    $project_data = new stdClass();
+    $project_data->id = $service_data->id;
+    $project_data->Title = $service_data->type;
+    $project_data->description = $service_data->content;
+    $project_data->public_image = $service_data->image;
+    $project_data->submission_date = explode("-", $service_data->updated_at)[0];
+    $project_data->type_of_service = $service_data->category;
+    $url_thing = "public_service";
+    return view("public_projects", compact("project_data", "url_thing"));
 });
 
 
 Route::get('/public_project/q/{type_of_service}', function($type_of_service){
-    $projectsMap = header_projects();
     $projects_data = Project::where("is_visible", true);
     if($type_of_service != "all"){
         $projects_data->where('status', 'LIKE', '%'. $type_of_service . '%');
@@ -99,7 +139,10 @@ Route::get('/public_project/q/{type_of_service}', function($type_of_service){
     // if(empty($projects_data) || empty($projects_data->id)) {
     //     return redirect("/");
     // }
-    return view("all_services", compact("projectsMap", "projects_data"));
+    $tags = ["All", "Completed", "Ongoing", "Research"];
+    $show_details = false;
+    $url_thing = "public_project";
+    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags"));
 });
 
 Route::get('/public_project/{id}', function($id){
@@ -108,7 +151,8 @@ Route::get('/public_project/{id}', function($id){
     if(empty($project_data) || empty($project_data->id)) {
         return redirect("/");
     }
-    return view("public_projects", compact("projectsMap", "project_data"));
+    $url_thing = "public_project";
+    return view("public_projects", compact("project_data", "url_thing"));
 });
 
 Auth::routes(["register"=>false]);
