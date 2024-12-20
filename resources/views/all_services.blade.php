@@ -1,6 +1,7 @@
 @extends('layouts.main_page')
 
 @section('content')
+
 <link rel="stylesheet" id="siteground-optimizer-combined-css-07ef100e8c9f8537cc3e26b2c8577d05"
     href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-07ef100e8c9f8537cc3e26b2c8577d05.css"
     media="all" />
@@ -23,7 +24,7 @@
                             <div class="cms-small-title font-500 mt-n7 pb-25 text-white empty-none"></div>
                             <h1
                                 class="cms-title cms-nl2br lh-108 mt-n10 text-75 text-tablet-50 text-smobile-40 text-white empty-none">
-                                services</h1>
+                                {{strtoupper(explode("_", $url_thing)[1])}}</h1>
                             <ul
                                 class="cms-breadcrumb unstyled text-white text-hover-white justify-content-center pt-20">
                                 <li><a class="breadcrumb-entry cms-hover-underline text-white text-hover-white"
@@ -34,7 +35,7 @@
                                                     d="M17.842 17.061l-12.146 12.146c-0.586 0.586-1.536 0.586-2.121 0l-1.417-1.417c-0.585-0.585-0.586-1.533-0.002-2.119l9.626-9.672-9.626-9.672c-0.583-0.586-0.582-1.534 0.002-2.119l1.417-1.417c0.586-0.586 1.536-0.586 2.121 0l12.146 12.146c0.586 0.586 0.586 1.536 0 2.121z">
                                                 </path>
                                             </svg> </span></a></li>
-                                <li><span class="breadcrumb-entry">Services</span></li>
+                                <li><span class="breadcrumb-entry">{{explode("_", $url_thing)[1]}}</span></li>
                             </ul>
                         </div>
                     </div>
@@ -53,18 +54,14 @@
                     <div class="elementor-widget-container">
                         <div id="cms_case_grid-488014d" class="cms-post-grid cms-grid cms-grid-9" data-layout="grid">
                             <div class="grid-filter-wrap d-flex justify-content-center"
-                                style="--cms-filter-color:primary;--cms-filter-color-hover:accent-regular;"> <a href="/public_project/q/completed"
+                                style="--cms-filter-color:primary;--cms-filter-color-hover:accent-regular;"> 
+                                @foreach($tags as $tag)
+                                <a href="/{{$url_thing}}/q/{{strtolower(join('_', explode(' ', $tag)))}}"
                                     class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
                                     data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">Completed</span> </a>
-                                <a href="/public_project/q/ongoing"
-                                    class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
-                                    data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">Ongoing</span> </a>
-                                <a href="/public_project/q/research"
-                                    class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
-                                    data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">Research</span> </a>
+                                        data-hover="Business">{{$tag}}</span> </a>
+                                
+                                @endforeach
                             </div>
                             <div class="e-con-inner">
                                 <div class="elementor-element elementor-element-6a6a6aa elementor-widget elementor-widget-cms_blog_grid"
@@ -86,18 +83,19 @@
                                                                 loading="lazy" decoding="async" width="570" height="380"
                                                                 src="/data/{{$project->public_image}}" />
                                                             <div
-                                                                class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8 text-white">
+                                                                class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8" style="color: black;">
                                                                 <div class="month text-15 lh-08">{{$project->submission_date}}</div>
                                                             </div>
                                                         </div>
                                                         <div class="cms-content p-40 p-lr-smobile-20">
                                                             <div class="cms-post-meta text-13 pb-10 mt-n5"> <a
-                                                                    href="/public_project/q/{{$project->type_of_service}}"
+                                                                    href="/{{$url_thing}}/q/{{$project->type_of_service}}"
                                                                     class="cms-term cms-hover-underline" style="text-transform: capitalize;">{{$project->type_of_service}}</a></div>
                                                             <h3 class="cms-heading text-line-2 text-21 lh-1238 pr-10"><a
-                                                                    href="/public_project/{{$project->id}}">
+                                                                    href="/{{$url_thing}}/{{$project->id}}">
                                                                     {{$project->Title}}
                                                                 </a></h3>
+                                                            @if($show_details)
                                                             <div class="cms-excerpt text-15 text-line-4 pt-20 mb-15">
                                                                 <div>
                                                                     <span class="cms-desc font-700 empty-none text-heading mt-n7 pb-25">Location:</span>
@@ -111,8 +109,10 @@
                                                                     <span class="cms-desc font-700 empty-none text-heading mt-n7 pb-25">Soil Test:</span>
                                                                     <span class="cms-desc empty-none text-body" style="text-transform: capitalize; margin-top: 10px;">{{$project->soil_test?"Yes":"No"}}</span>
                                                                 </div>
-                                                            </div> <a
-                                                                href="/public_project/{{$project->id}}"
+                                                            </div>
+                                                            @endif
+                                                             <a
+                                                                href="/{{$url_thing}}/{{$project->id}}"
                                                                 class="cms-readmore cms-readmore-1 cms-hover-move-icon-up"> <span
                                                                     class="cms-readmore--1 d-flex gap-10 align-items-center pr-10">
                                                                     <span class="text relative z-top">Read More</span> <span
