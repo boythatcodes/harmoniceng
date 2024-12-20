@@ -61,6 +61,22 @@ class HomeController extends Controller
 
     }
 
+    public function delete_services(Request $request)
+    {
+        Service::where("id", $request->id)->delete();
+        return redirect("/services");
+    }
+
+
+    public function all_services()
+    {
+        $header_info = "services";
+        $active = "All Services";
+        $button = ["Create Service", "create_service"];
+        $all_projects = Service::orderBy("id", 'desc')->get();
+        return view('services', compact("active", "all_projects", "header_info", "button"));
+    }
+
 
     public function service(Request $request, $id = "0")
     {
@@ -79,6 +95,46 @@ class HomeController extends Controller
         }
         return view('new_service', compact("user", "active", "project", "header_info",  "button"));
     }
+
+
+
+    public function new_service(Request $request, $id = "0")
+    {
+        if(empty($request->file_name)){
+            return redirect("/service/".$id);
+        }
+
+        $file_name = $request->file_name;
+        
+
+        if ($request->file != null) {
+            $file = $request->file('file');
+            $file_name = rand() . "." . $file->getClientOriginalExtension();
+            $file->move(public_path('data'), $file_name);
+        }
+
+
+        if ($id == "0") {
+            Service::create([
+                "type" => $request->title_service,
+                "content" => $request->desc,
+                "image" => $file_name,
+                "category" => $request->category,
+            ]);
+        } else {
+            $update_data = [
+                "type" => $request->title_service,
+                "content" => $request->desc,
+                "image" => $file_name,
+                "category" => $request->category,
+            ];
+
+            Service::where("id", $id)->update($update_data);
+        }
+        return redirect("/services");
+
+    }
+
 
     public function project(Request $request, $id = "0")
     {
