@@ -26,12 +26,12 @@
                         <div class="elementor-widget-container">
                             <div class="cms-epf cms-epf-1 text-center">
                                 <div class="post-cat text-13 lh-1308 mb-30 gap-10 d-flex justify-content-center" style="cursor: pointer;">
-                                    <a href="/public_project/q/all"
-                                        class="cms-term tag-cloud-link">All Services</a>
-                                    <a href="/services/q/{{$project_data->type_of_service}}"
+                                    <a href="/{{$url_thing}}/q/all"
+                                        class="cms-term tag-cloud-link">All @if($url_thing == "public_service") Services @else Projects @endif</a>
+                                    <a href="/{{$url_thing}}/q/{{$project_data->type_of_service}}"
                                         class="cms-term tag-cloud-link" style="text-transform: capitalize;">{{$project_data->type_of_service}}</a>
                                 </div>
-                                <h2 class="cms-title cms-heading text-34 max-580 mt-n7 mb-40 m-lr-auto">{{$project_data->title}}</h2>
+                                <h2 class="cms-title cms-heading text-34 max-580 mt-n7 mb-40 m-lr-auto">{{$project_data->Title}}</h2>
                                 <img loading="lazy" decoding="async"
                                     style="height: 587px; width: 840px;" src="/data/{{$project_data->public_image}}"
                                     onerror="this.src='https://www.svgrepo.com/show/522113/file-document.svg'; this.style.height = '10px !important';"
@@ -40,6 +40,7 @@
                             </div>
                         </div>
                     </div>
+                    @if($url_thing == "public_project")
                     <a href="/data/{{$project_data->public_image}}" download="/data/{{$project_data->public_image}}" style="text-align: center;">
                         <svg style="width: 25px;" viewBox="0 -0.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -85,6 +86,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     <div class="elementor-element elementor-element-a432728 elementor-invisible elementor-widget elementor-widget-cms_heading"
                         data-id="a432728" data-element_type="widget"
                         data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
@@ -102,7 +104,13 @@
                 </div>
                 <a
                     class="btn btn-lg cms-hover-move-icon-up btn-accent text-white btn-hover-accent-darken text-hover-white"
-                    href="/contact"> Request Access to files <span
+                    href="/contact"> 
+                    @if($url_thing == "public_project")
+                    Request Access to files 
+                    @else
+                    Contact US
+                    @endif
+                    <span
                         class="text-10 lh-0"><svg class="cms-arrow-up cms-arrow-up-right"
                             fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
                             xmlns="http://www.w3.org/2000/svg">
