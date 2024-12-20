@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 // use App\Models\Project;
 
 use App\Models\Project;
+use App\Models\Service;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -60,6 +61,24 @@ class HomeController extends Controller
 
     }
 
+
+    public function service(Request $request, $id = "0")
+    {
+        $user = Auth::user();
+        $project_count = 0;
+        $header_info = "services";
+        $active = "Create Service";
+        $button = ["Go Back", "go_back"];
+        $project = new Service();
+        if ($id != "0") {
+            $active = "Edit Service";
+            $project = Service::find($id);
+            if(!$project){
+                return redirect("/service/0");
+            }
+        }
+        return view('new_service', compact("user", "active", "project", "header_info",  "button"));
+    }
 
     public function project(Request $request, $id = "0")
     {

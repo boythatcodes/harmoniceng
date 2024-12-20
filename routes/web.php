@@ -123,6 +123,10 @@ Route::get("/projects", [App\Http\Controllers\HomeController::class, 'all_projec
 Route::get("/project/{id}", [App\Http\Controllers\HomeController::class, 'project'])->name('single_project');
 Route::post("/project/{id}", [App\Http\Controllers\HomeController::class, 'new_project'])->name('single_project_post');
 
+
+Route::get("/service/{id}", [App\Http\Controllers\HomeController::class, 'service'])->name('single_service');
+
+
 Route::post('/delete_user', [App\Http\Controllers\HomeController::class, 'delete_user'])->name('delete_user');
 Route::get('/no-access', [App\Http\Controllers\HomeController::class, 'no_access'])->name('no_access');
 
