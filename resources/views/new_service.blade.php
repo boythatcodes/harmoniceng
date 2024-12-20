@@ -4,18 +4,20 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
 <form method="post" enctype="multipart/form-data">
     @csrf
-    <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">Category</span></label><select name="is_visible" id="" class="select select-bordered w-full">
+    <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">Category</span></label><select name="category" id="" class="select select-bordered w-full">
             @if($project->category)
-                <option value="public" id="">Public (Project is visible to public)</option>
-                <option value="private" id="">Private (Only Harmonic Group has access)</option>
-            @else
-                <option value="private" id="">Private (Only Harmonic Group has access)</option>
-                <option value="public" id="">Public (Project is visible to public)</option>
+                <option selected value="{{$project->category}}" id="">{{$project->category}}</option>
             @endif
+            @foreach(["office_work", "field_work", "research"] as $status )
+                @if($project->category != $status)
+                    <option value="{{$status}}"  id="">{{str_replace("_"," ",$status)}}</option>
+                @endif
+
+            @endforeach
         </select>
     </div>
     <div class="form-control w-full undefined my-7"><label class="label"><span class="label-text text-base-content undefined">Title</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="title_service" required value="{{$project->type}}"></div>
-        <div contenteditable="true" class="textarea textarea-bordered w-full" style="min-height: 300px;" placeholder="" id="editable">@if($project->description) {!! $project->description !!} @endif</div>
+        <div contenteditable="true" class="textarea textarea-bordered w-full" style="min-height: 300px;" placeholder="" id="editable">@if($project->content) {!! $project->content !!} @endif</div>
         <input type="hidden" id="desc" name="desc">
     </div>
     <div class="divider">Service Image</div>
@@ -40,7 +42,7 @@
         </div>
     </div>
 
-    <input type="hidden" @if($project->image) value="{{$project->image}}" @endif id="image_name" required name="file_name">
+    <input type="hidden" @if($project->image) value="{{$project->image}}" @endif id="file_name_input" required name="file_name">
 
     <div class="mt-16"><button class="btn btn-primary float-right">Update</button></div>
 </form>
