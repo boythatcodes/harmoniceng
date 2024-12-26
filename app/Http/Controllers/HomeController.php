@@ -256,8 +256,7 @@ class HomeController extends Controller
         if (!(Auth::user()->is_admin)) {
             return redirect("/no-access");
         }
-        
-        
+
 
         $user_info = User::create([
             "name" => $request->name,
@@ -265,7 +264,8 @@ class HomeController extends Controller
             "password" => Hash::make($request->password),
             "is_admin" => $request->type_of_user == "admin",
             "description" => $request->description,
-            "phone" => $request->phone,
+            "position" => $request->position,
+            "expertise" => $request->expertise,
             "since" => $request->since,
             "image_visible" => $request->is_visible == "yes",
         ]);

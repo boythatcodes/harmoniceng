@@ -82,11 +82,14 @@
                             class="label-text text-base-content undefined">Full Name</span></label><input required type="text"
                         placeholder="" class="input  input-bordered w-full " name="name" value=""></div>
                 <div class="form-control w-full mt-4"><label class="label"><span
-                            class="label-text text-base-content undefined">Description</span></label><input required type="text"
-                        placeholder="" class="input  input-bordered w-full " name="description" value=""></div>
+                            class="label-text text-base-content undefined">Postion</span></label><input required type="text"
+                        placeholder="" class="input  input-bordered w-full " name="position" value=""></div>
                 <div class="form-control w-full mt-4"><label class="label"><span
-                            class="label-text text-base-content undefined">Phone</span></label><input required type="text"
-                        placeholder="" class="input  input-bordered w-full " name="phone" value=""></div>
+                    class="label-text text-base-content undefined">Expertise</span></label><input required type="text"
+                        placeholder="" class="input  input-bordered w-full " name="expertise" value=""></div>
+                <div class="form-control w-full mt-4"><label class="label"><span
+                            class="label-text text-base-content undefined">Description</span></label><textarea required type="text"
+                        placeholder="" class="input  input-bordered w-full " name="description" value=""> </textarea></div>
                 <div class="form-control w-full mt-4"><label class="label"><span
                             class="label-text text-base-content undefined">Email Id</span></label><input required name="email" type="email"
                         placeholder="" class="input  input-bordered w-full " value=""></div>
