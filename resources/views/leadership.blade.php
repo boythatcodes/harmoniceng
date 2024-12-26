@@ -84,10 +84,14 @@
                                                         rel="nofollow">{{$user->name}} </div></h4>
                                                 <div
                                                     class="team-position empty-none text-15 pt-5 mb-n5 text-primary">
-                                                    {{$user->description}} </div>
+                                                    <b>Postion: </b>{{$user->position}} </div>
                                                 <div
                                                     class="team-position empty-none text-15 pt-5 mb-n5 text-primary">
-                                                    {{$user->phone}} </div>
+                                                    <b>Expertise: </b>{{$user->expertise}} </div>
+                                                <div
+                                                    class="team-position empty-none text-15 pt-5 mb-n5 text-primary">
+                                                    <b>Description:</b>
+                                                    {!! nl2br(e($user->description)) !!} </div>
                                                 <div class="team-desc empty-none pt-15 text-15"></div>
                                             </div>
                                             <div class="team-socials d-flex gap-10 lh-20"> 
