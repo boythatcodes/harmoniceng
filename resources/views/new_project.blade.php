@@ -34,10 +34,14 @@
     </div>
     <div class="divider">More Info</div>
     <div class="form-control w-full"><label class="label">
-        <span class="label-text text-base-content undefined">Image Url: <small class="text-xs text-red-500 pl-3">(Public)</small></span>
+        <span class="label-text text-base-content undefined">Public File: <small class="text-xs text-red-500 pl-3">(Public)</small></span>
     </label>
     @if($project->public_image)
-        <span>Previous: </span><img src="/data/{{$project->public_image}}" alt="" class="max-w-xs my-2 rounded-md">
+        <span class=" mb-3 text-sm">Download Previous: 
+        <a href="/data/{{$project->public_image}}" download="/data/{{$project->public_image}}" class="underline text-primary">
+            /data/{{$project->public_image}}
+        </a>
+        </span>
         <span class="mb-2">Upload New:</span>
     @endif
     <input type="file" placeholder="" class="input  input-bordered w-full pt-2.5" name="public_image" value="">
@@ -64,8 +68,16 @@
         <div contenteditable="true" class="textarea textarea-bordered w-full" style="min-height: 300px;" placeholder="" id="editable">@if($project->description) {!! $project->description !!} @endif</div>
         <input type="hidden" id="desc" name="desc">
     </div>
-    <div class="divider">Project Zip File</div>
-    <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">Project File: <small class="text-xs text-green-500 pl-3">(Private)</small></span></label>
+    <div class="divider">Project Private File</div>
+    <div class="form-control w-full undefined">
+        <label class="label"><span class="label-text text-base-content undefined">Project File: <small class="text-xs text-green-500 pl-3">(Private)</small></span></label>
+        @if(!empty($project->file_name))
+        <div class=" mb-3 text-sm">Download Previous: 
+            <a href="/data/{{$project->public_image}}" download="/data/{{$project->file_path}}" class="underline text-primary">
+                {{$project->file_name}}
+            </a>
+        </div>
+        @endif
         <div class="file-dnd">
             <input type="file" id="upload-image" name="file" />
             <div class="before-upload">
