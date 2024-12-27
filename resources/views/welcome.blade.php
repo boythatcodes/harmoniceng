@@ -492,7 +492,7 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/financial-planning/index.html">Feasibility study</a></h3>
+                                                        href="/public_service/q/office_work">Feasibility study</a></h3>
                                                 <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">A feasibility study is conducted to assess the practicality and viability of a proposed project. <br> (Soil, Buildings, and Bridges)</div> 
                                             </div>
                                         </div>
@@ -518,7 +518,7 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/wealth-management/index.html">Survey</a></h3>
+                                                        href="/public_service/q/office_work">Survey</a></h3>
                                                 <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">A survey involves collecting data and measurements related to the project site, including topography, environmental factors, feasibility and design.
 
                                                 </div>
@@ -560,7 +560,7 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/portfolio-consulting/index.html">Design</a></h3>
+                                                        href="/public_service/q/office_work">Design</a></h3>
                                                 <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Design refers to the creation of detailed plans and specifications for the construction of the project.</div>
                                                 
                                             </div>
@@ -594,7 +594,7 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/mergers-acquisitions/index.html">Supervision</a></h3>
+                                                        href="/public_service/q/office_work">Supervision</a></h3>
                                                 <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">The term oversees the construction work to ensure that it adheres to the approved designs, specifications, and schedules.
                                                 </div> 
                                             </div>
@@ -631,7 +631,7 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/sustainability-assurance/index.html">Structural analysis</a></h3>
+                                                        href="/public_service/q/office_work">Structural analysis</a></h3>
                                                 <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25"> Engineers perform this analysis assessing the behavior of a structure under various conditions which ensure that the structure will be stable, safe, and durable.
                                                 </div> 
                                             </div>
@@ -693,7 +693,7 @@
                                             <div
                                                 class="cms-content p-40 p-lr-smobile-20 mt-n80 cms-shadow-2 cms-radius-tbl-16 bg-white ml-40 ml-hover-0 cms-transition relative z-top">
                                                 <h3 class="cms-heading text-line-2 text-22 lh-1238"><a
-                                                        href="service/crisis-management/index.html">Cost estimation</a></h3>
+                                                        href="/public_service/q/office_work">Cost estimation</a></h3>
                                                 <div class="cms-excerpt text-15 text-line-4 pt-20 mb-25">Predicting the total cost of the project involves estimating expenses from the planning stage through to completion, accounting for materials, labor, permits, and unforeseen variables. </div> 
                                             </div>
                                         </div>
