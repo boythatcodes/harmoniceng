@@ -339,7 +339,7 @@
     class="home page-template-default page page-id-10 cms-theme-cursor theme-harmonic translatepress-en_US cms-header-layout-1 cms-heading-font-default elementor-default elementor-kit-32 elementor-page elementor-page-10">
     <header id="cms-header-wrap" class="site-header">
         <div id="cms-header"
-            class="cms-header header-layout-1 sticky-on sticky-srollup transparent-off bg-primary header-shadow">
+            class="cms-header header-layout-1 transparent-off bg-primary header-shadow">
             <div id="cms-header-top" class="cms-header-top header-top-default">
                 <div data-elementor-type="wp-post" data-elementor-id="154" class="elementor elementor-154">
                     <div class="elementor-element elementor-element-fba1d44 e-con-boxed-wide bg-primary text-white elementor-hidden-mobile_extra elementor-hidden-mobile e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
@@ -406,7 +406,7 @@
                 </div>
             </div>
             <div
-                class="cms-header-main container-fluid d-flex gap-30 justify-content-between cms-radius-tltr-16 bg-white">
+                class="cms-header-main d-flex gap-30 justify-content-between cms-radius-tltr-16 bg-white">
                 <div class="site-branding flex-auto d-flex justify-content-start"><a class="site-logo" href="/"
                         title="Harmonic Eng" rel="home"><img width="197" height="49" alt="Harmonic Eng"
                             src="/wp-content/uploads/logo.png" data-mobile="/harmonic_eng.png"
@@ -731,14 +731,7 @@
                 </div>
             </div>
         </div>
-    </footer> <a href="#" class="scroll-top text-16 bg-white text-primary cms-shadow-2 circle cms-hover-move-icon-up">
-        <svg class="cms-arrow-up cms-arrow-up-right" fill="currentColor" fill-hover="currentColor" viewBox="0 0 10 11"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="cms-hover-move-1"
-                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-            <path class="cms-hover-move-2"
-                d="M10 9.80108V0H0.198919V0.633514H8.91892L0 9.55243L0.447568 10L9.36649 1.08108V9.80108H10Z" />
-        </svg> </a>
+    </footer> 
     <div id="cms-theme-cursor"></div>
     <div class="cms-modal-overlay cursor-close-white cms-transition"></div> <template id="tp-language"
         data-tp-language="en_US"></template>
