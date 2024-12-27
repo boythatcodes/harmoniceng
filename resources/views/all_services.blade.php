@@ -24,7 +24,7 @@
                             <div class="cms-small-title font-500 mt-n7 pb-25 text-white empty-none"></div>
                             <h1
                                 class="cms-title cms-nl2br lh-108 mt-n10 text-75 text-tablet-50 text-smobile-40 text-white empty-none">
-                                {{strtoupper(explode("_", $url_thing)[1])}}</h1>
+                                {{strtoupper(explode("_", $url_thing)[1]."s")}}</h1>
                             <ul
                                 class="cms-breadcrumb unstyled text-white text-hover-white justify-content-center pt-20">
                                 <li><a class="breadcrumb-entry cms-hover-underline text-white text-hover-white"
@@ -53,16 +53,36 @@
                     data-widget_type="cms_case_grid.default">
                     <div class="elementor-widget-container">
                         <div id="cms_case_grid-488014d" class="cms-post-grid cms-grid cms-grid-9" data-layout="grid">
+                            <h3 style="text-transform: capitalize; text-align: center;">{{join(" ", explode('_', $type_of_service))}}</h3>
+                            <br />
                             <div class="grid-filter-wrap d-flex justify-content-center"
-                                style="--cms-filter-color:primary;--cms-filter-color-hover:accent-regular;"> 
-                                @foreach($tags as $tag)
-                                <a href="/{{$url_thing}}/q/{{strtolower(join('_', explode(' ', $tag)))}}"
-                                    class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
-                                    data-filter="business|case-category"> <span class="filter--item"
-                                        data-hover="Business">{{$tag}}</span> </a>
-                                
-                                @endforeach
+                                style="--cms-filter-color:primary;--cms-filter-color-hover:accent-regular;">
+
+                                @if(empty($unique_tags))
+                                <b>Categories: </b>
+                                    @foreach($tags as $tag)
+                                    <?php
+                                        $tag = strtolower(join('_', explode(' ', $tag)));
+                                    ?>
+                                    <a href="/{{$url_thing}}/q/{{$tag}}"
+                                        @if($type_of_service  == $tag) style="border-bottom: 3px solid black; padding-bottom: 5px;" @endif
+                                        class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
+                                        data-filter="business|case-category"> <span class="filter--item"
+                                            data-hover="Business" style="text-transform: capitalize;">{{$tag}}</span> </a>
+                                    
+                                    @endforeach
+                                @else
+                                    <b>Sub Categories: </b>
+                                    @foreach($unique_tags as $catgory)
+                                        <a href="/{{$url_thing}}/q/{{$type_of_service}}?sub={{strtolower(join('_', explode(' ', $catgory)))}}"
+                                            class="filter-item text-primary text-hover-accent-regular text-active-accent-regular cms-hover-underline"
+                                            @if($sub  == $catgory) style="border-bottom: 3px solid black; padding-bottom: 5px;" @endif
+                                            data-filter="business|case-category"> <span class="filter--item"
+                                                data-hover="Business" style="text-transform: capitalize;">{{$catgory}}</span> </a>
+                                    @endforeach
+                                @endif
                             </div>
+                            <br />
                             <div class="e-con-inner">
                                 <div class="elementor-element elementor-element-6a6a6aa elementor-widget elementor-widget-cms_blog_grid"
                                     data-id="6a6a6aa" data-element_type="widget" data-widget_type="cms_blog_grid.default">
@@ -73,15 +93,17 @@
 
                                                 @php($x = 1)
                                                 @if(count($projects_data) == 0)
-                                                    <h1>No Data Available</h1>
+                                                    <h1 style="text-align: center; margin-top: 50px; margin-bottom: 50px">No Data Available</h1>
                                                 @endif
                                                 @foreach($projects_data as $project)
-                                                <div class="cms-item hover-image-zoom-out cms-hover-change item-{{$x}}">
-                                                    <div class="cms--item cms-radius-16 cms-hover-shadow-2 cms-transition bg-white">
+                                                <div class="cms-item hover-image-zoom-out cms-hover-change item-{{$x}}" style="text-align: center;">
+                                                    <div class="cms--item cms-radius-16 cms-hover-shadow-2 cms-transition bg-white" style="border: 3px solid #E2DFD2;">
                                                         <div class="cms-post-thumbnail overflow-hidden relative cms-radius-16">
                                                             <img
-                                                                loading="lazy" decoding="async" width="570" height="380"
-                                                                src="/data/{{$project->public_image}}" />
+                                                                loading="lazy" decoding="async"
+                                                                src="/data/{{$project->public_image}}" style="height: 200px; margin-top: 20px;" 
+                                                                onerror="this.src='https://www.svgrepo.com/show/522113/file-document.svg'; this.style.height = '10px !important';"
+                                                                />
                                                             <div
                                                                 class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8" style="color: black;">
                                                                 <div class="month text-15 lh-08">{{$project->submission_date}}</div>
@@ -89,9 +111,13 @@
                                                         </div>
                                                         <div class="cms-content p-40 p-lr-smobile-20">
                                                             <div class="cms-post-meta text-13 pb-10 mt-n5"> <a
+                                                                    @if(empty($project->sub_category))
                                                                     href="/{{$url_thing}}/q/{{$project->type_of_service}}"
-                                                                    class="cms-term cms-hover-underline" style="text-transform: capitalize;">{{$project->type_of_service}}</a></div>
-                                                            <h3 class="cms-heading text-line-2 text-21 lh-1238 pr-10"><a
+                                                                    @else
+                                                                    href="/{{$url_thing}}/q/{{$project->type_of_service}}?sub={{$project->sub_category}}"
+                                                                    @endif
+                                                                    class="cms-term cms-hover-underline" style="text-transform: capitalize;">@if(empty($project->sub_category)) {{$project->type_of_service}} @else {{$project->sub_category}} @endif</a></div>
+                                                            <h3 class="cms-heading text-line-2 text-21 lh-1238 pr-10" style="margin-top: 20px; margin-bottom: 20px;"><a
                                                                     href="/{{$url_thing}}/{{$project->id}}">
                                                                     {{$project->Title}}
                                                                 </a></h3>
@@ -113,6 +139,7 @@
                                                             @endif
                                                              <a
                                                                 href="/{{$url_thing}}/{{$project->id}}"
+                                                                style="margin-left: 30px;"
                                                                 class="cms-readmore cms-readmore-1 cms-hover-move-icon-up"> <span
                                                                     class="cms-readmore--1 d-flex gap-10 align-items-center pr-10">
                                                                     <span class="text relative z-top">Read More</span> <span
@@ -136,6 +163,7 @@
                                     </div>
                                 </div>
                             </div>
+                        <br />
                         </div>
                     </div>
                 </div>
