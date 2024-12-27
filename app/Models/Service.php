@@ -11,8 +11,8 @@ class Service extends Model
     protected $guarded = [];
 
 
-    public function User()
+    public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(User::class, 'service_user');
     }
 }
