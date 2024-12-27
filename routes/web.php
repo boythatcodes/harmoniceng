@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailableContact;
 
 function header_projects(){
     $projects = Project::where(function($query) {
@@ -85,14 +87,22 @@ Route::get('/contact', function(){
 });
 
 
-Route::get('/public_service/q/{type_of_service}', function($type_of_service){
-
-    if($type_of_service != "all"){
-        $services_data = Service::where('category', '=', $type_of_service)->get();
-    }else{
-        $services_data = Service::get();
+Route::get('/public_service/q/{type_of_service}', function(Request $request, $type_of_service){
+    if($type_of_service == "all"){
+        return redirect("/public_service/q/office_work");
     }
+    $sub = $request->sub;
+    $unique_tags = Service::where("category", "=", $type_of_service)->select("sub_category")->distinct()->pluck("sub_category");
+    $services_data = Service::where('category', '=', $type_of_service);
+    if(!empty($sub)) {
+        $services_data->where("sub_category", "=", $sub);
+    }
+    $services_data = $services_data->get();
 
+    if( count($services_data) == 1 ){
+        return redirect("/public_service/".$services_data[0]->id);
+    }
+    
     $projects_data= [];
     foreach ($services_data as $key => $value) {
         $append_new = new stdClass();
@@ -101,6 +111,7 @@ Route::get('/public_service/q/{type_of_service}', function($type_of_service){
         $append_new->public_image = $value->image;
         $append_new->submission_date = explode("-", $value->updated_at)[0];
         $append_new->type_of_service = $value->category;
+        $append_new->sub_category = $value->sub_category;
         array_push($projects_data, $append_new);
     }
     $show_details = false;
@@ -109,7 +120,7 @@ Route::get('/public_service/q/{type_of_service}', function($type_of_service){
     // if(empty($projects_data) || empty($projects_data->id)) {
     //     return redirect("/");
     // }
-    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags"));
+    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags", "unique_tags", "type_of_service", "sub"));
 });
 
 Route::get('/public_service/{id}', function($id){
@@ -126,7 +137,9 @@ Route::get('/public_service/{id}', function($id){
     $project_data->submission_date = explode("-", $service_data->updated_at)[0];
     $project_data->type_of_service = $service_data->category;
     $url_thing = "public_service";
-    return view("public_projects", compact("project_data", "url_thing"));
+    $team_members = $service_data->users;
+    $display_team_members = !$team_members->isEmpty();
+    return view("public_projects", compact("project_data", "url_thing", "team_members", "display_team_members"));
 });
 
 
@@ -142,7 +155,7 @@ Route::get('/public_project/q/{type_of_service}', function($type_of_service){
     $tags = ["All", "Completed", "Ongoing", "Research"];
     $show_details = false;
     $url_thing = "public_project";
-    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags"));
+    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags", "type_of_service"));
 });
 
 Route::get('/public_project/{id}', function($id){
@@ -152,7 +165,27 @@ Route::get('/public_project/{id}', function($id){
         return redirect("/");
     }
     $url_thing = "public_project";
-    return view("public_projects", compact("project_data", "url_thing"));
+    $display_team_members = false;
+    return view("public_projects", compact("project_data", "url_thing", "display_team_members"));
+});
+
+
+Route::post('/contact_us', function(Request $request){
+    DB::table("contactus")->insert([
+        "name" => $request->name,
+        "email" => $request->email,
+        "company_name" => empty($request->company_name)? " ": $request->company_name,
+        "phone_number" => $request->phone_number,
+        "info_related" => join(" ,", $request->info_related),
+        "description" => $request->description,
+    ]);
+    return redirect("/contact");
+});
+
+
+Route::get('/send-test-mail', function () {
+    Mail::to('harmonic@harmoniceng.com')->send(new MailableContact());
+    return 'Test mail sent!';
 });
 
 Auth::routes(["register"=>false]);
@@ -180,9 +213,8 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/inqueries', [App\Http\Controllers\HomeController::class, 'inqueries'])->name('inqueries');
-    Route::post('/delete_inquery', [App\Http\Controllers\HomeController::class, 'delete_inquery'])->name('delete_inquery');
+    Route::post('/mark_as_read_inquery', [App\Http\Controllers\HomeController::class, 'mark_as_read_inquery'])->name('mark_as_read_inquery');
 
 });
 
 
-Route::post('/contact_us', [App\Http\Controllers\HomeController::class, 'contact_us'])->name('contact_us');
