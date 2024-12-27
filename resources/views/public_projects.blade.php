@@ -9,6 +9,10 @@
     as="style">
 <main id="cms-main" class="cms-main is-elementor">
 
+    <link rel="stylesheet" id="siteground-optimizer-combined-css-8241d8cad2405f0aa8182767f58ee52f"
+        href="/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-8241d8cad2405f0aa8182767f58ee52f.css"
+        media="all" />
+
     <div data-elementor-type="wp-post" data-elementor-id="255" class="elementor elementor-255">
 
         <div class="elementor-element elementor-element-b88d5e9 p-tb-110 p-tb-tablet-60 e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
@@ -101,12 +105,82 @@
                         </div>
                     </div>
 
+                    @if($display_team_members)
+                    <h4 style="text-align: left !important;">Team at hand: </h4>
+
+                    <main id="cms-main" class="cms-main is-elementor" style="margin-top: -150px;">
+                        <div data-elementor-type="wp-page" data-elementor-id="17" class="elementor elementor-17">
+
+                            <div class="elementor-element elementor-element-1a91ba6 p-tb-110 p-tb-tablet-40 e-flex e-con-boxed cms-econ-boxed-no cms-econ-no-space-no e-con e-parent"
+                                data-id="1a91ba6" data-element_type="container">
+                                <div class="e-con-inner">
+                                    @foreach ($team_members as $user)
+
+                                    <a href="/contact" style="cursor: pointer !important;" class="elementor-element elementor-element-f88cf66 e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no e-con e-child"
+                                        data-id="f88cf66" data-element_type="container"
+                                        data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                                        <div style="cursor: pointer !important;" class="elementor-element elementor-element-17e72fb elementor-invisible elementor-widget elementor-widget-cms_teams"
+                                            data-id="17e72fb" data-element_type="widget"
+                                            data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+                                            data-widget_type="cms_teams.default">
+                                            <div class="elementor-widget-container">
+                                                <div
+                                                    class="cms-eteam cms-eteam-1 cms-team-grid d-flex gutter flex-col-1 flex-col-smobile-1">
+                                                    <div class="cms-team-item ">
+                                                        <div
+                                                            class="cms-team--item bg-white bg-hover-grey cms-transition cms-radius-16 cms-hover-change hover-image-zoom-out">
+                                                            <div class="team-name d-block text-center cms-radius-16 overflow-hidden"><img loading="lazy"
+                                                                    decoding="async" width="400" height="420"
+                                                                    src="/data/users/{{ $user->id }}.jpg"
+                                                                    alt="Image"
+                                                                    onerror="this.src='https://ui-avatars.com/api/?name={{ $user->name }}';"
+                                                                    alt="Avatar">
+                                                            </div>
+                                                            <div
+                                                                class="team-content p-40 p-lr-smobile-20 d-flex gap-20 align-items-center justify-content-between">
+                                                                <div class="team--content">
+                                                                    <h4 class="team-heading cms-heading text-21 mt-n5">
+                                                                        <div
+                                                                            class="team-name d-block relative"
+                                                                            rel="nofollow">{{$user->name}} </div>
+                                                                    </h4>
+                                                                    <div
+                                                                        class="team-position empty-none text-15 pt-5 mb-n5 text-primary">
+                                                                        <b>Postion: </b>{{$user->position}}
+                                                                    </div>
+                                                                    <div
+                                                                        class="team-position empty-none text-15 pt-5 mb-n5 text-primary">
+                                                                        <b>Expertise: </b>{{$user->expertise}}
+                                                                    </div>
+                                                                    <div
+                                                                        class="team-position empty-none text-15 pt-5 mb-n5 text-primary">
+                                                                        <b>Description:</b>
+                                                                        {!! nl2br(e($user->description)) !!}
+                                                                    </div>
+                                                                    <div class="team-desc empty-none pt-15 text-15"></div>
+                                                                </div>
+                                                                <div class="team-socials d-flex gap-10 lh-20">
+                                                                    <small>With Us Since: <b>{{$user->since}} </b></small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    @endif
                 </div>
                 <a
                     class="btn btn-lg cms-hover-move-icon-up btn-accent text-white btn-hover-accent-darken text-hover-white"
-                    href="/contact"> 
+                    href="/contact">
                     @if($url_thing == "public_project")
-                    Request Access to files 
+                    Request Access to files
                     @else
                     Contact US
                     @endif
