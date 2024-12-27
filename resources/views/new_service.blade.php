@@ -17,9 +17,9 @@
         </select>
     </div>
     <div class="form-control w-full undefined my-7"><label class="label"><span class="label-text text-base-content undefined">Title</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="title_service" required value="{{$project->type}}"></div>
+    <div class="form-control w-full undefined my-7"><label class="label"><span class="label-text text-base-content undefined">Sub Category:</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="sub_category" required value="{{$project->sub_category}}"></div>
         <div contenteditable="true" class="textarea textarea-bordered w-full" style="min-height: 300px;" placeholder="" id="editable">@if($project->content) {!! $project->content !!} @endif</div>
         <input type="hidden" id="desc" name="desc">
-    </div>
     <div class="divider">Service Image</div>
     <div class="form-control w-full undefined">
         <div class="file-dnd">
@@ -36,7 +36,7 @@
             </div>
             <div class="after-upload">
                 <div class="clear-btn">&times;</div>
-                <img src="@if(explode('/', $project->mime_type)[0] == 'image') /data/{{$project->image}} @else /document.svg @endif" />
+                <img src="/data/{{$project->image}}" />
             </div>
             <div class="text-center text-base-content" id="file_name"></div>
         </div>
@@ -44,15 +44,147 @@
 
     <input type="hidden" @if($project->image) value="{{$project->image}}" @endif id="file_name_input" required name="file_name">
 
+    <div class="divider">Team Members</div>
+    <div class="btn px-6 btn-md normal-case btn-primary w-full" onclick="add_user()">Add Team</div>
+    <table class="table w-full">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="selected_teams">
+            
+
+
+        </tbody>
+    </table>
+    
+
     <div class="mt-16"><button class="btn btn-primary float-right">Update</button></div>
 </form>
+
+
+
+<div class="modal" id="add_user">
+    <div class="modal-box  "><button class="btn btn-sm btn-circle absolute right-2 top-2" onclick="hide_add_user()">✕</button>
+        <div class="" id="">
+            <h3>Select a user</h3>
+            <table class="table w-full">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="add_team">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
 <script src="/imageupload.js"></script>
 <script>
+    add_user_div = document.getElementById("add_user")
+    add_team_div = document.getElementById("add_team")
+    selected_teams_div = document.getElementById("selected_teams")
     const editableDiv = document.getElementById('editable');
     const desc = document.getElementById('desc');
     var editor = new MediumEditor('#editable');
+
+    var selected_users = new Set(@json($associated_users_id));
+
+
+    view_able_users = @json($viewable_users);
+
+
+    function display_members_of_team(){
+        var string_to_append = ""
+        selected_users.forEach( user_id => {
+            view_able_users.forEach(element => {
+                if(element["id"] == user_id) {
+                    string_to_append += `<tr>
+                        <td>
+                            <div class="flex items-center space-x-3">
+                                <div class="avatar">
+                                    <div class="mask mask-squircle w-12 h-12"><img
+                                            src="/data/users/${element['id']}.jpg" 
+                                            alt="Image" 
+                                            onerror="this.src='https://ui-avatars.com/api/?name=${element['name']}';"
+                                            alt="Avatar"></div>
+                                </div>
+                                <div>
+                                    <div class="font-bold capitalize">${element['name']}</div>
+                                    <div class="text-sm opacity-50">${element['is_admin']? 'Admin': 'User'}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>${element['email']}</td>
+                        <td><button class="btn btn-square btn-ghost" onclick="add_or_remove_from_service(${element['id']})"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    aria-hidden="true" class="w-5">
+                                    ${selected_users.has(element['id'])?'<path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />': '<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />'}
+                                </svg></button></td>
+                        <input type="hidden" name="user_id[]" value="${user_id}" />
+                    </tr>`
+                }
+            });
+        });
+
+        selected_teams_div.innerHTML = string_to_append
+    }
+    
+    
+
+    function update_viewable_user() {
+        var string_to_append = ""
+        view_able_users.forEach(element => {
+            string_to_append += `<tr>
+                        <td>
+                            <div class="flex items-center space-x-3">
+                                <div class="avatar">
+                                    <div class="mask mask-squircle w-12 h-12"><img
+                                            src="/data/users/${element['id']}.jpg" 
+                                            alt="Image" 
+                                            onerror="this.src='https://ui-avatars.com/api/?name=${element['name']}';"
+                                            alt="Avatar"></div>
+                                </div>
+                                <div>
+                                    <div class="font-bold capitalize">${element['name']}</div>
+                                    <div class="text-sm opacity-50">${element['is_admin']? 'Admin': 'User'}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>${element['email']}</td>
+                        <td><button class="btn btn-square btn-ghost" onclick="add_or_remove_from_service(${element['id']})"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    aria-hidden="true" class="w-5">
+                                    ${selected_users.has(element['id'])?'<path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />': '<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />'}
+                                </svg></button></td>
+                    </tr>`
+        });
+
+        add_team_div.innerHTML = string_to_append
+        display_members_of_team()
+    }
+
+
+    function add_or_remove_from_service(id){
+        if(selected_users.has(id)){
+            selected_users.delete(id)
+        }else{
+            selected_users.add(id)
+        }
+
+        update_viewable_user()
+    }
+
 
     function contentChanged() {
         desc.value = editableDiv.innerHTML;
@@ -67,10 +199,21 @@
         window.location.href = '/services';
     }
 
+    function add_user() {
+        add_user_div.classList.add("modal-open")
+        update_viewable_user()
+    }
+
+    function hide_add_user() {
+        add_user_div.classList.remove("modal-open")
+    }
+
     @if($project->id)
     document.querySelector(".after-upload").style.display = "block";
     document.querySelector(".before-upload").style.display = "none";
     @endif
+
+    display_members_of_team()
 </script>
 
 <style>
