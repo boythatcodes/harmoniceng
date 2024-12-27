@@ -81,19 +81,22 @@ class HomeController extends Controller
     public function service(Request $request, $id = "0")
     {
         $user = Auth::user();
+        $viewable_users = User::where("image_visible", "=",true)->select("id", "name", "email", "is_admin")->get();
         $project_count = 0;
         $header_info = "services";
         $active = "Create Service";
         $button = ["Go Back", "go_back"];
+        $associated_users_id = [];
         $project = new Service();
         if ($id != "0") {
             $active = "Edit Service";
             $project = Service::find($id);
+            $associated_users_id = $project->users()->pluck('users.id');
             if(!$project){
                 return redirect("/service/0");
             }
         }
-        return view('new_service', compact("user", "active", "project", "header_info",  "button"));
+        return view('new_service', compact("user", "active", "project", "header_info",  "button", "viewable_users", "associated_users_id"));
     }
 
 
@@ -115,23 +118,35 @@ class HomeController extends Controller
 
 
         if ($id == "0") {
-            Service::create([
+            $service = Service::create([
                 "type" => $request->title_service,
+                "sub_category" => strtolower( $request->sub_category),
                 "content" => $request->desc,
                 "image" => $file_name,
                 "category" => $request->category,
             ]);
+
+            if(!empty($request->user_id)) {
+                $service->users()->attach($request->user_id);
+            }
         } else {
             $update_data = [
                 "type" => $request->title_service,
+                "sub_category" => strtolower($request->sub_category),
                 "content" => $request->desc,
                 "image" => $file_name,
                 "category" => $request->category,
             ];
 
             Service::where("id", $id)->update($update_data);
+
+            $service = Service::findOrFail($id);
+
+            if(!empty($request->user_id)) {
+                $service->users()->sync($request->user_id);
+            }
         }
-        return redirect("/services");
+        return redirect("/service/".$id);
 
     }
 
@@ -279,38 +294,38 @@ class HomeController extends Controller
         return redirect("/users");
     }
 
-    public function contact_us(Request $request)
-    {
-        DB::table("contactus")->insert([
-            "name" => $request->name,
-            "email" => $request->email,
-            "company_name" => $request->company_name,
-            "phone_number" => $request->phone_number,
-            "description" => $request->description,
-        ]);
-        return redirect("/");
-    }
-
-
     public function inqueries(Request $request)
     {
         $user = Auth::user();
         if (!($user->is_admin)) {
             return redirect("/no-access");
         }
-        $all_inqueries = DB::table("contactus")->orderBy("id", 'desc')->get();
         $header_info = "Contact";
-        $active = "All Inqueries";
-        $button = ["", ""];
-        return view('inqueries', compact("user", "all_inqueries", "active", "header_info", "button"));
+        $active = "Unmarked Inqueries";
+        $button = ["View Marked Only", "view_marked"];
+
+        $all_inqueries = DB::table("contactus")->where("is_read", "=", $request->read == 1)->orderBy("id", 'desc')->get();
+
+        $count_of_total = DB::table("contactus")->count();
+        if(!empty($request->read)) {
+            $active = "Marked Inqueries";
+            $button = ["View Unmarked", "view_unmarked"];
+            $count_of_read = count($all_inqueries);
+        }else {
+            $count_of_read = DB::table("contactus")->where("is_read", "=", true)->count();
+        }
+
+        $conversionRate = ($count_of_read / $count_of_total) * 100;
+
+        return view('inqueries', compact("user", "all_inqueries", "active", "header_info", "button", "conversionRate", "count_of_total", "count_of_read"));
     }
 
-    public function delete_inquery(Request $request)
+    public function mark_as_read_inquery(Request $request)
     {
         if (!(Auth::user()->is_admin)) {
             return redirect("/no-access");
         }
-        DB::table("contactus")->where("id", $request->id)->delete();
-        return redirect("/inqueries");
+        DB::table("contactus")->where("id", $request->id)->update(["is_read" => $request->forward == "1"]);
+        return redirect("/inqueries?read=".$request->forward);
     }
 }

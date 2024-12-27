@@ -4,40 +4,51 @@
     @csrf
     <div class="row gutterx-40 guttery-30">
         <div class="col-6 col-smobile-12"> <label class="label">Your
-                name</label> <span class="wpcf7-form-control-wrap"
+                name *</label> <span class="wpcf7-form-control-wrap"
                 data-name="name"><input size="40" maxlength="400"
                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                     autocomplete="name" aria-required="true"
-                    aria-invalid="false" placeholder="Harmonic Eng" value=""
+                    aria-invalid="false" placeholder="" value=""
                     type="text" name="name" required /></span></div>
         <div class="col-6 col-smobile-12"> <label class="label">Email
-                Address</label> <span class="wpcf7-form-control-wrap"
+                Address *</label> <span class="wpcf7-form-control-wrap"
                 data-name="email"><input size="40" maxlength="400"
                     class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
                     autocomplete="email" aria-required="true"
-                    aria-invalid="false" placeholder="Name@harmoniceng.com"
+                    aria-invalid="false" placeholder=""
                     value="" type="email" name="email"  required /></span></div>
         <div class="col-6 col-smobile-12"> <label class="label">Company
                 Name</label> <span class="wpcf7-form-control-wrap"
                 data-name="company_name"><input size="40" maxlength="400"
                     class="wpcf7-form-control wpcf7-text" aria-invalid="false"
-                    placeholder="Harmonic Eng" value="" type="text"
-                    name="company_name"  required /></span></div>
+                    placeholder="" value="" type="text"
+                    name="company_name"  /></span></div>
         <div class="col-6 col-smobile-12"> <label class="label">Phone
-                Number</label> <span class="wpcf7-form-control-wrap"
+                Number *</label> <span class="wpcf7-form-control-wrap"
                 data-name="phone_number"><input size="40" maxlength="400"
                     class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
                     aria-required="true" aria-invalid="false"
-                    placeholder="002 010668811" value="" type="tel"
+                    placeholder="" value="" type="tel"
                     name="phone_number"  required /></span></div>
-        <div class="col-12"> <label class="label">Description</label>
+        <div class="col-12">
+        <label class="label" style="margin-bottom: 10px;">Info related *</label> 
+        <div style="display: flex; gap: 10px">
+            <input type="checkbox" name="info_related[]" id="office_work" value="office_work"> <label for="office_work"> Office Work</label>
+            <input type="checkbox" name="info_related[]" id="field_work" value="field_work"> <label for="field_work"> Field Work</label>
+            <input type="checkbox" name="info_related[]" id="research" value="research"> <label for="research"> Research</label>
+            <input type="checkbox" name="info_related[]" id="general" value="general" checked> <label for="general"> General</label>
+        </div>
+        </div>
+        <div class="col-12"> <label class="label">Description *</label>
             <span class="wpcf7-form-control-wrap"
                 data-name="description"><textarea cols="40" rows="10"
                     maxlength="2000" class="wpcf7-form-control wpcf7-textarea"
                     aria-invalid="false"
+                    required
                     placeholder="Kindly provide enough information about what you want to now..."
                     name="description"></textarea></span>
         </div>
+        
         <div class="col-12"><button
                 class="wpcf7-form-control wpcf7-submit btn btn-lg btn-accent text-white btn-hover-primary text-hover-white w-100 cms-hover-move-icon-up"
                 type="submit">Submit Request<span
