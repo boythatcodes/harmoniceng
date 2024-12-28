@@ -89,7 +89,24 @@ Route::get('/contact', function(){
 
 Route::get('/public_service/q/{type_of_service}', function(Request $request, $type_of_service){
     if($type_of_service == "all"){
-        return redirect("/public_service/q/office_work");
+        $categories = [
+            [
+                "title" => "Office Work",
+                "info" => "Info Related To office work goes here.",
+                "url" => "/public_service/q/office_work"
+            ],
+            [
+                "title" => "Field Work",
+                "info" => "Info Related To field work goes here.",
+                "url" => "/public_service/q/field_work"
+            ],
+            [
+                "title" => "Research",
+                "info" => "Info Related To research work goes here.",
+                "url" => "/public_service/q/research"
+            ],
+    ];
+        return view("services_category", compact("categories"));
     }
     $sub = $request->sub;
     $unique_tags = Service::where("category", "=", $type_of_service)->select("sub_category")->distinct()->pluck("sub_category");
