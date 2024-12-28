@@ -101,13 +101,15 @@
                                                         <div class="cms-post-thumbnail overflow-hidden relative cms-radius-16">
                                                             <img
                                                                 loading="lazy" decoding="async"
-                                                                src="/data/{{$project->public_image}}" style="height: 200px; margin-top: 20px;" 
+                                                                src="/data/{{$project->public_image}}" style="height: 200px; margin-top: 20px; border-radius: 10px;" 
                                                                 onerror="this.src='https://www.svgrepo.com/show/522113/file-document.svg'; this.style.height = '10px !important';"
                                                                 />
-                                                            <div
-                                                                class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8" style="color: black;">
-                                                                <div class="month text-15 lh-08">{{$project->submission_date}}</div>
-                                                            </div>
+                                                            @if($show_details)
+                                                                <div
+                                                                    class="cms-post-thumb-date absolute top-left ml-20 mt-20 p-20 cms-radius-8" style="color: black;">
+                                                                    <div class="month text-15 lh-08">{{$project->submission_date}}</div>
+                                                                </div>
+                                                            @endif
                                                         </div>
                                                         <div class="cms-content p-40 p-lr-smobile-20">
                                                             <div class="cms-post-meta text-13 pb-10 mt-n5"> <a
