@@ -1740,4 +1740,42 @@
             </div>
         </div>
     </main>
+
+    @if($enabled)
+    <div class="popup"  style="position: fixed; z-index: 10000; background:rgba(0,0,0, 0.55); width: 100vw; height: 100vh; top:0; left:0; display: grid; grid-column: 1 / span 2; place-items:center;" id="popup">
+        <div style="position: relative; max-width: 100%; max-height: 100%; background: white; padding: 10px; border-radius: 10px;">
+        @if($type == 'image')    
+        <img src="{{$url}}" style="max-width: 100vw; max-height: 100vh;"
+            onload="(function(img) {
+                if (img.naturalHeight > img.naturalWidth) {
+                    img.style.height = '100%';
+                    img.style.width = 'auto';
+                } else {
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                }
+            })(this)" 
+            alt="Harmonic Image">
+            @elseif($type == 'youtube')
+            <iframe style="width: 100vw; height: 100vh; max-width: 560px; max-height: 315px;" src="{{$url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            @endif
+            <div style="position: absolute; right: 10px; background: black; padding: 7px 10px 5px 10px; top: 10px; border-radius: 100%; cursor: pointer;"
+                id="closeButton">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" style="height: 40px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+    @endif
+
+    <script defer>
+        var closeButton = document.getElementById('closeButton');
+        var popup = document.getElementById('popup');
+        closeButton.addEventListener("click", ()=>{
+            popup.style.display = 'none';
+        })
+    </script>
 @endsection
