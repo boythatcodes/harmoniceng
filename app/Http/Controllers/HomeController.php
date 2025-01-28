@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 // use App\Models\Project;
 
+use App\Models\Popup;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\User;
@@ -327,5 +328,69 @@ class HomeController extends Controller
         }
         DB::table("contactus")->where("id", $request->id)->update(["is_read" => $request->forward == "1"]);
         return redirect("/inqueries?read=".$request->forward);
+    }
+
+
+    public function popup(Request $request)
+    {
+        if (!(Auth::user()->is_admin)) {
+            return redirect("/no-access");
+        }
+
+        $popup = Popup::find(1);
+        if(empty($popup)) {
+            $popup = Popup::create([
+                "enabled" => false,
+                "type" => "youtube",
+                "url" => "https://www.youtube.com/"
+            ]);
+        }
+
+        $header_info = "popup";
+        $active = "Toggle Popup";
+        if($popup->enabled) {
+            $button = ["Disable Popup", "disable_current_popup"];
+        }else {
+            $button = ["Enable Popup", "enable_current_popup"];
+        }
+        return view('popup', compact("popup", "active", "header_info", "button"));
+    }
+
+
+    public function updated_popup(Request $request, $enabled)
+    {
+        if (!(Auth::user()->is_admin)) {
+            return redirect("/no-access");
+        }
+
+        Popup::where("id",1)->update(["enabled" => $enabled == "1"]);
+        
+       
+        return redirect("/popup");
+    }
+
+    public function other_update_popup(Request $request)
+    {
+        if (!(Auth::user()->is_admin)) {
+            return redirect("/no-access");
+        }
+
+        if(empty($request->youtube) && empty($request->image)){
+            return redirect("/popup");
+        }
+
+        $type_of_data = "youtube";
+        $url = $request->youtube;
+
+        if(!empty($request->image)){
+            $type_of_data = "image";
+            $file = $request->file('image');
+            $url = rand() . "." . $file->getClientOriginalExtension();
+            $file->move(public_path('data/popup'), $url);
+        }
+
+        Popup::where("id",1)->update(["url" => $url, "type"=>$type_of_data]);
+       
+        return redirect("/popup");
     }
 }
