@@ -109,17 +109,17 @@ Route::get('/public_service/q/{type_of_service}', function(Request $request, $ty
         $categories = [
             [
                 "title" => "Office Work",
-                "info" => "Info Related To office work goes here.",
+                "info" => "Info Related To office work is found in this section.",
                 "url" => "/public_service/q/office_work"
             ],
             [
                 "title" => "Field Work",
-                "info" => "Info Related To field work goes here.",
+                "info" => "Info Related To field work is found in this section.",
                 "url" => "/public_service/q/field_work"
             ],
             [
                 "title" => "Research",
-                "info" => "Info Related To research work goes here.",
+                "info" => "Info Related To research work is found in this section.",
                 "url" => "/public_service/q/research"
             ],
     ];
