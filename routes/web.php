@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailableContact;
+use App\Models\Popup;
 
 function header_projects(){
     $projects = Project::where(function($query) {
@@ -24,7 +25,23 @@ function header_projects(){
 }
 
 Route::get('/', function () {
-    return view('welcome');
+    $popup = Popup::find( 1);
+    $url = "";
+    $type = "youtube";
+    $enabled = false;
+
+    if(!empty($popup) && $popup->enabled){
+
+        if($popup->type == "image") {
+            $type = "image";
+            $url = "/data/popup/". $popup->url;
+        }else {
+            $url = $popup->url;
+        }
+
+        $enabled = $popup->enabled;
+    }
+    return view('welcome', compact("url", "type", "enabled"));
 });
 
 Route::get('/download', function (Request $request) {
@@ -227,6 +244,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/delete_user', [App\Http\Controllers\HomeController::class, 'delete_user'])->name('delete_user');
     Route::get('/no-access', [App\Http\Controllers\HomeController::class, 'no_access'])->name('no_access');
 
+    Route::get('/popup', [App\Http\Controllers\HomeController::class, 'popup'])->name('popup');
+    Route::get('/updated_popup/{update}', [App\Http\Controllers\HomeController::class, 'updated_popup'])->name('updated_popup');
+    Route::post('/popup', [App\Http\Controllers\HomeController::class, 'other_update_popup'])->name('other_update_popup');
 
 
     Route::get('/inqueries', [App\Http\Controllers\HomeController::class, 'inqueries'])->name('inqueries');
