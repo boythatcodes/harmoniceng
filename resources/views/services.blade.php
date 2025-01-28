@@ -24,7 +24,7 @@
             </div>
             <div class="flex w-full gap-2">
                 <button class="btn btn-primary  flex-1 -mt-3">Edit Project</button>
-                <form action="/delete/service" method="post" style="z-index: 10000000;">
+                <form action="/delete/service" method="post" style="z-index: 1;">
                     @csrf
                     <input type="hidden" value="{{$project->id}}" name="id">
                     <button class="btn btn-error  -mt-3">Delete</button>
