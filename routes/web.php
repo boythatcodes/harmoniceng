@@ -63,7 +63,7 @@ Route::get('/download', function (Request $request) {
         if(!empty($value->public_image)){
             array_push($files, [
                 "title" => $value->Title,
-                "file_name" => $value->file_name,
+                "file_name" => $value->public_image,
                 "soil_test" => $value->soil_test,
                 "client" => $value->client,
                 "submission_date"=> $value->submission_date,
@@ -71,7 +71,7 @@ Route::get('/download', function (Request $request) {
                 "location" => $value->location,
                 "status" => $value->status,
                 "status" => "free",
-                "link" => "/data/".$value->file_path,
+                "link" => "/data/".$value->public_image,
             ]);
         }
         array_push($files, [
