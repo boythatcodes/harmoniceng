@@ -57,7 +57,7 @@
                                 class="btn btn-ghost btn-circle avatar">
                                 <div class="avatar online">
                                     <div class="w-10 rounded-full">
-                                        <img src="https://ui-avatars.com/api/?name=Sairash+Gautam" />
+                                        <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" />
                                     </div>
                                 </div>
 
