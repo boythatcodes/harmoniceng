@@ -11,7 +11,8 @@
             </div>
             <div class="divider mt-2"></div>
             <div class="h-full w-full pb-6 ">
-                <p class="flex"><img alt="icon" src="@if(explode('/', $project->mime_type)[0] == 'image') /data/{{$project->file_path}} @else /document.svg @endif" class="w-12 h-12 inline-block mr-4">
+                <p class="flex">
+                    <img alt="icon" src="@if(explode('/', $project->mime_type)[0] == 'image') /data/public_path/{{$project->public_image}} @else /document.svg @endif" class="w-12 h-12 inline-block mr-4">
                 {{substr(strip_tags($project->description), 0, 150)}}
             </p>
                 <div class="mt-8 text-sm ">

@@ -101,7 +101,7 @@
                                                         <div class="cms-post-thumbnail overflow-hidden relative cms-radius-16">
                                                             <img
                                                                 loading="lazy" decoding="async"
-                                                                src="/data/{{$project->public_image}}" style="height: 200px; margin-top: 20px; border-radius: 10px;" 
+                                                                src="@if($type_of_public == 'image' || explode('/', $project->mime_type)[0] == 'image') /data/public_path/{{$project->public_image}} @else /document.svg @endif" style="height: 200px; margin-top: 20px; border-radius: 10px;" 
                                                                 onerror="this.src='https://www.svgrepo.com/show/522113/file-document.svg'; this.style.height = '10px !important';"
                                                                 />
                                                             @if($show_details)

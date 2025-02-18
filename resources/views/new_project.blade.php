@@ -2,6 +2,8 @@
 
 @section('content')
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+<link href="https://releases.transloadit.com/uppy/v3.8.0/uppy.min.css" rel="stylesheet">
+
 <form method="post" enctype="multipart/form-data">
     @csrf
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -11,21 +13,21 @@
         <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">Submission Date</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="submission_date" required value="{{$project->submission_date}}"></div>
         <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">Soil Test</span></label><select name="soil_test" id="" class="select select-bordered w-full">
                 @if($project->soil_test)
-                    <option value="yes" id="">Yes</option>
-                    <option value="no" id="">No</option>
+                <option value="yes" id="">Yes</option>
+                <option value="no" id="">No</option>
                 @else
-                    <option value="no" id="">No</option>
-                    <option value="yes" id="">Yes</option>
+                <option value="no" id="">No</option>
+                <option value="yes" id="">Yes</option>
                 @endif
             </select>
         </div>
         <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">Visiblity</span></label><select name="is_visible" id="" class="select select-bordered w-full">
                 @if($project->is_visible)
-                    <option value="public" id="">Public (Project is visible to public)</option>
-                    <option value="private" id="">Private (Only Harmonic Group has access)</option>
+                <option value="public" id="">Public (Project is visible to public)</option>
+                <option value="private" id="">Private (Only Harmonic Group has access)</option>
                 @else
-                    <option value="private" id="">Private (Only Harmonic Group has access)</option>
-                    <option value="public" id="">Public (Project is visible to public)</option>
+                <option value="private" id="">Private (Only Harmonic Group has access)</option>
+                <option value="public" id="">Public (Project is visible to public)</option>
                 @endif
             </select>
         </div>
@@ -34,34 +36,34 @@
     </div>
     <div class="divider">More Info</div>
     <div class="form-control w-full"><label class="label">
-        <span class="label-text text-base-content undefined">Public File: <small class="text-xs text-red-500 pl-3">(Public)</small></span>
-    </label>
-    @if($project->public_image)
-        <span class=" mb-3 text-sm">Download Previous: 
-        <a href="/data/{{$project->public_image}}" download="/data/{{$project->public_image}}" class="underline text-primary">
-            /data/{{$project->public_image}}
-        </a>
+            <span class="label-text text-base-content undefined">Public File: <small class="text-xs text-red-500 pl-3">(Public)</small></span>
+        </label>
+        @if($project->public_image)
+        <span class=" mb-3 text-sm">Download Previous:
+            <a href="{{ asset('data/public_path/'.$project->public_image) }}" download="{{ $project->public_image }}" class="underline text-primary">
+            {{ $project->public_image }}
+            </a>
         </span>
         <span class="mb-2">Upload New:</span>
-    @endif
-    <input type="file" placeholder="" class="input  input-bordered w-full pt-2.5" name="public_image" value="">
-</div>
-        <div class="form-control w-full undefined">
-            <label class="label">
-                <span class="label-text text-base-content undefined">Status</span>
-            </label>
-            <select name="status" id="" class="select select-bordered w-full capitalize">
-                @if(!empty($project->status))
-                    <option selected value="{{$project->status}}" id="">{{$project->status}}</option>
-                @endif
-                @foreach(["completed", "ongoing", "research"] as $status )
-                    @if($project->status != $status)
-                        <option value="{{$status}}"  id="">{{$status}}</option>
-                    @endif
+        @endif
+        <input type="file" placeholder="" class="input  input-bordered w-full pt-2.5" name="public_image" value="">
+    </div>
+    <div class="form-control w-full undefined">
+        <label class="label">
+            <span class="label-text text-base-content undefined">Status</span>
+        </label>
+        <select name="status" id="" class="select select-bordered w-full capitalize">
+            @if(!empty($project->status))
+            <option selected value="{{$project->status}}" id="">{{$project->status}}</option>
+            @endif
+            @foreach(["completed", "ongoing", "research"] as $status )
+            @if($project->status != $status)
+            <option value="{{$status}}" id="">{{$status}}</option>
+            @endif
 
-                @endforeach
-            </select>
-        </div>
+            @endforeach
+        </select>
+    </div>
     <div class="form-control w-full undefined my-7"><label class="label"><span class="label-text text-base-content undefined">Type Of Service</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="type_of_service" required value="{{$project->type_of_service}}"></div>
     <div class="form-control w-full undefined my-7"><label class="label"><span class="label-text text-base-content undefined">Location</span></label><input type="text" placeholder="" class="input  input-bordered w-full " name="location" required value="{{$project->location}}"></div>
     <div class="form-control w-full undefined"><label class="label"><span class="label-text text-base-content undefined">More Info: <small class="text-xs text-red-500 pl-3">(Public)</small></span></label>
@@ -69,45 +71,121 @@
         <input type="hidden" id="desc" name="desc">
     </div>
     <div class="divider">Project Private File</div>
-    <div class="form-control w-full undefined">
-        <label class="label"><span class="label-text text-base-content undefined">Project File: <small class="text-xs text-green-500 pl-3">(Private)</small></span></label>
-        @if(!empty($project->file_name))
-        <div class=" mb-3 text-sm">Download Previous: 
-            <a href="/data/{{$project->public_image}}" download="/data/{{$project->file_path}}" class="underline text-primary">
-                {{$project->file_name}}
-            </a>
-        </div>
-        @endif
-        <div class="file-dnd">
-            <input type="file" id="upload-image" name="file" />
-            <div class="before-upload">
-                <div class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-primary size-36 ml-20">
-                        <path d="M11.47 1.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1-1.06 1.06l-1.72-1.72V7.5h-1.5V4.06L9.53 5.78a.75.75 0 0 1-1.06-1.06l3-3ZM11.25 7.5V15a.75.75 0 0 0 1.5 0V7.5h3.75a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h3.75Z" />
-                    </svg>
 
-                    <h4>Drag and Drop Image file or Browse</h4>
-                    <p>Supports: Zip, PDF, Images</p>
-                </div>
-            </div>
-            <div class="after-upload">
-                <div class="clear-btn">&times;</div>
-                <img src="@if(explode('/', $project->mime_type)[0] == 'image') /data/{{$project->file_path}} @else /document.svg @endif" />
-            </div>
-            <div class="text-center text-base-content" id="file_name">{{$project->file_name}}</div>
-        </div>
-    </div>
 
-    <input type="hidden" @if($project->file_name) value="{{$project->file_name}}" @endif id="file_name_input" required name="file_name">
-    <input type="hidden" @if($project->mime_type) value="{{$project->mime_type}}" @endif id="mime_type" required name="mime_type">
-    <input type="hidden" @if($project->file_path) value="{{$project->file_path}}" @endif id="file_path" required name="file_path">
+    @if($project->id != 0)
+    <div id="dashboard"></div>
 
-    <div class="mt-16"><button class="btn btn-primary float-right">Update</button></div>
+    <script src="https://releases.transloadit.com/uppy/v3.8.0/uppy.min.js"></script>
+    <script src="https://releases.transloadit.com/uppy/v3.8.0/@uppy/xhr-upload.min.js"></script>
+    <script src="https://releases.transloadit.com/uppy/v3.8.0/@uppy/dashboard.min.js"></script>
+
+    <script>
+        const uppy = new Uppy.Uppy({
+                restrictions: {
+                    maxFileSize: 120000000, // 120MB per file
+                    allowedFileTypes: null, // All file types
+                    maxNumberOfFiles: null // Unlimited files
+                },
+                autoProceed: false
+            })
+            .use(Uppy.Dashboard, {
+                inline: true,
+                target: '#dashboard',
+                showProgressDetails: true,
+                proudlyDisplayPoweredByUppy: false,
+                note: 'Maximum file size 120MB, unlimited files'
+            })
+            .use(Uppy.XHRUpload, {
+                endpoint: '/project/{{$project->id}}/upload', // Replace with actual project ID
+                method: 'post',
+                formData: true,
+                fieldName: 'file',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content'),
+                    'Accept': 'application/json'
+                }
+            });
+
+        uppy.on('complete', (result) => {
+            console.log('Successful uploads:', result.successful);
+            console.log('Failed uploads:', result.failed);
+        });
+
+        uppy.on('error', (error) => {
+            console.error('Upload error:', error);
+        });
+    </script>
+
+    <div class="mt-4 mb-2">Existing Private files:</div>
+    <table class="table w-full">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($project->files as $file)
+            <tr>
+                <td>
+                    <div class="w-full">{{$file->original_name}}</div>
+                </td>
+                <td class="flex gap-2">
+                    <a class="btn btn-square btn-primary text-white" download="{{ $file->original_name }}" href="{{ asset($file->stored_path) }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                        </svg>
+
+                    </a>
+                    <a class="btn btn-square btn-error text-white" onclick='add_user("{{$file->original_name}}", "{{ number_format($file->size / 1048576,2)}} mb", "{{$file->id}}" )'>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                        </svg>
+                    </a>
+                </td>
+                @endforeach
+        </tbody>
+    </table>
+    @else
+    <div class="alert alert-warning">Create Project First To Upload Private Files</div>
+    @endif
+
+    <div class="mt-16"><button class="btn btn-primary float-right">@if($project->id != 0) Update @else Create @endif</button></div>
 </form>
 
+
+
+<div class="modal" id="add_user">
+    <div class="modal-box  "><button class="btn btn-sm btn-circle absolute right-2 top-2" onclick="hide_add_user()">✕</button>
+        <form action="/project/{{$project->id}}/delete" method="post" class="" id="">
+            @csrf
+            <h3>Delete File</h3>
+            <table class="table w-full">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody id="add_team">
+                    <td id="name"></td>
+                    <td id="size"></td>
+                </tbody>
+            </table>
+            <input type="hidden" name="file_id" id="file_id">
+            <div class="modal-action"><button class="btn btn-ghost" oncanplay="hide_add_user()">Cancel</button><button
+                    class="btn btn-error px-6">Delete</button></div>
+        </form>
+    </div>
+</div>
+
 <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
-<script src="/imageupload.js"></script>
 <script>
+    add_user_div = document.getElementById("add_user")
+    name_delete = document.getElementById("name")
+    size_delete = document.getElementById("size")
+    file_id = document.getElementById("file_id")
     const editableDiv = document.getElementById('editable');
     const desc = document.getElementById('desc');
     var editor = new MediumEditor('#editable');
@@ -125,11 +203,22 @@
         window.location.href = '/projects';
     }
 
-    @if($project->id)
-    document.querySelector(".after-upload").style.display = "block";
-    document.querySelector(".before-upload").style.display = "none";
-    @endif
+
+    function add_user(name, size, id) {
+        name_delete.innerHTML = name
+        size_delete.innerHTML = size
+        file_id.value = id
+        add_user_div.classList.add("modal-open")
+        update_viewable_user()
+    }
+
+    function hide_add_user() {
+        add_user_div.classList.remove("modal-open")
+    }
 </script>
+
+
+
 
 <style>
     .medium-editor-toolbar,
@@ -152,86 +241,6 @@
     h3 {
         font-size: 18px;
         /* or 1.17em */
-    }
-
-
-    .file-dnd {
-        width: 100%;
-        height: 320px;
-        border-radius: 10px;
-        border: 1px solid #ddd;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        gap: 10px;
-        box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.05);
-    }
-
-    .file-dnd input {
-        display: none;
-    }
-
-    .file-dnd h2 {
-        text-align: left;
-    }
-
-    .file-dnd .before-upload {
-        border: 1px dashed #888;
-        width: 100%;
-        height: 100%;
-        flex: 1;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .file-dnd .before-upload:hover {
-        background-color: rgba(100, 100, 100, 0.4);
-    }
-
-
-    .file-dnd .before-upload h4 {
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-
-    .file-dnd .before-upload p {
-        font-size: 14px;
-    }
-
-
-    .file-dnd .after-upload {
-        display: none;
-        position: relative;
-    }
-
-    .file-dnd .after-upload img {
-        width: 100%;
-        border-radius: 5px;
-        max-height: 260px;
-        object-fit: cover;
-    }
-
-    .file-dnd .after-upload .clear-btn {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        background: rgba(0, 0, 0, 0.5);
-        width: 15px;
-        height: 15px;
-        text-align: center;
-        line-height: 15px;
-        border-radius: 50%;
-        color: #fff;
-        font-size: 12px;
-        cursor: pointer;
     }
 </style>
 @endsection

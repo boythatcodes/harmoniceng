@@ -6,13 +6,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Popup;
 use App\Models\Project;
+use App\Models\ProjectFile;
 use App\Models\Service;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File ;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -114,7 +115,7 @@ class HomeController extends Controller
         if ($request->file != null) {
             $file = $request->file('file');
             $file_name = rand() . "." . $file->getClientOriginalExtension();
-            $file->move(public_path('data'), $file_name);
+            $file->move(public_path('data/public_path/'), $file_name);
         }
 
 
@@ -162,7 +163,7 @@ class HomeController extends Controller
         $project = new Project();
         if ($id != "0") {
             $active = "Edit Project";
-            $project = Project::find($id);
+            $project = Project::with('files')->find($id);
             if(!$project){
                 return redirect("/project/0");
             }
@@ -173,41 +174,26 @@ class HomeController extends Controller
 
     public function new_project(Request $request, $id = "0")
     {
-        if(empty($request->file_name)){
-            return redirect("/project/".$id);
-        }
-        $file_name = $request->file_name;
-        $mimeType = $request->mime_type;
-        $file_path = $request->file_path;
-        
         $pub_file_path = "";
-
-        if ($request->file != null) {
-            $file = $request->file('file');
-            $mimeType = $file->getClientMimeType();
-            $file_name = $file->getClientOriginalName();
-            $file_path = rand() . "." . $file->getClientOriginalExtension();
-            $file->move(public_path('data'), $file_path);
-        }
+        $mime_type = "";
 
         if($request->public_image != null){
             $pub_file = $request->file('public_image');
+            $mime_type = $pub_file->getMimeType();
             $pub_file_path = rand() . "." . $pub_file->getClientOriginalExtension();
-            $pub_file->move(public_path('data'), $pub_file_path);
+            $pub_file->move(public_path('data/public_path'), $pub_file_path);
         }
-
-
 
         $user = Auth::user();
         if ($id == "0") {
-            Project::create([
+            $project = Project::create([
                 "title" => $request->title,
                 "is_visible" => $request->is_visible == "public",
                 "description" => $request->desc,
                 "language" => $request->language,
-                "file_path" => $file_path,
-                "file_name" => $file_name,
-                "mime_type" => $mimeType,
+                "file_path" => "",
+                "file_name" => "",
+                "mime_type" => $mime_type,
                 "public_image"=> $pub_file_path != ""? $pub_file_path:"",
                 "client" => $request->client,
                 "submission_date" => $request->submission_date,
@@ -217,15 +203,15 @@ class HomeController extends Controller
                 "status" => $request->status,
                 "location" => $request->location
             ]);
+            return redirect("/project/{$project->id}");
         } else {
             $update_data = [
                 "title" => $request->title,
                 "is_visible" => $request->is_visible == "public",
                 "description" => $request->desc,
                 "language" => $request->language,
-                "file_path" => $file_path,
-                "file_name" => $file_name,
-                "mime_type" => $mimeType,
+                "file_path" => "",
+                "file_name" => "",
                 "client" => $request->client,
                 "submission_date" => $request->submission_date,
                 "soil_test" => $request->soil_test == "yes",
@@ -239,9 +225,14 @@ class HomeController extends Controller
                 $update_data["public_image"]= $pub_file_path;
             }
 
+            if($mime_type != ""){
+                $update_data["mime_type"]= $mime_type;
+            }
+
             Project::where("id", $id)->update($update_data);
+            return redirect("/projects");
         }
-        return redirect("/projects");
+        
     }
 
     public function users(Request $request)
@@ -392,5 +383,52 @@ class HomeController extends Controller
         Popup::where("id",1)->update(["url" => $url, "type"=>$type_of_data]);
        
         return redirect("/popup");
+    }
+
+
+    public function new_store(Request $request, int $project_id)
+    {
+        $request->validate([
+            'file' => 'required|file|max:120000',
+        ]);
+
+        $project = Project::findOrFail($project_id);
+
+        $file = $request->file('file');
+        $file_name = rand() . "." . $file->getClientOriginalExtension();
+        $name = $file->getClientOriginalName();
+        $mime = $file->getMimeType();
+        $size = $file->getSize();
+        $file->move(public_path('data/private_files_/'), $file_name);
+
+        $projectFile = $project->files()->create([
+            'original_name' => $name,
+            'stored_path' => "data/private_files_/{$file_name}",
+            'mime_type' => $mime,
+            'size' => $size,
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'file' => $projectFile
+        ]);
+    }
+
+    public function delete_file(Request $request, int $project_id){
+        if (!(Auth::user())) {
+            return redirect("/no-access");
+        }
+
+        $request->validate([
+            'file_id' => 'required',
+        ]);
+
+        $file = ProjectFile::findOrFail($request->file_id);
+
+        File::delete(public_path('data/private_files_/') . $file->stored_path);
+
+        ProjectFile::where("id", $request->file_id)->delete();
+
+        return redirect("/project/{$project_id}");
     }
 }

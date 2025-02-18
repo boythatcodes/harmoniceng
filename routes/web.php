@@ -48,8 +48,8 @@ Route::get('/download', function (Request $request) {
     $s = $request->s;
     $files = [];
 
-    $columns = ['title', 'description', 'file_name', 'client', 'submission_date', 'type_of_service', 'location'];
-    $download_query = Project::where("is_visible", 1);
+    $columns = ['title', 'description', 'client', 'submission_date', 'type_of_service', 'location'];
+    $download_query = Project::with("files")->where("is_visible", 1);
     if(!empty($s)){
         $download_query->where(function ($query) use ($s, $columns) {
             foreach ($columns as $column) {
@@ -71,21 +71,25 @@ Route::get('/download', function (Request $request) {
                 "location" => $value->location,
                 "status" => $value->status,
                 "status" => "free",
-                "link" => "/data/".$value->public_image,
+                "link" => "/data/public_path/".$value->public_image,
             ]);
         }
-        array_push($files, [
-            "title" => $value->Title,
-            "file_name" => $value->file_name,
-            "soil_test" => $value->soil_test,
-            "client" => $value->client,
-            "submission_date"=> $value->submission_date,
-            "type_of_service" => $value->type_of_service,
-            "location" => $value->location,
-            "status" => $value->status,
-            "status" => "paid",
-            "link" => "/contact/",
-        ]);
+
+        foreach ($value->files as $key => $file) {
+            array_push($files, [
+                "title" => $file->original_name,
+                "file_name" => $value->original_name,
+                "soil_test" => $value->soil_test,
+                "client" => $value->client,
+                "submission_date"=> $value->submission_date,
+                "type_of_service" => $value->type_of_service,
+                "location" => $value->location,
+                "status" => $value->status,
+                "status" => "paid",
+                "link" => "/contact/",
+            ]);
+        }
+        
     }
     return view('download', compact("files"));
 });
@@ -154,7 +158,8 @@ Route::get('/public_service/q/{type_of_service}', function(Request $request, $ty
     // if(empty($projects_data) || empty($projects_data->id)) {
     //     return redirect("/");
     // }
-    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags", "unique_tags", "type_of_service", "sub"));
+    $type_of_public = "image";
+    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags", "unique_tags", "type_of_service", "sub", "type_of_public"));
 });
 
 Route::get('/public_service/{id}', function($id){
@@ -189,7 +194,8 @@ Route::get('/public_project/q/{type_of_service}', function($type_of_service){
     $tags = ["All", "Completed", "Ongoing", "Research"];
     $show_details = false;
     $url_thing = "public_project";
-    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags", "type_of_service"));
+    $type_of_public = "";
+    return view("all_services", compact("projects_data", "show_details", "url_thing", "tags", "type_of_service", "type_of_public"));
 });
 
 Route::get('/public_project/{id}', function($id){
@@ -233,6 +239,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get("/projects", [App\Http\Controllers\HomeController::class, 'all_projects'])->name('all_projects');
     Route::get("/project/{id}", [App\Http\Controllers\HomeController::class, 'project'])->name('single_project');
     Route::post("/project/{id}", [App\Http\Controllers\HomeController::class, 'new_project'])->name('single_project_post');
+    Route::post('/project/{project_id}/upload', [App\Http\Controllers\HomeController::class, 'new_store']);
+    Route::post('/project/{project_id}/delete', [App\Http\Controllers\HomeController::class, 'delete_file']);
 
 
     Route::post("/delete/service", [App\Http\Controllers\HomeController::class, 'delete_services'])->name('delete_services');
