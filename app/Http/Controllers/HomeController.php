@@ -289,9 +289,9 @@ class HomeController extends Controller
     public function inqueries(Request $request)
     {
         $user = Auth::user();
-        if (!($user->is_admin)) {
-            return redirect("/no-access");
-        }
+        // if (!($user->is_admin)) {
+        //     return redirect("/no-access");
+        // }
         $header_info = "Contact";
         $active = "Unmarked Inqueries";
         $button = ["View Marked Only", "view_marked"];
