@@ -36,7 +36,7 @@
             </div>
             <div class="after-upload">
                 <div class="clear-btn">&times;</div>
-                <img src="/data/{{$project->image}}" />
+                <img src="/data/public_path/{{$project->image}}" />
             </div>
             <div class="text-center text-base-content" id="file_name"></div>
         </div>

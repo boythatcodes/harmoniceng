@@ -11,7 +11,7 @@
             </div>
             <div class="divider mt-2"></div>
             <div class="h-full w-full pb-6 ">
-                <p class="flex"><img alt="icon" src=" /data/{{$project->image}}" class="w-12 h-12 inline-block mr-4">
+                <p class="flex"><img alt="icon" src="/data/public_path/{{$project->image}}" class="w-12 h-12 inline-block mr-4">
                 {{substr(strip_tags($project->content), 0, 150)}}
             </p>
                 <div class="mt-8 text-sm ">
