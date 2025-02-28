@@ -40,26 +40,26 @@
                                 <div class="cms-title cms-heading text-heading text-19 pb-20 mt-n7">Contact Info
                                 </div> <a
                                     class="cms-eqc-item d-flex align-items-center gap-10  cms-email text-accent-regular text-hover-primary-regular"
-                                    href="mailto:harmoniceng@google.com" target="_blank"> <span
+                                    href="mailto:info.harmonicengineering@gmail.com" target="_blank"> <span
                                         class="cms-email-title empty-none cms-icon-color text-accent "></span> <span
-                                        class="cms-email-text">harmoniceng@google.com</span> </a> <a
+                                        class="cms-email-text">info.harmonicengineering@gmail.com</span> </a> <a
                                     class="cms-eqc-item d-flex align-items-center gap-10  cms-phone text-primary text-hover-accent"
-                                    href="tel:+9770000000"> <span
+                                    href="tel:01-5919669"> <span
                                         class="cms-phone-title empty-none cms-icon-color text-accent "></span> <span
-                                        class="cms-phone-text">+977 98000000</span> </a> <a
+                                        class="cms-phone-text">01-5919669</span> </a> <a
                                     class="cms-eqc-item  cms-address text-body text-hover-accent d-block pt-40"
                                     href="https://maps.app.goo.gl/M4B6kLjgWUBWo1CJ6"
                                     target="_blank">
                                     <div
                                         class="cms-address-title empty-none cms-heading cms-icon-color text-heading  text-19 pb-20">
                                         Address</div>
-                                    <div class="cms-address-text text-15 cms-nl2br">Kathmandu <br /> Nepal</div>
+                                    <div class="cms-address-text text-15 cms-nl2br">Lokanthali, Bhaktapur <br /> Nepal</div>
                                 </a>
                                 <div class="cms-eqc-item  cms-time text-body text-hover-accent text-15 pt-40">
                                     <div
                                         class="cms-time-title cms-heading cms-icon-color text-primary  text-19 pb-20">
                                         Support Hours</div>
-                                    <div class="cms-time-text">Mon-Fri 9:00am – 5:00pm PST</div>
+                                    <div class="cms-time-text">Sun-Fri 9:00am – 5:00pm</div>
                                     <div class="exclude-time text-secondary empty-none w-100">*Excludes Holidays
                                     </div>
                                 </div>
