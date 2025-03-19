@@ -66,37 +66,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="elementor-element elementor-element-5e3d280 pt-20 elementor-widget elementor-widget-cms_social_icons"
-                        data-id="5e3d280" data-element_type="widget" data-widget_type="cms_social_icons.default">
-                        <div class="elementor-widget-container">
-                            <div class="text-19 cms-heading text- pb-20 ">Social Media</div>
-                            <div class="cms-social-icons cms-social-icons-3 d-flex gap-15 "> <a
-                                    class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-269f32d text-primary-regular text-hover-accent-regular"
-                                    href="https://facebook.com/" target="_blank" aria-label="Facebook> <span class="
-                                    cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M32 16c0-8.838-7.163-16-16-16s-16 7.162-16 16 7.162 16 16 16c0.094 0 0.188 0 0.281-0.006v-12.45h-3.438v-4.006h3.438v-2.95c0-3.419 2.087-5.281 5.137-5.281 1.462 0 2.719 0.106 3.081 0.156v3.575h-2.1c-1.656 0-1.981 0.787-1.981 1.944v2.55h3.969l-0.519 4.006h-3.45v11.844c6.688-1.919 11.581-8.075 11.581-15.381z">
-                                        </path>
-                                    </svg> </span> </a> <a
-                                    class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-1da69cc text-primary-regular text-hover-accent-regular"
-                                    href="https://twitter.com/" target="_blank" aria-label="Twitter> <span class="
-                                    cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM23.305 12.475c0.007 0.157 0.011 0.316 0.011 0.475 0 4.853-3.694 10.449-10.449 10.449v0c-2.074 0-4.004-0.608-5.629-1.65 0.287 0.034 0.58 0.051 0.876 0.051 1.721 0 3.304-0.587 4.561-1.572-1.608-0.030-2.963-1.092-3.431-2.551 0.224 0.043 0.454 0.066 0.69 0.066 0.335 0 0.66-0.045 0.969-0.129-1.68-0.336-2.946-1.822-2.946-3.6 0-0.017 0-0.031 0-0.047 0.495 0.275 1.061 0.441 1.663 0.459-0.986-0.658-1.634-1.783-1.634-3.057 0-0.673 0.182-1.303 0.497-1.846 1.811 2.222 4.518 3.684 7.57 3.837-0.063-0.269-0.095-0.549-0.095-0.837 0-2.027 1.645-3.672 3.673-3.672 1.056 0 2.011 0.447 2.681 1.16 0.837-0.165 1.622-0.471 2.332-0.891-0.275 0.857-0.857 1.576-1.615 2.031 0.743-0.089 1.451-0.286 2.109-0.578-0.491 0.737-1.115 1.384-1.832 1.902z">
-                                        </path>
-                                    </svg> </span> </a> <a
-                                    class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-1846ae4 text-primary-regular text-hover-accent-regular"
-                                    href="https://linkedin.com/" target="_blank" aria-label="LinkedIn> <span class="
-                                    cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M16 0c-8.835 0-16 7.165-16 16s7.165 16 16 16 16-7.165 16-16-7.165-16-16-16zM11.351 24.188h-3.897v-11.723h3.897zM9.402 10.863h-0.025c-1.308 0-2.153-0.9-2.153-2.025 0-1.15 0.872-2.026 2.205-2.026s2.153 0.875 2.179 2.026c0 1.125-0.846 2.025-2.205 2.025zM25.401 24.188h-3.896v-6.272c0-1.576-0.564-2.651-1.974-2.651-1.076 0-1.718 0.725-1.999 1.425-0.103 0.25-0.128 0.601-0.128 0.951v6.547h-3.896s0.051-10.624 0-11.723h3.896v1.66c0.518-0.799 1.444-1.935 3.512-1.935 2.564 0 4.486 1.676 4.486 5.276z">
-                                        </path>
-                                    </svg> </span> </a></div>
-                        </div>
-                    </div>
                 </div>
                 <div class="elementor-element elementor-element-df3a93f e-con-full e-flex cms-econ-boxed-no cms-econ-no-space-no elementor-invisible e-con e-child"
                     data-id="df3a93f" data-element_type="container"
