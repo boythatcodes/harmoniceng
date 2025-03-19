@@ -10,7 +10,7 @@
         content="Harmonic Engineering">
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link rel="pingback" href="xmlrpc.php" />
-    <title>Harmonic Group &#8211; Construction</title>
+    <title>Harmonic Group - Consulting And Construction </title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <style type="text/css">
@@ -369,7 +369,7 @@
                                     <div
                                         class="cms-social-icons cms-social-icons-1 d-flex align-items-center gap-20 justify-content-end justify-content-mobile-center">
                                         <a class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-8379a35 text-accent text-hover-white"
-                                            href="https://facebook.com/" target="_blank" aria-label="Facebook"> <span
+                                            href="https://www.facebook.com/share/1BkWgSyd6C/" target="_blank" aria-label="Facebook"> <span
                                                 class="cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                     <path
@@ -379,7 +379,7 @@
                                                 class="cms-title text-grey cms-hidden-laptop cms-hidden-tablet_extra cms-hidden-tablet cms-hidden-mobile_extra cms-hidden-mobile">Facebook</span>
                                         </a> <a
                                             class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-d6ca4c2 text-accent text-hover-white"
-                                            href="https://twitter.com/" target="_blank" aria-label="Twitter"> <span
+                                            href="https://x.com/Harmonicdsgn" target="_blank" aria-label="Twitter"> <span
                                                 class="cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                     <path
@@ -389,7 +389,7 @@
                                                 class="cms-title text-grey cms-hidden-laptop cms-hidden-tablet_extra cms-hidden-tablet cms-hidden-mobile_extra cms-hidden-mobile">Twitter</span>
                                         </a> <a
                                             class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon elementor-animation-grow elementor-repeater-item-9cf85f9 text-accent text-hover-white"
-                                            href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"> <span
+                                            href="https://www.linkedin.com/in/harmonic-engineering-a74958352" target="_blank" aria-label="LinkedIn"> <span
                                                 class="cms-eicon text-20 lh-0 cms-icon"><svg version="1.1"
                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                     <path
@@ -406,7 +406,7 @@
                 </div>
             </div>
             <div
-                class="cms-header-main d-flex gap-30 justify-content-between cms-radius-tltr-16 bg-white">
+                class="cms-header-main d-flex gap-30 justify-content-between cms-radius-tltr-16 bg-white" style="padding: 0 20px 0 10px;">
                 <div class="site-branding flex-auto d-flex justify-content-start"><a class="site-logo" href="/"
                         title="Harmonic Eng" rel="home"><img width="197" height="49" alt="Harmonic Eng"
                             src="/wp-content/uploads/logo.png" data-mobile="/harmonic_eng.png"
@@ -800,19 +800,19 @@
                                         <div class="cms-eqc cms-eqc-5 ">
                                             <h2 class="cms-title text-19 text-heading mb-20 mt-n5">Contact Info</h2> <a
                                                 class="cms-eqc-item d-flex align-items-center gap-10  cms-email text-accent text-hover-accent"
-                                                href="mailto:Harmonic Engineering@cmsheroes.com" target="_blank"> <span
+                                                href="mailto:info.harmonicenginner@gmail.com" target="_blank"> <span
                                                     class="cms-email-title cms-icon-color text-accent empty-none "></span>
                                                 <span
-                                                    class="cms-email-text text-accent text-hover-accent">Harmonic Engineering@gmail.com</span>
+                                                    class="cms-email-text text-accent text-hover-accent">info.harmonicenginner@gmail.com</span>
                                             </a> <a
                                                 class="cms-eqc-item d-flex align-items-center gap-10 mt-5  cms-phone text-primary text-hover-accent"
-                                                href="tel:0201061245741"> <span
+                                                href="tel:01-5919669"> <span
                                                     class="cms-phone-title cms-icon-color text-primary empty-none "></span>
-                                                <span class="cms-phone-text">02 01061245741</span> </a>
+                                                <span class="cms-phone-text">01-5919669</span> </a>
                                             <div
                                                 class="cms-social-icons cms-social-icons-5 d-flex align-items-center gap-15 text-13 pt-20 ">
                                                 <a class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-cbb75f9 text-primary text-hover-accent"
-                                                    href="https://facebook.com/" target="_blank"> <span
+                                                    href="https://www.facebook.com/share/1BkWgSyd6C/" target="_blank"> <span
                                                         class="cms-eicon lh-0 cms-icon text-20"><svg
                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                             <path
@@ -821,7 +821,7 @@
                                                         </svg></span> <span class="screen-reader-text">Facebook</span>
                                                 </a> <a
                                                     class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-e49f23b text-primary text-hover-accent"
-                                                    href="https://twitter.com/" target="_blank"> <span
+                                                    href="https://x.com/Harmonicdsgn" target="_blank"> <span
                                                         class="cms-eicon lh-0 cms-icon text-20"><svg
                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                             <path
@@ -830,7 +830,7 @@
                                                         </svg></span> <span class="screen-reader-text">Twitter</span>
                                                 </a> <a
                                                     class="cms-social-item d-flex align-items-center gap-10 cms-animate-icon  elementor-repeater-item-76336cb text-primary text-hover-accent"
-                                                    href="https://linkedin.com/" target="_blank"> <span
+                                                    href="https://www.linkedin.com/in/harmonic-engineering-a74958352" target="_blank"> <span
                                                         class="cms-eicon lh-0 cms-icon text-20"><svg
                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                                             <path
