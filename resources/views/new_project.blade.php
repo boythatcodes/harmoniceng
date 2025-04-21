@@ -74,48 +74,105 @@
 
 
     @if($project->id != 0)
-    <div id="dashboard"></div>
 
-    <script src="https://releases.transloadit.com/uppy/v3.8.0/uppy.min.js"></script>
-    <script src="https://releases.transloadit.com/uppy/v3.8.0/@uppy/xhr-upload.min.js"></script>
-    <script src="https://releases.transloadit.com/uppy/v3.8.0/@uppy/dashboard.min.js"></script>
+    
+    <div class="mt-10 mb-5 text-lg font-bold">
+        Upload Private Files:
+    </div>
+    <input type="file" id="file-input" class="mb-4">
+
+    <div id="file-upload-progressbar" class="hidden">
+        <div id="progress-container" style="display: block; margin: 0 0 20px 0;">
+            <div class="">Uploading file: <span id="file-name" class="font-bold"></span> </div>
+            <div class="mb-4">
+            Size: <span id="file-size" class="font-bold"></span>
+            </div>
+            <div style="width: 100%; height: 20px; background-color: #f0f0f0; border-radius: 10px;">
+                <div id="progress-bar" style="width: 0%; height: 100%; background-color: #007bff; border-radius: 10px; transition: width 0.3s ease;"></div>
+            </div>
+            <div id="file-upload-percent" style="margin-top: 5px; text-align: center; color: #666;"></div>
+        </div>
+    </div>
 
     <script>
-        const uppy = new Uppy.Uppy({
-                restrictions: {
-                    maxFileSize: 120000000, // 120MB per file
-                    allowedFileTypes: null, // All file types
-                    maxNumberOfFiles: null // Unlimited files
-                },
-                autoProceed: false
-            })
-            .use(Uppy.Dashboard, {
-                inline: true,
-                target: '#dashboard',
-                showProgressDetails: true,
-                proudlyDisplayPoweredByUppy: false,
-                note: 'Maximum file size 120MB, unlimited files'
-            })
-            .use(Uppy.XHRUpload, {
-                endpoint: '/project/{{$project->id}}/upload', // Replace with actual project ID
-                method: 'post',
-                formData: true,
-                fieldName: 'file',
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content'),
-                    'Accept': 'application/json'
+        const file_upload_progressbar = document.getElementById("file-upload-progressbar");
+        const file_upload_percent = document.getElementById("file-upload-percent");
+        const file_name = document.getElementById("file-name");
+        const progress_bar = document.getElementById("progress-bar");
+        const file_input = document.getElementById("file-input");
+        const file_size = document.getElementById("file-size");
+
+
+        var percent = "0%";
+
+        function update_percent(){
+            progress_bar.style.width = percent
+            file_upload_percent.innerText = percent
+        }
+
+        async function uploadFile(file) {
+            file_upload_progressbar.style.display = "block";
+            file_input.disabled = true;
+            file_size.innerText = `${(file.size / 1048576).toFixed(2)}mb`;
+
+            file_name.innerText = `${file.name}`;
+
+            const CHUNK_SIZE = 100 * 1024 * 1024; // 100MB
+            const TOTAL_CHUNKS = Math.ceil(file.size / CHUNK_SIZE);
+            const UPLOAD_ID = crypto.randomUUID();
+
+
+
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+
+            for (let index = 0; index < TOTAL_CHUNKS; index++) {
+                const chunk = file.slice(index * CHUNK_SIZE, (index + 1) * CHUNK_SIZE);
+                
+                const formData = new FormData();
+                formData.append('uploadId', UPLOAD_ID);
+                formData.append('chunkIndex', index);
+                formData.append('totalChunks', TOTAL_CHUNKS);
+                formData.append('originalFilename', file.name);
+                formData.append('mimeType', file.type);
+                formData.append('totalSizeOfFile', file.size);
+                formData.append('file', chunk, file.name);
+
+                
+                try {
+                    const response = await fetch('/project/{{$project->id}}/upload', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': csrfToken,
+                            'Accept': 'application/json',
+                        },
+                    });
+                    
+                    if (!response.ok) throw new Error('Chunk upload failed');
+                    
+                    percent = `${(index/ TOTAL_CHUNKS) * 100}%`
+                    update_percent();
+                    if (index === TOTAL_CHUNKS - 1) {
+                        window.location.href = `/project/{{$project->id}}`
+                    }
+
+                } catch (error) {
+                    console.error('Error uploading chunk:', error);
+                    // Implement retry logic here
+                    break;
                 }
-            });
+            }
+        }
 
-        uppy.on('complete', (result) => {
-            console.log('Successful uploads:', result.successful);
-            console.log('Failed uploads:', result.failed);
-        });
-
-        uppy.on('error', (error) => {
-            console.error('Upload error:', error);
+        // Usage example
+        document.getElementById('file-input').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                uploadFile(file);
+            }
         });
     </script>
+
 
     <div class="mt-4 mb-2">Existing Private files:</div>
     <table class="table w-full">
@@ -132,7 +189,7 @@
                     <div class="w-full">{{$file->original_name}}</div>
                 </td>
                 <td class="flex gap-2">
-                    <a class="btn btn-square btn-primary text-white" download="{{ $file->original_name }}" href="{{ asset($file->stored_path) }}">
+                    <a class="btn btn-square btn-primary text-white" onclick="download_file('{{$file->original_name}}', '{{$file->stored_path}}', '{{ number_format($file->size / 1048576,2)}} mb')">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                         </svg>
@@ -180,6 +237,8 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/web-streams-polyfill@2.0.5/dist/ponyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/streamsaver@2.0.5/StreamSaver.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
 <script>
     add_user_div = document.getElementById("add_user")
@@ -209,15 +268,72 @@
         size_delete.innerHTML = size
         file_id.value = id
         add_user_div.classList.add("modal-open")
-        update_viewable_user()
     }
 
     function hide_add_user() {
         add_user_div.classList.remove("modal-open")
     }
+
+    async function download_file(og_name, path, size){
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+        const response = await fetch(`/project/{{$project->id}}/${path}/list`, {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+                'Accept': 'application/json',
+            },
+        });
+
+        parsed_resp = await response.json();
+
+        if(parsed_resp.error != null){
+            alert(parsed_resp.error);
+            return
+        }
+
+        await mergeAndDownloadSequentially(parsed_resp.files, og_name);
+    }
+
+    async function mergeAndDownloadSequentially(urls, fileName) {
+        let writer;
+        
+        try {
+            // Create a writable stream
+            const writableStream = streamSaver.createWriteStream(fileName);
+            writer = writableStream.getWriter();
+
+            for (const url of urls) {
+                const response = await fetch(`/data/private_files_/${url}`);
+                if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+
+                const reader = response.body.getReader();
+
+                // Pipe the stream chunks to disk
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    await writer.write(value);
+                }
+                reader.releaseLock();
+            }
+
+            await writer.close();
+            console.log('All files merged successfully!');
+        } catch (error) {
+            console.error('Error:', error);
+            if (writer) await writer.abort();
+        }
+    }
+
+    // Service worker registration for StreamSaver.js
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then(registration => console.log('ServiceWorker registered'))
+            .catch(err => console.log('ServiceWorker registration failed'));
+    }
+
 </script>
-
-
 
 
 <style>

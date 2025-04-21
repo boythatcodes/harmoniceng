@@ -241,7 +241,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post("/project/{id}", [App\Http\Controllers\HomeController::class, 'new_project'])->name('single_project_post');
     Route::post('/project/{project_id}/upload', [App\Http\Controllers\HomeController::class, 'new_store']);
     Route::post('/project/{project_id}/delete', [App\Http\Controllers\HomeController::class, 'delete_file']);
-
+    Route::post("/project/{project_id}/{file}/list", [App\Http\Controllers\HomeController::class, 'download_private_file'])->name('file_details_to_download');
+    
 
     Route::post("/delete/service", [App\Http\Controllers\HomeController::class, 'delete_services'])->name('delete_services');
     Route::get("/services", [App\Http\Controllers\HomeController::class, 'all_services'])->name('all_services');

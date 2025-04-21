@@ -385,32 +385,77 @@ class HomeController extends Controller
         return redirect("/popup");
     }
 
+    private function allChunksUploaded($temp_dir, $totalChunks)
+    {
+        for ($i = 0; $i < $totalChunks; $i++) {
+            if (!File::exists("$temp_dir/chunk_{$i}.part")) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public function new_store(Request $request, int $project_id)
     {
-        $request->validate([
-            'file' => 'required|file|max:120000',
+        $validated = $request->validate([
+            'uploadId' => 'required|string',
+            'chunkIndex' => 'required|integer',
+            'totalChunks' => 'required|integer',
+            'originalFilename' => 'required|string',
+            'mimeType' => 'required|string',
+            'totalSizeOfFile' => 'required|integer',
+            'file' => 'required|file',
         ]);
+
+        
+        $file = $request->file('file');
+        $uploadId = $request->input('uploadId');
+        $chunkIndex = $request->input('chunkIndex');
+        $totalChunks = $request->input('totalChunks');
+        $originalFilename = $request->input('originalFilename');
+        $mimeType = $request->input('mimeType');
+        $size = $request->input('totalSizeOfFile');
 
         $project = Project::findOrFail($project_id);
 
-        $file = $request->file('file');
-        $file_name = rand() . "." . $file->getClientOriginalExtension();
-        $name = $file->getClientOriginalName();
-        $mime = $file->getMimeType();
-        $size = $file->getSize();
-        $file->move(public_path('data/private_files_/'), $file_name);
+        $temp_dir = "data/private_files_/{$uploadId}/";
 
-        $projectFile = $project->files()->create([
-            'original_name' => $name,
-            'stored_path' => "data/private_files_/{$file_name}",
-            'mime_type' => $mime,
-            'size' => $size,
-        ]);
+        $file->move(public_path($temp_dir), "chunk_{$chunkIndex}.part");
+        $complete = false;
+        
+        if($this->allChunksUploaded($temp_dir, $totalChunks)){
+            $project->files()->create([
+                'original_name' => $originalFilename,
+                'stored_path' => $uploadId,
+                'mime_type' => $mimeType,
+                'size' => $size,
+            ]);
+
+            $complete = true;
+        }
 
         return response()->json([
             'success' => true,
-            'file' => $projectFile
+            'complete' => $complete
+        ]);
+    }
+
+    public function download_private_file(Request $request, int $project_id, string $file_name){
+        $folder = "data/private_files_/{$file_name}/";
+        if (!File::exists($folder)) {
+            return response()->json(['error' => 'Folder not found'], 404);
+        }
+
+        $files = File::files($folder);
+        $fileNames = [];
+
+        foreach ($files as $file) {
+            $fileNames[] = "$file_name/{$file->getFilename()}";
+        }
+
+        return response()->json([
+            'file_count' => count($fileNames),
+            'files' => $fileNames
         ]);
     }
 
