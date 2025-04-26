@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('stored_path');
             $table->string('mime_type');
             $table->unsignedInteger('size');
-            $table->unsignedInteger('project_id'); // Match projects.id type
+            $table->unsignedBigInteger('project_id'); // Match projects.id type
             
             $table->foreign('project_id')
                   ->references('id')
